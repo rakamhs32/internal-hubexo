@@ -1,0 +1,16 @@
+.centered-text-banner h1,
+.centered-text-banner h2 {
+	max-width: 30ch;
+	margin-inline: auto;
+}
+.centered-text-banner h2 {
+	max-width: 38ch;
+}
+.centered-text-banner--meta {
+	margin-top: 20px;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}

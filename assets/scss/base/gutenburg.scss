@@ -1,0 +1,30 @@
+html :where(.wp-block) {
+	max-width: 100% !important;
+	margin: 0 !important;
+}
+
+.edit-post-visual-editor__post-title-wrapper {
+	margin-bottom: 30px !important;
+	text-align: center;
+}
+
+html :where(.wp-block) .fade-in,
+html :where(.wp-block) .fade-up {
+	opacity: 1;
+}
+
+@media (min-width: 782px) {
+	.interface-complementary-area {
+		width: 480px;
+	}
+}
+
+body#tinymce {
+	background-color: transparent;
+	padding: 1em;
+	padding-top: 0;
+}
+
+h1.wp-block-post-title {
+	@extend .h4;
+}

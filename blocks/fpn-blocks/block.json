@@ -1,0 +1,18 @@
+{
+    "name": "acf/fpn-blocks",
+    "title": "FPN Blocks",
+    "description": "FPN Blocks",
+    "style": [],
+    "category": "hubexo",
+    "icon": "",
+    "keywords": [
+        "FPN Blocks"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "fpn-blocks.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

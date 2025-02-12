@@ -1,0 +1,26 @@
+.cta-blocks--grid {
+	display: flex;
+	max-width: 88.888%;
+	margin-inline: auto;
+	column-gap: stretch(10px, 23px);
+	@media (max-width: 767px) {
+		flex-direction: column;
+		row-gap: 60px;
+	}
+}
+.cta-block {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}
+.cta-block span.h4 {
+	display: block;
+	max-width: 25ch;
+	margin-inline: auto;
+	margin-top: auto;
+	padding-top: stretch(10px, 25px);
+}

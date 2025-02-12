@@ -1,0 +1,111 @@
+.white-text {
+  color: var(--earth);
+  h1,
+  h2 {
+    color: var(--atomicYellow);
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--white);
+  }
+  p,
+  ul,
+  ol,
+  li,
+  a:not(.blueprint--button) {
+    color: var(--earth);
+  }
+  span {
+    color: var(--earth);
+  }
+}
+.white-bg {
+  background-color: var(--earth);
+}
+.yellow-bg {
+  background-color: var(--atomicYellow);
+}
+.aluminium-bg {
+  background-color: var(--aluminium);
+}
+.earth-bg {
+  background-color: var(--earth);
+}
+.plum-bg {
+  background-color: var(--plum);
+}
+
+main {
+  position: relative;
+}
+.content-panel.team:before,
+main:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-y;
+  background-size: 100%;
+  z-index: 1;
+}
+
+main.plum-bg {
+  &:before {
+    content: "";
+    background-image: url(../img/plum-bg-image.webp);
+    opacity: 0.1;
+  }
+  .content-panel.plum-bg {
+    background-color: transparent;
+  }
+}
+
+main.earth-bg {
+  &:before {
+    content: "";
+    background-image: url(../img/plum-bg-image.webp);
+    opacity: 1;
+  }
+}
+
+.team.aluminium-bg,
+main.aluminium-bg {
+  &:before {
+    content: "";
+    background-image: url(../img/plum-bg-image.webp);
+    opacity: 1;
+  }
+}
+
+.flexible-content-panels {
+  position: relative;
+  z-index: 2;
+}
+
+// body {
+// 	position: relative;
+// 	background-color: var(--plum);
+// }
+
+// body:before {
+// 	content: "";
+// 	display: block;
+// 	position: absolute;
+// 	top: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	right: 0;
+// 	z-index: -1;
+// 	background-image: url(../img/background-repeat.svg);
+// 	background-size: 100%;
+// 	background-repeat: repeat-y;
+// 	pointer-events: none;
+// }
+
+// .plum-bg {
+// 	background-color: transparent;
+// }

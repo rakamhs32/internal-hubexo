@@ -1,0 +1,14 @@
+.title-banner {
+	padding-bottom: stretch(60px, 200px);
+	position: relative;
+	z-index: 2;
+}
+
+main.aluminium-bg .title-banner,
+main.earth-bg .title-banner {
+	padding-bottom: stretch(30px, 100px);
+}
+
+main.plum-bg .title-banner {
+	color: var(--atomicYellow);
+}

@@ -1,0 +1,89 @@
+.fullscreen-banner {
+	padding: stretch(225px, 310px) 0;
+	position: relative;
+	overflow: hidden;
+	color: var(--lightPurple);
+	display: flex;
+	text-align: center;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: var(--lightPurple);
+	}
+}
+
+.fullscreen-banner h1 {
+	max-width: 23ch;
+	margin-inline: auto;
+}
+
+.fullscreen-banner:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+
+	right: 0;
+	background: linear-gradient(
+		78.26deg,
+		rgba(0, 0, 0, 0.8) 1.45%,
+		rgba(0, 0, 0, 0) 87.31%
+	);
+	opacity: 0.8;
+	z-index: 20;
+}
+.fullscreen-banner .container {
+	position: relative;
+	z-index: 21;
+	width: 100%;
+}
+
+.fullscreen-banner .swiper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.fullscreen-banner .swiper-slide {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.fullscreen-banner .swiper-slide img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	animation: shrinkIn;
+	animation-duration: 1.2s;
+	animation-fill-mode: both;
+}
+
+.fullscreen-banner .blueprint--button {
+	margin-top: stretch(20px, 30px);
+}
+
+.fullscreen-banner h1,
+.fullscreen-banner .blueprint--button {
+	animation: fadeInUp;
+	animation-duration: 0.6s;
+	animation-fill-mode: both;
+}
+.fullscreen-banner .blueprint--button {
+	animation-delay: 0.2s;
+}

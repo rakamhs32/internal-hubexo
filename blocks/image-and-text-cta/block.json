@@ -1,0 +1,16 @@
+{
+  "name": "acf/image-and-text-cta",
+  "title": "Image and text call to action",
+  "description": "Image and text call to action",
+  "style": [],
+  "category": "hubexo",
+  "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect y=\"6.00977\" width=\"24\" height=\"12\" rx=\"2\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.9869 11.006L3.99072 11.006L3.99072 9.50604L10.9869 9.50604L10.9869 11.006Z\" fill=\"white\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.98865 14.023H3.99072V12.523H7.98865V14.023Z\" fill=\"white\"/></svg>",
+  "keywords": ["Image and text, Call to action"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "image-and-text-cta.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

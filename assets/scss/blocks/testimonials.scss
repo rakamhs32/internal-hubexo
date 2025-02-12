@@ -1,0 +1,119 @@
+.testimonials {
+	//padding-bottom: 0;
+	background: var(--plum) url(../img/quote-bg.svg);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-size: min(70%, 1200px) auto;
+}
+
+.testimonials .container {
+	position: relative;
+	z-index: 10;
+}
+
+.testimonials blockquote {
+	padding: 0;
+	margin: 0;
+	margin-top: 40px;
+}
+
+.testimonials blockquote p {
+	font-size: stretch(24px, 40px);
+	line-height: stretch(32px, 48px);
+	//max-width: 35ch;
+	padding-inline: stretch(30px, 60px);
+	margin-inline: auto;
+}
+
+.testimonials cite {
+	font-style: normal;
+	@extend .p;
+	display: block;
+	color: var(--atomicYellow);
+	margin-bottom: 40px;
+}
+
+svg.testimonial-pattern {
+	width: 100%;
+	height: auto;
+	position: relative;
+	top: -90px;
+	margin-bottom: -90px;
+}
+
+.testimonial-image {
+	width: stretch(68px, 90px);
+	height: stretch(68px, 90px);
+	border-radius: 50%;
+	margin-inline: auto;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	margin-top: auto;
+	background-color: transparent;
+}
+.testimonial-image img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.testimonials-slider {
+	z-index: 10;
+}
+
+.testimonials-slider li {
+	display: flex;
+	flex-direction: column;
+}
+
+.splide__arrows {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+	z-index: 30;
+}
+
+.splide__arrows button {
+	width: stretch(24px, 60px);
+	height: stretch(24px, 60px);
+	border-radius: 50%;
+	border: 0;
+	background-color: transparent;
+	background-image: url(../img/carousel-arrow.svg);
+	background-size: contain;
+	padding: 0;
+	display: flex;
+	svg {
+		opacity: 0;
+	}
+}
+.splide__arrows button + button {
+	transform: rotate(180deg);
+}
+
+.testimonials-slider button:disabled {
+	display: none;
+}
+
+.editor-styles-wrapper .testimonials-slider {
+	visibility: visible;
+}
+.editor-styles-wrapper .testimonials-slider li {
+	width: 100%;
+}
+
+.editor-styles-wrapper .testimonials-slider .splide__list {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}

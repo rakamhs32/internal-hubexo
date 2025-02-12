@@ -1,0 +1,51 @@
+:root {
+	--header-pad: #{stretch(104px, 162px)};
+}
+
+body.has-promo-banner .header-pad {
+	padding-top: stretch(176px, 200px);
+}
+
+.header-pad {
+	padding-top: var(--header-pad);
+}
+
+.fullscreen-banner + .content-panel {
+	padding-top: stretch(30px, 60px);
+}
+
+.content-panel {
+	padding: stretch(60px, 120px) 0;
+}
+.content-panel.half-space {
+	padding: stretch(30px, 60px) 0;
+}
+.content-panel.double-space {
+	padding: stretch(60px, 120px) 0;
+}
+.content-panel.no-bg + .content-panel.no-bg {
+	padding-top: 0;
+}
+.content-panel.no-bg + .content-panel.no-bg.double-space {
+	padding-top: stretch(30px, 60px);
+}
+
+//Specific use cases
+
+.content-panel.text-block + .content-panel.link-list {
+	padding-top: 48px;
+}
+.content-panel.text-block:has(+ .link-list) {
+	padding-bottom: 0;
+}
+
+.content-panel.link-list:has(+ .icon-blocks) {
+	padding-bottom: 0;
+}
+
+.content-panel.text-block + .content-panel.stats {
+	padding-top: 0;
+}
+.content-panel.stats + .content-panel.text-block {
+	padding-top: 0;
+}

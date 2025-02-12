@@ -1,0 +1,40 @@
+.jobs-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: stretch(16px, 25px);
+	margin-top: 48px;
+	row-gap: stretch(32px, 40px);
+	@media (max-width: 991px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: 767px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.job-card {
+	background-color: var(--earth);
+	padding: 24px;
+	@media (min-width: 900px) {
+		--transition-duration: 1s;
+		opacity: 0;
+		transform: translateX(50px);
+		transition: transform var(--transition-duration),
+			opacity var(--transition-duration);
+		transition-delay: calc(0.1s + var(--n) * 0.2s);
+		&.in-view {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+}
+.job-card h3 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.editor-styles-wrapper .job-card {
+	opacity: 1;
+	transform: none;
+}

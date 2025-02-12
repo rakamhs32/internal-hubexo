@@ -1,0 +1,62 @@
+// .map {
+// 	overflow: hidden;
+// 	padding-bottom: 56.25%;
+// 	position: relative;
+// 	height: 0;
+// 	margin-top: 60px;
+// 	@media (max-width: 575px) {
+// 		margin-top: 30px;
+// 	}
+// }
+
+// .map iframe {
+// 	left: 0;
+// 	top: 0;
+// 	height: 100%;
+// 	width: 100%;
+// 	position: absolute;
+// }
+
+// ul.contact-details {
+// 	margin-top: 0;
+// 	padding-left: 0;
+// }
+// ul.contact-details address {
+// 	margin-top: 0;
+// }
+// ul.contact-details li {
+// 	list-style: none;
+// 	margin-bottom: 0;
+// 	position: relative;
+// 	@extend .p;
+// 	margin-top: 15px;
+// 	display: flex;
+// 	column-gap: 30px;
+// 	overflow-wrap: break-word;
+// 	word-wrap: break-word;
+// 	-ms-word-break: break-all;
+// 	word-break: break-all;
+// 	/* Instead use this non-standard one: */
+// 	word-break: break-word;
+// 	-ms-hyphens: auto;
+// 	-moz-hyphens: auto;
+// 	-webkit-hyphens: auto;
+// 	hyphens: auto;
+// 	flex-shrink: 0;
+// }
+// ul.contact-details li:first-child {
+// 	margin-top: 0;
+// }
+
+// ul.contact-details li a {
+// 	border: 0;
+// }
+// ul.contact-details svg {
+// 	height: auto;
+// 	align-self: flex-start;
+// 	transform: scale(0.95);
+// }
+
+// span.contact-details--icon {
+// 	width: 20px;
+// }

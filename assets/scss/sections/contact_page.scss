@@ -1,0 +1,32 @@
+.contact-page--details {
+	display: flex;
+	max-width: 900px;
+	margin-inline: auto;
+	column-gap: stretch(10px, 23px);
+	row-gap: stretch(30px, 60px);
+	@media (max-width: 767px) {
+		flex-direction: column;
+	}
+}
+.contact-page--details-text {
+	width: 62.5%;
+	p {
+		@extend .h4;
+		max-width: 40ch;
+	}
+	@media (max-width: 767px) {
+		width: 100%;
+		p {
+			max-width: 100%;
+		}
+	}
+}
+.contact-page--details--info {
+	width: 37.5%;
+	ul.contact-details {
+		padding-left: 0;
+	}
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}

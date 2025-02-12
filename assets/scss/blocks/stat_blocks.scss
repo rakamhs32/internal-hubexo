@@ -1,0 +1,36 @@
+.stat-blocks {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 767px) {
+		flex-direction: column;
+		gap: 40px;
+	}
+}
+
+.stat-block {
+	width: 23%;
+	@media (max-width: 767px) {
+		width: 55%;
+		margin-inline: auto;
+	}
+}
+
+.stat-block svg {
+	width: 55px;
+	height: auto;
+}
+
+.stat-block--number {
+	font-size: stretch(60px, 100px);
+	line-height: stretch(66px, 66px);
+	font-weight: 500;
+	display: block;
+	margin-top: stretch(0px, 24px);
+}
+
+.stat-block--title {
+	font-size: stretch(20px, 24px);
+	line-height: stretch(28px, 32px);
+	display: block;
+	margin-top: stretch(0px, 24px);
+}

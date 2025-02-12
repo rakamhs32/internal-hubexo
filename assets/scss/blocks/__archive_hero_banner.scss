@@ -1,0 +1,82 @@
+.hero-banner.has-pattern {
+  // min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 128px;
+}
+.hero-banner.error-404 {
+  padding-bottom: 128px;
+  min-height: 100vh;
+}
+
+img.animation-404 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: auto;
+}
+
+.hero-banner svg.quote-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: 100%;
+  opacity: 0;
+  animation: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  @media (max-width: 991px) {
+    top: auto;
+    bottom: 0;
+    height: auto;
+    width: 60%;
+    transform: translateY(60%);
+  }
+  @media (max-width: 767px) {
+    width: 150%;
+    transform: translateY(90%) translateX(40%);
+  }
+}
+
+.hero-banner .container {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-banner svg.pattern-a {
+  margin-top: 60px;
+}
+
+.hero-banner h1 {
+  max-width: 15ch;
+}
+
+.hero-banner h1 + p {
+  @extend .h6;
+  max-width: 37ch;
+}
+.hero-banner.has-pattern h1 + p {
+  max-width: 30ch;
+}
+
+.hero-banner p {
+  @extend .small-title;
+  max-width: 36ch;
+}
+
+.hero-banner h1,
+.hero-banner p {
+  opacity: 0;
+  animation: fadeInUp;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+.hero-banner p {
+  animation-delay: 0.2s;
+}
+.hero-banner p.hero-banner--button-wrap {
+  animation-delay: 0.4s;
+}

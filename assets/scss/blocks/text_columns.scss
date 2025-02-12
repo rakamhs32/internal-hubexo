@@ -1,0 +1,24 @@
+.text-columns h2 {
+	margin-bottom: 30px;
+	max-width: 54ch;
+}
+
+.text-columns-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 23px;
+	row-gap: stretch(20px, 40px);
+	@media (max-width: 767px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: 575px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.text-columns-grid p {
+	max-width: 35ch;
+	@media (max-width: 575px) {
+		max-width: 100%;
+	}
+}

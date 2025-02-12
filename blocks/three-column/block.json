@@ -1,0 +1,16 @@
+{
+	"name": "acf/three-column",
+	"title": "Three column",
+	"description": "Three column",
+	"style": [],
+	"category": "hubexo",
+	"icon": "",
+	"keywords": ["Three column"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "three-column.php"
+	},
+	"supports": {
+		"anchor": true
+	}
+}

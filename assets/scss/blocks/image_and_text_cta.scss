@@ -1,0 +1,44 @@
+.image-and-text-cta {
+	position: relative;
+	background-color: #e5e5e5;
+	overflow: hidden;
+	@media (max-width: 767px) {
+		padding-top: 260px;
+	}
+}
+.image-and-text-cta img {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center right;
+}
+
+.image-and-text-cta .container {
+	position: relative;
+}
+
+.image-and-text-cta h2 {
+	max-width: 15ch;
+	font-size: stretch(36px, 60px);
+	line-height: stretch(44px, 60px);
+}
+
+.image-and-text-cta p {
+	max-width: 43ch;
+}
+
+.image-and-text-cta--image-wrap {
+	@media (max-width: 767px) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: stretch(392px, 395px);
+	}
+}

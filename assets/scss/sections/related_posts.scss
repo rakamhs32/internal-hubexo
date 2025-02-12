@@ -1,0 +1,6 @@
+.related-posts .blog-post-grid {
+	padding-top: 30px;
+}
+.content-panel.no-bg + .content-panel.no-bg.related-posts {
+	padding-top: stretch(30px, 60px);
+}

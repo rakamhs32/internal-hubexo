@@ -1,0 +1,19 @@
+.centered-text-panel {
+	background-image: url(../img/yellow-bg-pattern.webp);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	@media (max-width: 991px) {
+		background-size: 200%;
+	}
+}
+
+.centered-text-panel h2 {
+	@extend .h5;
+	max-width: 37ch;
+	margin-inline: auto;
+}
+.centered-text-panel p {
+	max-width: 40ch;
+	margin-inline: auto;
+}

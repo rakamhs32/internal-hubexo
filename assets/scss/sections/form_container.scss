@@ -1,0 +1,23 @@
+.form-container {
+	max-width: 900px;
+	margin-inline: auto;
+	padding: stretch(30px, 60px);
+	padding-top: stretch(10px, 40px);
+	padding-bottom: stretch(90px, 160px);
+	padding-right: stretch(30px, 90px);
+}
+
+.form-grid {
+	display: flex;
+	column-gap: stretch(10px, 90px);
+	@media (max-width: 767px) {
+		flex-direction: column;
+	}
+}
+.form-grid--left,
+.form-grid--right {
+	width: 50%;
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}

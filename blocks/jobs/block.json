@@ -1,0 +1,16 @@
+{
+  "name": "acf/jobs",
+  "title": "Jobs",
+  "description": "Jobs",
+  "style": [],
+  "category": "hubexo",
+  "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><mask id=\"path-1-inside-1_3_1248\" fill=\"white\"><rect y=\"8\" width=\"11.5\" height=\"9\" rx=\"1\"/></mask><rect y=\"8\" width=\"11.5\" height=\"9\" rx=\"1\" fill=\"white\" stroke=\"#1E1E1E\" stroke-width=\"3\" mask=\"url(#path-1-inside-1_3_1248)\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.60517 12.5275H2.98254V11.0275H7.60517V12.5275Z\" fill=\"#1E1E1E\"/><path d=\"M12.5 9C12.5 8.44772 12.9477 8 13.5 8H23C23.5523 8 24 8.44772 24 9V16C24 16.5523 23.5523 17 23 17H13.5C12.9477 17 12.5 16.5523 12.5 16V9Z\" fill=\"white\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 9.5V15.5H22.5V9.5H14ZM13.5 8C12.9477 8 12.5 8.44772 12.5 9V16C12.5 16.5523 12.9477 17 13.5 17H23C23.5523 17 24 16.5523 24 16V9C24 8.44772 23.5523 8 23 8H13.5Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.1052 12.5275H15.4825V11.0275H20.1052V12.5275Z\" fill=\"#1E1E1E\"/></svg>",
+  "keywords": ["Jobs"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "jobs.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

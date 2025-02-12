@@ -1,0 +1,121 @@
+.accordion-wrapper h2 {
+	margin-bottom: stretch(40px, 60px);
+}
+
+.accordions {
+	margin-top: 0;
+	padding-left: 0;
+}
+
+.accordion {
+	list-style: none;
+	margin: 0;
+	margin-top: stretch(30px, 35px);
+	padding: 0;
+	border-bottom: 1px solid var(--blue);
+	padding-bottom: 30px;
+	&:first-child {
+		margin-top: 0;
+	}
+	ul {
+		margin-left: 0;
+	}
+}
+
+button.accordion--heading {
+	display: block;
+	@extend .h3;
+	border: 0;
+	width: 100%;
+	margin-top: 0;
+	justify-content: flex-start;
+	background-color: transparent;
+	height: auto;
+	padding: 0;
+	padding-left: 8.3333%;
+
+	overflow: visible;
+	position: relative;
+	text-align: left;
+}
+button.accordion--heading span.arrow-button {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+	//transform: translateX(calc(-100% - 30px));
+}
+button.accordion--heading svg {
+	position: relative;
+	top: 0.05em;
+	transition: all 0.3s ease-in-out;
+	width: stretch(17px, 25px);
+	height: auto;
+	path {
+		transition: stroke 0.3s ease-in-out;
+	}
+}
+
+.accordion.is-open {
+	svg {
+		transform: translateY(-50%) rotate(180deg);
+		transform-origin: center center;
+		top: 0.15em;
+	}
+	button.accordion--heading {
+		transition: none;
+	}
+	button.accordion--heading:hover {
+		background-color: transparent;
+	}
+}
+
+.accordion--grow {
+	position: relative;
+	height: 0;
+	transition: height 0.3s;
+	overflow: hidden;
+}
+
+.accordion--content {
+	width: 100%;
+	position: absolute;
+	display: flex;
+	left: 0;
+	padding-left: 8.3333%;
+	padding-top: 15px;
+	.accordion--text {
+		width: 75%;
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+	}
+}
+
+.accordion--content.has-image {
+	display: flex;
+	gap: 30px;
+	@media (max-width: 991px) {
+		flex-direction: column;
+	}
+}
+.accordion--image {
+	width: 25%;
+	margin-left: 8.33333%;
+	@media (max-width: 991px) {
+		flex-direction: column;
+		width: 50%;
+		margin-left: 0;
+	}
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+.accordion--content.has-image .accordion--text {
+	width: 50%;
+	@media (max-width: 991px) {
+		width: 100%;
+	}
+}

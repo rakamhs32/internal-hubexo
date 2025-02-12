@@ -1,0 +1,104 @@
+.team {
+  overflow: hidden;
+  position: relative;
+}
+
+.team .container {
+  position: relative;
+  z-index: 1;
+}
+
+.team .grid {
+  margin-top: 48px;
+}
+
+.editor-styles-wrapper .team .grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.team-member {
+  background-color: var(--earth);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.grid-sizer,
+.team-member {
+  width: calc(50% - 12px);
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}
+
+.editor-styles-wrapper .grid-sizer {
+  display: none;
+}
+
+.editor-styles-wrapper .team-member {
+  width: auto;
+}
+
+.team-member--meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: stretch(24px, 44px);
+}
+
+.team-member--meta p {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 24ch;
+}
+
+.team-member--image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.team-member--image img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.team-member--bio {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.team-member.active .team-member--bio {
+  display: block;
+}
+
+button.team-member--button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 27px;
+  margin-bottom: 24px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.team-member.active button.team-member--button svg {
+  transform: rotate(180deg);
+}
+
+.team-member .blueprint--button {
+  display: none;
+}
+.team-member.active .blueprint--button {
+  display: inline-flex;
+}

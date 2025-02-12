@@ -1,0 +1,211 @@
+//  remvoe space between paragarph
+// make the header background aluminium
+// remove line on just the main menu on contact page
+
+.link-list {
+	position: relative;
+	overflow: hidden;
+}
+
+.link-list h2 {
+	margin-bottom: stretch(28px, 48px);
+}
+.link-list .h2 {
+	// Keep everything on one line!
+	@media (max-width: 1000px) {
+		font-size: stretch(22px, 66.8px, 320px, 1000px);
+	}
+}
+
+.link-list ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.link-list svg {
+	width: stretch(24px, 60px);
+	height: auto;
+	position: relative;
+	z-index: 2;
+}
+.link-list svg rect {
+	transition: fill 0.8s ease;
+}
+
+.link-list li {
+	margin: 0;
+	padding-top: stretch(24px, 47px);
+	position: relative;
+	@media (max-width: 1000px) {
+		padding-top: 40px;
+	}
+}
+
+.link-list li .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-inline: stretch(16px, 32px);
+}
+
+.link-list svg {
+	flex-shrink: 0;
+}
+
+.link-list a,
+.link-list .no-link {
+	text-decoration: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	column-gap: 15px;
+}
+
+.editor-styles-wrapper .link-list a {
+	pointer-events: none;
+}
+
+.link-list hr {
+	flex: 1;
+	flex-basis: 100%;
+	margin: 0;
+	margin-top: stretch(24px, 47px);
+	border: 0;
+	border-bottom: 1px solid var(--earth);
+	display: block;
+	width: 100%;
+	backface-visibility: hidden;
+	@media (max-width: 1000px) {
+		margin-top: 40px;
+	}
+}
+
+.link-list .link-list--overlay {
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: auto;
+	// background-color: var(--aluminium);
+	background-color: var(--earth);
+	z-index: 1;
+	// transform: translateX(-100%);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	padding: stretch(0px, 33px) 0px;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: var(--plum);
+	}
+	p {
+		margin-top: 20px;
+		max-width: 762px;
+		font-weight: 400;
+	}
+	.container {
+		display: block;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+	}
+	@media (max-width: 991px) {
+		display: flex;
+		align-items: center;
+		.h6 {
+			font-size: stretch(24px, 24px);
+			line-height: stretch(32px, 32px);
+			font-weight: 600;
+		}
+		p {
+			font-size: 14px;
+			line-height: 1.2;
+			margin-top: 1em;
+			padding-right: 32px;
+		}
+	}
+}
+
+.link-list--trigger {
+	// background: hotpink;
+	// box-shadow: inset 0 0 0 4px #000;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: none;
+	@media (pointer: coarse) {
+		display: block;
+	}
+}
+
+.link-list li.hovered .link-list--overlay,
+.link-list li:hover .link-list--overlay {
+	opacity: 1;
+}
+.link-list li.hovered .link-list--overlay .container,
+.link-list li:hover .link-list--overlay .container {
+	opacity: 1;
+}
+
+// .link-list li.blue-hover.hovered .link-list--arrow rect,
+// .link-list li.blue-hover:hover .link-list--arrow rect {
+//   fill: var(--blue);
+// }
+// .link-list li.purple-hover.hovered .link-list--arrow rect,
+// .link-list li.purple-hover:hover .link-list--arrow rect {
+//   fill: var(--purple);
+// }
+// .link-list li.red-hover.hovered .link-list--arrow rect,
+// .link-list li.red-hover:hover .link-list--arrow rect {
+//   fill: var(--red);
+// }
+// .link-list li.orange-hover.hovered .link-list--arrow rect,
+// .link-list li.orange-hover:hover .link-list--arrow rect {
+//   fill: var(--orange);
+// }
+// .link-list li.green-hover.hovered .link-list--arrow rect,
+// .link-list li.green-hover:hover .link-list--arrow rect {
+//   fill: var(--green);
+// }
+.link-list li.hovered .link-list--arrow rect,
+.link-list li:hover .link-list--arrow rect {
+	fill: var(--plum);
+}
+.link-list li.hovered .link-list--arrow path,
+.link-list li:hover .link-list--arrow path {
+	stroke: #fff;
+}
+
+.link-list .pattern-a {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: auto;
+	opacity: 1;
+	pointer-events: none;
+}
+
+.link-list--title {
+	opacity: 0;
+	transition: opacity 1s;
+	transition-delay: calc(0.2s * var(--n));
+	.link-list.in-view & {
+		opacity: 1;
+	}
+}
+
+.editor-styles-wrapper .link-list--title {
+	opacity: 1;
+}

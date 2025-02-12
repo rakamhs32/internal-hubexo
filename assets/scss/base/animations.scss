@@ -1,0 +1,95 @@
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.in-view {
+  animation: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.fade-up.in-view {
+  animation: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes growCircle {
+  0%,
+  80%,
+  100% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(calc(0.7 - var(--y) * 0.3));
+  }
+}
+@keyframes growCircleSlow {
+  0%,
+  40%,
+  100% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(calc(0.7 - var(--y) * 0.3));
+  }
+}
+
+circle {
+  transform-box: fill-box;
+  transform-origin: center center;
+  animation: growCircle 9s infinite;
+  animation-delay: calc(var(--x) * -0.04s - 5s);
+}
+
+svg.pattern-a {
+  width: 100%;
+  height: 80px;
+  display: block;
+  &.flipped {
+    transform: rotate(180deg);
+    circle {
+      animation-direction: reverse;
+    }
+  }
+}
+
+.pattern-a.is-yellow {
+  color: var(--atomicYellow);
+  background-color: var(--plum);
+}
+.pattern-a.is-aluminium {
+  color: var(--aluminium);
+  background-color: var(--plum);
+}
+.pattern-a.is-red {
+  color: red;
+}
+.pattern-a.is-on-grey {
+  color: rgba(50, 20, 50, 0.05);
+  circle {
+    animation-name: growCircleSlow;
+  }
+}

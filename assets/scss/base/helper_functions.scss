@@ -1,0 +1,35 @@
+@use "sass:math";
+
+$siteMinViewport: 375px;
+$siteMaxViewport: 1440px;
+
+// 1.
+@function roundish($n) {
+	@return math.div(math.round($n * 1000), 1000);
+}
+
+// 2:
+@function toRem($n) {
+	@return roundish(math.div($n, 16px));
+}
+
+// 3.
+@function stretch(
+	$minValuePx,
+	$maxValuePx,
+	$minViewport: $siteMinViewport,
+	$maxViewport: $siteMaxViewport
+) {
+	$variablePart: roundish(
+		math.div($maxValuePx - $minValuePx, $maxViewport - $minViewport)
+	);
+	$constant: (math.div($maxValuePx - $maxViewport * $variablePart, 16));
+
+	$rez: clamp(
+		#{toRem($minValuePx)}rem,
+		#{math.div($constant, 1px)}rem + #{100 * $variablePart}vw,
+		#{toRem($maxValuePx)}rem
+	);
+
+	@return $rez;
+}

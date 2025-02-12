@@ -1,0 +1,130 @@
+.fifty-fifty--grid {
+	display: flex;
+	height: auto;
+	position: relative;
+	@media (max-width: 991px) {
+		flex-direction: column;
+	}
+}
+
+.fifty-fifty--grid a:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+}
+.image-left .fifty-fifty--grid {
+	flex-direction: row-reverse;
+	@media (max-width: 991px) {
+		flex-direction: column;
+	}
+}
+.fifty-fifty--image,
+.fifty-fifty--text {
+	width: 50%;
+	@media (max-width: 991px) {
+		width: 100%;
+	}
+}
+.fifty-fifty--image {
+	@media (max-width: 991px) {
+		width: calc(100% - stretch(30px, 80px));
+		margin-inline: auto;
+		margin-top: auto;
+	}
+}
+.fifty-fifty--image {
+	position: relative;
+	aspect-ratio: 668/600;
+	min-height: 550px;
+	@media (max-width: 991px) {
+		min-height: 0;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		object-fit: cover;
+	}
+}
+.fifty-fifty--text {
+	padding: stretch(15px, 40px);
+	padding-bottom: stretch(30px, 60px);
+	padding-top: stretch(60px, 120px);
+}
+.fifty-fifty--text span.h4 {
+	color: var(--lightOlive);
+}
+
+.fifty-fifty-carousel .swiper-pagination {
+	position: absolute;
+	bottom: stretch(30px, 60px);
+	left: stretch(15px, 40px);
+	text-align: left;
+	margin-top: auto;
+	display: flex;
+	gap: 25px;
+	.swiper-pagination-bullet {
+		margin: 0;
+		width: 10px;
+		height: 10px;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: var(--black);
+	}
+	@media (max-width: 991px) {
+		position: static;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		margin-left: stretch(15px, 40px);
+	}
+}
+.fifty-fifty-carousel.image-left .swiper-pagination {
+	left: calc(50% + stretch(15px, 40px));
+}
+
+.fifty-fifty-carousel-wrap {
+	position: relative;
+	background-color: var(--lightPurple);
+}
+.fifty-fifty-carousel-wrap.is-blog {
+	background-color: var(--lightPurple);
+}
+.fifty-fifty-carousel h2 {
+	position: absolute;
+	top: stretch(30px, 40px);
+	left: stretch(15px, 40px);
+	z-index: 200;
+	color: var(--blue);
+}
+.fifty-fifty-carousel.image-left h2 {
+	left: calc(50% + stretch(15px, 40px));
+	@media (max-width: 991px) {
+		left: stretch(15px, 40px);
+	}
+}
+
+span.inline-tag {
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	z-index: 500;
+}
+.image-left span.inline-tag {
+	right: auto;
+	left: 15px;
+	@media (max-width: 991px) {
+		left: auto;
+		right: 15px;
+	}
+}

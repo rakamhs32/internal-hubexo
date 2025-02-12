@@ -1,0 +1,103 @@
+.site-header {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out,
+    backdrop-filter 0.3s;
+  background: transparent;
+  backdrop-filter: blur(0px);
+  backface-visibility: hidden;
+  // @media (min-width: 992px) {
+  &.header-bg {
+    background: rgba(245, 245, 245, 0.26);
+    backdrop-filter: blur(6px);
+  }
+  // }
+  @media (max-width: 991px) {
+    body.menu-open & {
+      height: 100%;
+    }
+  }
+}
+
+.site-header.hide {
+  @media (min-width: 992px) {
+    transform: translateY(-100%);
+  }
+}
+
+.site-header--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: stretch(12px, 40px);
+  transition: padding 0.3s ease-in-out;
+  .site-header.header-bg & {
+    padding-block: stretch(12px, 24px);
+  }
+}
+
+.site-header--home-link {
+  display: block;
+  height: auto;
+  border: 0;
+  position: relative;
+  z-index: 100;
+  &:hover {
+    border: 0;
+  }
+  @media (max-width: 991px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.site-header--home-link a {
+  display: block;
+  border: 0;
+}
+.site-header--home-link svg {
+  width: stretch(80px, 156px);
+  height: auto;
+}
+
+.animated-hubexo-logo {
+  color: var(--plum);
+}
+body:has(.hero-banner.plum-bg) {
+  .site-header.header-bg {
+    background: #32143222;
+  }
+  .animated-hubexo-logo {
+    color: var(--atomicYellow);
+  }
+}
+
+@keyframes animateLogoPath {
+  0%,
+  100% {
+    stroke-dasharray: var(--length) var(--length) var(--length) var(--length);
+  }
+  50% {
+    stroke-dasharray: 0 var(--length) var(--length) var(--length);
+  }
+}
+
+@keyframes animateLogoPathReverse {
+  0%,
+  100% {
+    stroke-dasharray: 0 0 var(--length) var(--length);
+  }
+  50% {
+    stroke-dasharray: 0 var(--length) var(--length) var(--length);
+  }
+}
+
+.animated-hubexo-logo.animating .animated-path {
+  animation: animateLogoPath 2s;
+  &.reverse {
+    animation-name: animateLogoPathReverse;
+  }
+}

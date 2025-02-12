@@ -1,0 +1,59 @@
+.office--content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+}
+
+.list-office--item {
+    text-decoration: none;
+    list-style: none;
+    height: fit-content;
+    border-bottom: 1px solid var(--plum);
+    margin-bottom: 0rem;
+}
+
+.office-name {
+    position: relative;
+}
+
+.office-name svg {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+.office-name h5 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.office-open-name {
+    width: 100%;
+    padding: 1.5rem 0rem;
+}
+
+.office-name-list {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: max-content;
+    gap: 1.5rem;
+}
+
+.sub-office-name p {
+    margin-top: 0rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.office-location--details .address-office {
+    margin-top: 1rem;
+    font-weight: 400;
+}
+
+.office-location--details {
+    
+}
+
+.sub-office-name {
+    width: 20rem;
+}

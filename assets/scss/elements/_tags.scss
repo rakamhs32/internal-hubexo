@@ -1,0 +1,17 @@
+.inline-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--lightPurple);
+	height: 32px;
+	padding: 0 10px;
+	text-decoration: none;
+	border: 0;
+	border-radius: 3px;
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+		border: 0;
+	}
+}

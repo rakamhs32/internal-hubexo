@@ -1,0 +1,56 @@
+.blueprint--button {
+  font-weight: 600;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 16px 24px;
+  border-radius: 100px;
+  line-height: 20px;
+  border: 1px solid var(--atomicYellow);
+  font-size: stretch(15px, 18px);
+  outline: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+  background-color: var(--atomicYellow);
+  color: var(--plum);
+  text-decoration: none;
+  &.hover,
+  &:hover,
+  &:active {
+    background-color: var(--plum);
+    border-color: var(--plum);
+    color: #fff;
+  }
+  &.is-plum {
+    border: 1px solid var(--plum);
+  }
+}
+.white-text .blueprint--button:hover,
+.white-text .blueprint--button:active {
+  border-color: var(--earth);
+  color: var(--earth);
+}
+
+.plum-bg .blueprint--button:hover,
+.plum-bg .blueprint--button:active {
+  border-color: var(--earth);
+  color: var(--earth);
+}
+// .blueprint--button,
+// input[type="submit"],
+// input[type="reset"],
+// input[type="button"] {
+// 	&.is-olive {
+// 		background-color: var(--blue);
+// 		border-color: var(--blue);
+// 		color: var(--lightPurple);
+// 		&:hover,
+// 		&:active {
+// 			background-color: var(--blue);
+// 			border-color: var(--blue);
+// 			color: var(--lightPurple);
+// 		}
+// 	}
+// }

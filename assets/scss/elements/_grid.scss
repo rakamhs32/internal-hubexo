@@ -1,0 +1,12 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 1440px;
+  // padding-inline: stretch(32px, 132px);
+  // they asked for this, R.I.P.
+  padding-inline: 32px;
+}
+.container.is-wide {
+  padding-inline: 32px;
+}

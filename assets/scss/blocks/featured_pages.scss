@@ -1,0 +1,114 @@
+.featured-pages {
+	position: relative;
+	overflow: hidden;
+}
+
+.featured-pages .swiper {
+	overflow: visible;
+}
+
+.featured-pages h2.title {
+	margin-bottom: stretch(30px, 60px);
+	max-width: 30ch;
+	margin-inline: auto;
+}
+
+.featured-pages-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: stretch(10px, 23px);
+	row-gap: stretch(30px, 60px);
+}
+.featured-pages-grid.is-three {
+	grid-template-columns: repeat(3, 1fr);
+	@media (max-width: 991px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.featured-page-block {
+	position: relative;
+	&.is-hidden {
+		display: none;
+	}
+}
+
+.featured-page-block.has-bg .featured-page-block--text {
+	padding-inline: stretch(15px, 20px);
+	padding-bottom: stretch(20px, 30px);
+}
+
+.featured-pages .swiper .featured-page-block--image,
+.featured-pages-grid.is-three .featured-page-block--image {
+	aspect-ratio: 1/1;
+}
+
+.featured-page-block--image {
+	margin-bottom: 15px;
+	position: relative;
+	aspect-ratio: 670/437;
+}
+.featured-page-block--image span.inline-tag {
+	right: auto;
+	left: 15px;
+	background-color: var(--lightPurple);
+}
+.featured-page-block--image img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.featured-page-block .button {
+	margin-top: 20px;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.featured-pages .swiper-button-next,
+.featured-pages .swiper-button-prev {
+	width: stretch(47px, 66px);
+	height: stretch(47px, 66px);
+	background-color: var(--black);
+	border-radius: 50%;
+	margin: 0;
+	transform: translateY(-200%) rotate(180deg);
+	padding: 0;
+	right: stretch(-15px, -25px);
+	&:after {
+		display: none;
+	}
+	svg {
+		width: stretch(20px, 40px);
+	}
+}
+.featured-pages .swiper-button-prev {
+	right: auto;
+	left: stretch(-15px, -25px);
+	transform: translateY(-200%) rotate(0);
+}
+
+html :where(.wp-block) .featured-pages .swiper-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: auto;
+	gap: 30px;
+}
+
+html :where(.wp-block) .featured-pages .swiper-wrapper .swiper-slide {
+	width: 33.3333%;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "acf/link-list",
+  "title": "Link list",
+  "description": "Link list",
+  "style": [],
+  "category": "hubexo",
+  "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.881 9.50979L1.99561 9.5098L1.99561 8.0098L15.881 8.00979L15.881 9.50979Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 8.76318L19.3525 11.4107L18.2918 10.3501L19.8787 8.76318L18.285 7.16947L19.3456 6.10881L22 8.76318Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.881 16.0097L1.99561 16.0097L1.99561 14.5097L15.881 14.5097L15.881 16.0097Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 15.2631L19.3525 17.9107L18.2918 16.85L19.8787 15.2631L18.285 13.6694L19.3456 12.6088L22 15.2631Z\" fill=\"#1E1E1E\"/></svg>",
+  "keywords": ["Link list"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "link-list.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

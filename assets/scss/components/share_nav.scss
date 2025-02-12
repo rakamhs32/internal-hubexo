@@ -1,0 +1,31 @@
+.share-nav {
+	margin: 0;
+	display: inline-flex;
+	column-gap: stretch(20px, 30px);
+	row-gap: 20px;
+	align-items: center;
+	height: stretch(38px, 46px);
+	padding: 0 stretch(18px, 30px);
+	border-radius: 100px;
+	background-color: var(--lightPurple);
+}
+.share-nav li {
+	display: inline-flex;
+	align-items: center;
+	list-style: none;
+	@extend .p;
+	margin: 0;
+}
+.share-nav li a {
+	border: 0;
+	line-height: 1;
+}
+.share-nav svg {
+	transform: scale(0.8);
+}
+.share-nav li.whatsapp {
+	display: none;
+	@media (pointer: none), (pointer: coarse) {
+		display: inline-flex;
+	}
+}

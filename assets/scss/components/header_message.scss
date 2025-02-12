@@ -1,0 +1,43 @@
+.header-message {
+	background-color: var(--plum);
+	color: var(--white);
+	@extend .small-para;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	position: relative;
+	z-index: 11;
+	display: none;
+	color: #fff;
+}
+.header-message p,
+.header-message a {
+	color: #fff;
+}
+
+.header-message p {
+	padding: 0 20px;
+}
+.header-message .container-fluid {
+	position: relative;
+	padding: 0 80px;
+}
+.header-message button {
+	background: transparent;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 40px;
+	line-height: 1;
+	border: 0;
+	@media (max-width: 767px) {
+		right: 20px;
+	}
+}
+.header-message button svg path,
+.header-message button svg circle {
+	stroke: var(--white);
+}

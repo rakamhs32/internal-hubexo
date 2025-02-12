@@ -1,0 +1,55 @@
+.snug {
+	margin-top: 0;
+}
+
+.snug-child > *:first-child {
+	margin-top: 0;
+}
+.large-intro > *:first-child {
+	@extend .small-title;
+}
+
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid;
+	border-color: #f8eeff;
+	margin-top: 40px;
+}
+
+img.alignright {
+	float: right;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+img.alignleft {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+img.alignnone {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}

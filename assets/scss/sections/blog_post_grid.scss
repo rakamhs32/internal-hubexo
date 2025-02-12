@@ -1,0 +1,139 @@
+body.blog {
+  background-color: var(--aluminium);
+}
+
+.blog-post-grid {
+  display: grid;
+  column-gap: stretch(16px, 25px);
+  row-gap: stretch(16px, 32px);
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 1199px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 575px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.blog-post-block {
+  background-color: var(--earth);
+  position: relative;
+
+  height: 505px;
+  .blueprint--button {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    background-color: var(--atomicYellow);
+    .blog-post-block--title {
+      text-decoration: underline;
+    }
+    .blueprint--button {
+      opacity: 1;
+    }
+  }
+}
+
+.blog-post-block--text {
+  padding: 24px;
+  height: 222px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--earth);
+  transition: all 0.2s;
+}
+
+.blog-post-block:hover .blog-post-block--text {
+  height: 100%;
+  background-color: var(--atomicYellow);
+}
+
+.blog-post-block a {
+  text-decoration: none;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.blog-post-block h3 {
+  margin-top: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-post-block--meta {
+  display: flex;
+  opacity: 0.5;
+  font-size: 16px;
+  line-height: 1.2;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.blog-post-block--meta span:first-child::after {
+}
+
+.blog-post-block--meta-locations:before {
+  content: "\2022";
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.blog-post-block .image-wrap {
+  // aspect-ratio: 375/281;
+  width: 100%;
+  height: 0;
+  height: 280px;
+  position: absolute;
+  overflow: hidden;
+  transition: padding-bottom 0.3s ease-in-out;
+  top: 0;
+  left: 0;
+}
+
+.blog-post-block .image-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease-in-out;
+  backface-visibility: hidden;
+}
+.blog-post-block a:hover img {
+  // transform: scale(1.05);
+}
+
+.navigation.pagination {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+  display: none;
+}
+.nav-links {
+  display: flex;
+
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}

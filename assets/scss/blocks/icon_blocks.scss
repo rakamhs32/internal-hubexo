@@ -1,0 +1,116 @@
+.icon-size-medium,
+.icon-size-default {
+  object-fit: contain;
+  object-position: center;
+}
+.icon-size-default {
+  width: 64px;
+  height: 64px;
+}
+.icon-size-medium {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-blocks {
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-blocks .fade-in {
+  position: relative;
+  z-index: 2;
+}
+
+.icon-blocks--background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  @media (max-width: 991px) {
+    height: 40%;
+    top: auto;
+    bottom: 0;
+  }
+  @media (max-width: 767px) {
+    height: 50%;
+  }
+}
+.has-image .icon-blocks--background {
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+  top: auto;
+  bottom: 0;
+}
+
+.icon-blocks--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+  z-index: 2;
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (max-width: 767px) {
+    display: flex;
+    gap: 16px;
+    overflow: auto;
+    flex-wrap: nowrap;
+  }
+}
+.icon-blocks--grid::-webkit-scrollbar {
+  display: none;
+}
+
+.icon-blocks--grid.is-two {
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.icon-block {
+  background-color: var(--earth);
+  padding: 24px;
+
+  @media (min-width: 900px) {
+    --transition-duration: 1s;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: transform var(--transition-duration),
+      opacity var(--transition-duration);
+    transition-delay: calc(0.1s + var(--n) * 0.2s);
+
+    .editor-styles-wrapper & {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+
+    &.in-view {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    min-width: 311px;
+  }
+}
+
+.icon-block img,
+.icon-block svg {
+  margin-bottom: 48px;
+}
+
+.icon-block p {
+  margin-top: 10px;
+}

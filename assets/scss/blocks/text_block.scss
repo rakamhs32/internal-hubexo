@@ -1,0 +1,41 @@
+.text-block--text {
+	width: 66.666%;
+	@media (max-width: 991px) {
+		width: 100%;
+	}
+	p {
+		max-width: 46ch;
+	}
+}
+
+.text-block h1,
+.text-block h2 {
+	@extend .h5;
+}
+.text-block h3,
+.text-block h4,
+.text-block h5,
+.text-block h6 {
+	@extend .h6;
+}
+
+.text-block ul {
+	padding: 0;
+	list-style: none;
+}
+.text-block li {
+	@extend .p;
+	margin-top: 25px !important;
+	position: relative;
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:before {
+		content: "–";
+		top: 0;
+		left: 0;
+	}
+}

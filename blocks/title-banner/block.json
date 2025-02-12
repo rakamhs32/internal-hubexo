@@ -1,0 +1,16 @@
+{
+  "name": "acf/title-banner",
+  "title": "Title banner",
+  "description": "Title banner",
+  "style": [],
+  "category": "hubexo",
+  "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20 11.0837H4V9.58374H20V11.0837Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 14.5642H4V13.0642H14V14.5642Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1.5 7.54468V16.5447H22.5V7.54468H1.5ZM1 6.04468C0.447715 6.04468 0 6.49239 0 7.04468V17.0447C0 17.597 0.447716 18.0447 1 18.0447H23C23.5523 18.0447 24 17.597 24 17.0447V7.04468C24 6.49239 23.5523 6.04468 23 6.04468H1Z\" fill=\"#1E1E1E\"/></svg>",
+  "keywords": ["Title banner"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "title-banner.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

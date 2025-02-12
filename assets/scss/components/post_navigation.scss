@@ -1,0 +1,29 @@
+.post-navigation {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid var(--plum);
+	padding-top: 24px;
+	padding-bottom: stretch(24px, 60px);
+	position: relative;
+	z-index: 2;
+}
+
+.post-navigation a {
+	@extend .small-title--bold;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	svg {
+		margin-right: 24px;
+	}
+	@media (max-width: 767px) {
+		span {
+			display: none;
+		}
+	}
+}
+
+.post-navigation .next-post a svg {
+	margin-right: 0;
+	margin-left: 24px;
+}

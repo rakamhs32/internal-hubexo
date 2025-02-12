@@ -1,0 +1,51 @@
+ul {
+	list-style: disc outside;
+}
+ol {
+	list-style: decimal outside;
+}
+ol,
+ul {
+	margin-bottom: 0;
+	@extend .p;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin: 1.5rem 0 1.5rem 3rem;
+	font-size: 90%;
+}
+
+li {
+	margin-bottom: 1rem;
+}
+
+.tick-list {
+	ul {
+		li {
+			list-style: none;
+			position: relative;
+			padding-left: 30px;
+			line-height: 1.3;
+			&:before {
+				content: "";
+				display: block;
+				width: 17px;
+				height: 13px;
+				background: url(../img/custom-bullet.svg);
+				position: absolute;
+				background-size: 80%;
+				background-repeat: no-repeat;
+				background-position: center center;
+				top: 0.5em;
+				left: 0;
+				@media (max-width: 767px) {
+					width: 13px;
+					height: 9px;
+				}
+			}
+		}
+	}
+}

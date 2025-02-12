@@ -1,0 +1,16 @@
+{
+  "name": "acf/testimonials",
+  "title": "Testimonials",
+  "description": "Testimonials",
+  "style": [],
+  "category": "hubexo",
+  "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.989 15.5002H3.98901V14.0002H19.989V15.5002Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.989 18.9807H3.98901V17.4807H13.989V18.9807Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.4964 9.57081V3.98718H7.9964V9.57081C7.9964 10.1695 7.8012 10.8163 7.25195 11.3021C6.71507 11.7769 5.94476 12.0044 4.98273 12.0044V10.5044C5.72874 10.5044 6.09027 10.327 6.25821 10.1785C6.41379 10.0409 6.4964 9.84586 6.4964 9.57081Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.0014 9.57081V3.98718H13.5014V9.57081C13.5014 10.1695 13.3062 10.8163 12.757 11.3021C12.2201 11.7769 11.4498 12.0044 10.4878 12.0044V10.5044C11.2338 10.5044 11.5953 10.327 11.7632 10.1785C11.9188 10.0409 12.0014 9.84586 12.0014 9.57081Z\" fill=\"#1E1E1E\"/><path d=\"M3.98901 3.98718H7.98901V7.98718H3.98901V3.98718Z\" fill=\"#1E1E1E\"/><path d=\"M9.48157 3.98718H13.4816V7.98718H9.48157V3.98718Z\" fill=\"#1E1E1E\"/></svg>",
+  "keywords": ["Testimonials"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "testimonials.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

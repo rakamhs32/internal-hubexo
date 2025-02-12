@@ -1,0 +1,28 @@
+button.hamburger {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	border: 0;
+	background-color: transparent;
+	display: none;
+	font-weight: 500;
+	@media (max-width: 991px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+span.hamburger--icon {
+	position: relative;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: var(--plum);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	outline: none;
+	border: 0;
+}

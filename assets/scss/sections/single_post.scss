@@ -1,0 +1,142 @@
+body.single-post {
+	//background-color: var(--aluminium);
+}
+
+.single-post-title {
+	max-width: 776px;
+}
+
+.single-post-banner {
+	position: relative;
+	z-index: 2;
+}
+
+.single-post--content {
+	max-width: 776px;
+	position: relative;
+	z-index: 2;
+}
+
+.single-post--content .location-card p {
+	margin-top: 0;
+}
+
+.blog-post-contact {
+	margin-top: 16px;
+	max-width: 375px;
+	@media (max-width: 767px) {
+		max-width: 100%;
+	}
+}
+
+.content-panel.blog-content {
+	@media (max-width: 991px) {
+		padding-bottom: 0;
+	}
+}
+
+.blog-content.content-panel {
+	padding-top: 60px;
+}
+
+.single-post--content p,
+.single-post--content figure,
+.single-post--content ul {
+	margin-top: 60px;
+}
+.single-post--content ul,
+.editor-styles-wrapper ul {
+	padding: 0;
+	list-style: none;
+}
+.single-post--content li,
+.editor-styles-wrapper li.block-editor-block-list__block {
+	@extend .p;
+	margin-top: 25px !important;
+	position: relative;
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:before {
+		content: "–";
+		top: 0;
+		left: 0;
+	}
+}
+
+.single-post--content li:first-child,
+.editor-styles-wrapper li.block-editor-block-list__block:first-child {
+	margin-top: 0 !important;
+}
+
+.single-post--content .wp-embed-aspect-16-9 .wp-block-embed__wrapper {
+	width: 100%;
+	aspect-ratio: 16/9;
+	position: relative;
+	iframe {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.single-post--content img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.single-post--content figure {
+	padding: 0;
+	margin: 0;
+	margin-top: 60px;
+}
+
+.single-post-container img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.single-post--footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin-top: 30px;
+}
+
+//gutenburg stuff
+
+.editor-styles-wrapper p.wp-block-paragraph,
+.editor-styles-wrapper .wp-block-image,
+.editor-styles-wrapper ul.wp-block-list {
+	margin-top: 60px !important;
+}
+
+.editor-styles-wrapper figure.wp-embed-aspect-16-9 .wp-block-embed__wrapper {
+	width: 100%;
+	aspect-ratio: 16/9;
+	position: relative;
+	iframe {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+.editor-styles-wrapper figure {
+	margin: 0;
+	margin-top: 60px;
+}

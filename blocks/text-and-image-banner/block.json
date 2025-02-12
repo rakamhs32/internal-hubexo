@@ -1,0 +1,16 @@
+{
+  "name": "acf/text-and-image-banner",
+  "title": "Text and image banner",
+  "description": "Text and image banner",
+  "style": [],
+  "category": "hubexo",
+  "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1.5 7.54602V16.546H22.5V7.54602H1.5ZM1 6.04602C0.447715 6.04602 0 6.49374 0 7.04602V17.046C0 17.5983 0.447716 18.046 1 18.046H23C23.5523 18.046 24 17.5983 24 17.046V7.04602C24 6.49374 23.5523 6.04602 23 6.04602H1Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10.9869 11.0423L3.99072 11.0423L3.99072 9.5423L10.9869 9.5423L10.9869 11.0423Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.98865 14.0593H3.99072V12.5593H7.98865V14.0593Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.773 10.7429L23.8421 14.8456L22.7771 15.9019L19.8014 12.9016L16.5298 16.3786L13.6739 14.2148L9.36272 17.8985L8.38831 16.7581L13.6174 12.2901L16.3612 14.3689L19.773 10.7429Z\" fill=\"#1E1E1E\"/></svg>",
+  "keywords": ["Text and image banner"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "text-and-image-banner.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "acf/homepage-banner",
+  "title": "Homepage banner",
+  "description": "Homepage banner",
+  "style": [],
+  "category": "hubexo",
+  "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"6.03003\" cy=\"6\" r=\"0.5\" fill=\"#1E1E1E\"/><circle cx=\"9.99927\" cy=\"6\" r=\"1\" fill=\"#1E1E1E\"/><circle cx=\"5.99927\" cy=\"10\" r=\"1\" fill=\"#1E1E1E\"/><circle cx=\"13.9993\" cy=\"6\" r=\"1.5\" fill=\"#1E1E1E\"/><circle cx=\"9.99927\" cy=\"10\" r=\"1.5\" fill=\"#1E1E1E\"/><circle cx=\"5.99927\" cy=\"14\" r=\"1.5\" fill=\"#1E1E1E\"/><circle cx=\"17.9993\" cy=\"18\" r=\"2\" fill=\"#1E1E1E\"/><circle cx=\"13.9993\" cy=\"18\" r=\"2\" fill=\"#1E1E1E\"/><circle cx=\"9.99927\" cy=\"18\" r=\"2\" fill=\"#1E1E1E\"/><circle cx=\"5.99927\" cy=\"18\" r=\"2\" fill=\"#1E1E1E\"/><circle cx=\"17.9993\" cy=\"6\" r=\"2\" fill=\"#1E1E1E\"/><circle cx=\"17.9993\" cy=\"14\" r=\"2\" fill=\"#1E1E1E\"/><circle cx=\"13.9993\" cy=\"14\" r=\"2\" fill=\"#1E1E1E\"/><circle cx=\"13.9993\" cy=\"10\" r=\"2\" fill=\"#1E1E1E\"/><circle cx=\"9.99927\" cy=\"14\" r=\"2\" fill=\"#1E1E1E\"/><circle cx=\"17.9993\" cy=\"10\" r=\"2\" fill=\"#1E1E1E\"/></svg>",
+  "keywords": ["Homepage banner"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "homepage-banner.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

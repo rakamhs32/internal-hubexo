@@ -1,0 +1,22 @@
+a {
+	color: var(--plum);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.2em;
+	font-weight: 600;
+	&:hover {
+		color: var(--plum);
+	}
+	&.no-ul {
+		text-decoration: none;
+	}
+}
+
+a.block-link {
+	display: block;
+	color: inherit;
+	border: 0;
+	&:hover {
+		text-decoration: none;
+	}
+}

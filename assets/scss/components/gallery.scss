@@ -1,0 +1,134 @@
+body .fslightbox-toolbar-button:first-child {
+	display: none;
+}
+
+body .fslightbox-slide-number-container {
+	@extend .h4;
+	margin-top: 0;
+	color: var(--white);
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: stretch(30px, 60px);
+	top: auto;
+	height: auto;
+}
+
+body .fslightbox-slash {
+	width: auto;
+	height: auto;
+	transform: none;
+	background-color: transparent;
+}
+
+body .fslightbox-slash:after {
+	content: "of";
+	display: inline-block;
+}
+
+body .fslightbox-slide-btn,
+body .fslightbox-toolbar-button {
+	width: 48px;
+	height: 48px;
+	background-color: var(--lightPurple);
+	border-radius: 50px;
+	svg path {
+		fill: var(--black);
+	}
+	&:hover svg path {
+		fill: var(--black);
+	}
+}
+body .fslightbox-slide-btn-container:hover .fslightbox-svg-path {
+	fill: var(--black);
+}
+body .fslightbox-toolbar-button:hover .fslightbox-svg-path {
+	fill: var(--black);
+}
+
+body .fslightbox-toolbar-button {
+	margin-top: 15px;
+	margin-right: 15px;
+}
+
+.glightbox-clean .gprev,
+.glightbox-clean .gnext,
+.glightbox-clean .gclose {
+	width: stretch(28px, 48px);
+	height: stretch(28px, 48px);
+	background-color: var(--lightPurple);
+	border-radius: 50px;
+	padding: 0;
+	opacity: 1;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 40%;
+	svg {
+		width: 35%;
+		height: auto;
+	}
+	svg path {
+		fill: var(--black);
+	}
+	&:hover {
+		background-color: var(--lightPurple);
+	}
+}
+.glightbox-clean .gclose {
+	svg {
+		opacity: 0;
+	}
+	background-image: url(../img/close.svg);
+}
+.glightbox-clean .gnext,
+.glightbox-clean .gprev {
+	svg {
+		opacity: 0;
+	}
+	background-image: url(../img/small-arrow.svg);
+}
+.glightbox-clean .gnext {
+	transform: rotate(180deg);
+}
+
+.plyr button {
+	height: auto;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: transparent !important;
+	}
+	&.plyr__control.plyr__control--overlaid {
+		background-color: var(--plum);
+		opacity: 1;
+		//background-color: var(--plum);
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: var(--plum) !important;
+		}
+	}
+}
+
+.plyr--full-ui input[type="range"] {
+	color: var(--plum);
+}
+
+body .goverlay {
+	background-color: rgba(#321432, 0.8);
+}
+
+body .gclose {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: var(--earth);
+	svg {
+		width: 14px;
+		height: 14px;
+	}
+}

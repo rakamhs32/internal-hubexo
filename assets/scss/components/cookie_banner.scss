@@ -1,0 +1,70 @@
+body #cookie-consent {
+	button {
+		@extend .button;
+		&.solid {
+			background-color: var(--blue);
+			border-color: var(--blue);
+			color: var(--lightPurple);
+			margin-top: 0;
+			&:hover,
+			&:active {
+				background-color: var(--black);
+				border-color: var(--black);
+				color: var(--lightPurple);
+			}
+		}
+		&.hollow {
+			color: var(--black);
+			&:hover,
+			&:active,
+			&:focus {
+				color: var(--lightPurple);
+			}
+		}
+	}
+	.page {
+		margin-top: 30px;
+		padding: stretch(15px, 30px);
+	}
+	.page h2 {
+		@extend .h2;
+		margin-top: 0;
+	}
+	.messaging {
+		margin: 0;
+	}
+	.messaging p {
+		@extend .p;
+	}
+	.controls {
+		margin-top: stretch(20px, 40px);
+	}
+	.toggle-set {
+		background-color: var(--lightPurple);
+	}
+	p.toggle-set {
+		padding: 0;
+		@extend .p;
+	}
+	.toggle-set h4 {
+		font-weight: normal;
+		margin-bottom: 0;
+	}
+
+	.partner-list,
+	.partner-list.open {
+		padding: 0;
+		padding-left: 0;
+	}
+	.partner-section-title {
+		padding: 0;
+	}
+
+	.partner {
+		margin-top: 15px;
+		padding-bottom: 7.5px;
+	}
+	.partner .partner-logo {
+		margin-left: 0;
+	}
+}
