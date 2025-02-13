@@ -5,6 +5,7 @@ import GLightbox from "glightbox";
 import basicIntersections from "./modules/basicIntersections";
 import dotsStrip from "./modules/dotsStrip";
 import logoCarousel from "./modules/logoCarousel";
+// import journey from "./modules/journey";
 import testimonials from "./modules/testimonials";
 import infiniteScroll from "./modules/infiniteScroll";
 import fpnBlocks from "./modules/fpnBlocks";
@@ -25,6 +26,7 @@ function init() {
   basicIntersections.init();
   infiniteScroll.init();
   fpnBlocks.init();
+  // journey.init();
   createHero();
   stats();
   linkListMobileTriggers();

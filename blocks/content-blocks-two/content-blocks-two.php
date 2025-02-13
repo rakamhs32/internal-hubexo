@@ -38,7 +38,7 @@ if (!empty($image)) {
                     <div class="image-block--details">
                         <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr($image_alt); ?>"
                              title="<?= esc_attr($image_title); ?>">
-                        <div class="block-yellow"></div>
+                        <div class="block-yellow-two"></div>
                     </div>
                 <?php endif; ?>
             </div>

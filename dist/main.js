@@ -4353,6 +4353,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 
 
 
+// import journey from "./modules/journey";
 
 
 
@@ -4372,6 +4373,7 @@ function init() {
   _modules_basicIntersections__WEBPACK_IMPORTED_MODULE_4__["default"].init();
   _modules_infiniteScroll__WEBPACK_IMPORTED_MODULE_8__["default"].init();
   _modules_fpnBlocks__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+  // journey.init();
   (0,_modules_introDots__WEBPACK_IMPORTED_MODULE_11__.createHero)();
   (0,_modules_stats__WEBPACK_IMPORTED_MODULE_12__.stats)();
   (0,_modules_linkList__WEBPACK_IMPORTED_MODULE_13__.linkListMobileTriggers)();

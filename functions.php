@@ -50,3 +50,5 @@ function add_custom_class_to_gutenberg_page_content() {
     }
 }
 add_action('admin_head', 'add_custom_class_to_gutenberg_page_content');
+
+

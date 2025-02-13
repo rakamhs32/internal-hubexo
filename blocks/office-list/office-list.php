@@ -1,33 +1,61 @@
 <?php
-
 $image = get_field('map_image');
 $locationBlocks = get_field('location_blocks');
-
 ?>
-<div class="content-panel earth-bg map">
+
+<div class="content-panel earth-bg map map-office">
     <div class="container">
-        <div class="locations fade-in">
-            <h2 class="h5"><?= get_field('title'); ?></h2>
+        <?php if (!empty($image)): ?>
+            <picture>
+                <source
+                    srcset="<?= esc_url($image['sizes']['mobile']); ?>"
+                    media="(max-width: 500px)">
+                <source
+                    srcset="<?= esc_url($image['url']); ?>">
+                <img
+                    src="<?= esc_url($image['url']); ?>"
+                    loading="lazy"
+                    class="fade-in map--image"
+                    alt="<?= esc_attr($image['alt']); ?>">
+            </picture>
+            <div class="locations fade-in in-view">
+        <?php else: ?>
+            <picture style="display: none;"></picture>
+            <div class="locations map-none fade-in in-view">
+        <?php endif; ?>
+            <h2 class="h5"><?= esc_html(get_field('title')); ?></h2>
             <div class="locations-grid">
                 <?php if (!empty($locationBlocks)): ?>
                     <?php foreach ($locationBlocks as $i => $locationBlock):
-                        $email = $locationBlock['email_address'];
-                        $email = antispambot($email);
                     ?>
-                        <div class="location-card" style="--n: <?= $i ?>">
-                            <h3 class="snug small-title--bold">
-                                <?= $locationBlock['title']; ?>
-                                <p><a href="mailto:<?= $email; ?>" target="_blank" class="blueprint--button">Email us <?php get_template_part('parts/svg/right-arrow'); ?></a></p>
-
+                        <div class="location-card" style="--n: <?= esc_attr($i); ?>">
+                            <h3 class="snug small-title--bold location-card-center">
+                                <?= esc_html($locationBlock['title']); ?>
+                                <p>
+                                    <a href="mailto:<?= esc_html(antispambot($locationBlock['email_address'])); ?>" target="_blank" class="blueprint--button">Email us <?php get_template_part('parts/svg/right-arrow'); ?></a>
+                                </p>
                             </h3>
-                            <?php if ($locationBlock['icon'] ?? false): ?>
-                                <img src="<?= $locationBlock['icon']['url'] ?>" alt="<?= $locationBlock['icon']['alt'] ?>" class="icon-size-medium" />
-                            <?php endif; ?>
+                            <div class="location-card__content">
+                                <p><?= esc_html($locationBlock['description']); ?></p>
+
+                                <?php if (!empty($locationBlock['contact_list'])): ?>
+                                    <?php foreach ($locationBlock['contact_list'] as $contact): ?>
+                                        <div class="loopnumb">
+                                            <div class="phone-numb">
+                                                <?php if (!empty($contact['icon'])): ?>
+                                                    <img src="<?= esc_url($contact['icon']['url']); ?>" alt="<?= esc_attr($contact['icon']['alt']); ?>" class="icon-size-medium" />
+                                                <?php endif; ?>
+                                                <p><?= esc_html($contact['number']); ?></p>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
-
         </div>
     </div>
 </div>

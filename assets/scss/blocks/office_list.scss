@@ -1,3 +1,7 @@
+.content-panel.map.map-office {
+    padding: clamp(4.938rem, 0.615rem + 1.4vw, 1.875rem) 0;
+}
+
 .office--content {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -50,10 +54,31 @@
     font-weight: 400;
 }
 
-.office-location--details {
-    
-}
-
 .sub-office-name {
     width: 20rem;
+}
+
+.location-card-center p {
+    margin-top: 0rem;
+}
+
+.loopnumb {
+    margin-top: 1rem;
+}
+
+.phone-numb {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: .5rem;
+}
+
+.phone-numb p {
+    margin-top: 0;
+}
+
+.locations.map-none {
+    position: relative;
+    top: 0px;
+    margin-bottom: 0px;
 }

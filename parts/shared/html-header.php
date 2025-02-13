@@ -25,6 +25,8 @@
 		window.THEME_DIRECORY = "<?= get_stylesheet_directory_uri(); ?>";
 		window.GOOGLE_MAPS_API_KEY = "<?= GOOGLE_MAPS_API_KEY ?>";
 	</script>
+	<link rel="stylesheet" href="<?php echo get_theme_file_uri('node_modules/swiper/swiper-bundle.min.css')?>">
+	<script src="<?php echo get_theme_file_uri('node_modules/swiper/swiper-bundle.min.js')?>"></script>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-V49ZSF18RF"></script>
 	<script>

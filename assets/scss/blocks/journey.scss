@@ -1,0 +1,136 @@
+.swiper-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 0rem 0rem 0rem;
+}
+
+.pagination-item {
+  // width: fit-content !important;
+  top: 0 !important;
+  height: fit-content;
+  // width: min-content !important;
+}
+
+.mySwiper {
+  height: 15rem;
+  margin-top: 4rem;
+  @media (max-width: 767px) {
+    height: 16rem;
+    margin-top: 4rem;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 120px !important;
+  height: 120px !important;
+  background-color: var(--plum) !important;
+  color: var(--atomicYellow) !important;
+  border: 2px solid var(--atomicYellow) !important;
+  opacity: 1 !important;
+  @media (max-width: 767px) {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
+  width: 120px !important;
+  height: 120px !important;
+  background-color: var(--atomicYellow) !important;
+  color: var(--plum) !important;
+  @media (max-width: 767px) {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+.line-yellow {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px solid var(--atomicYellow);
+    @media (max-width: 767px) {
+      top: 50px;
+    }
+}
+
+.title-journey,
+.subtitle-journey,
+.swiper-item {
+    color: var(--earth);
+}
+
+.year {
+  margin-top: 2.6rem !important;
+  font-size: 1.5rem !important;
+  @media (max-width: 767px) {
+    margin-top: 2rem !important;
+    font-size: 1.2rem !important;
+  }
+}
+
+.swiper-button-prev.button-prev {
+  left: 0px;
+}
+
+.swiper-button-next.button-next {
+  right: 0px;
+}
+
+.swiper-button-next.button-next, .swiper-button-prev.button-prev {
+  top: 50px;
+  background-color: var(--atomicYellow);
+  padding: 2rem;
+  color: var(--plum);
+  border-radius: 4px;
+  z-index: 1000;
+  @media (max-width: 1023px) {
+    padding: 1.4rem;
+    top: 60px;
+  }
+  @media (max-width: 767px) {
+    padding: 1rem;
+    top: 50px;
+  }
+}
+
+.swiper-button-next.button-next.swiper-button-disabled, .swiper-button-prev.button-prev.swiper-button-disabled {
+  opacity: 1;
+  background-color: #b9d733;
+}
+
+.swiper-button-next.button-next::after, .swiper-button-prev.button-prev::after {
+  font-size: 1.8rem;
+  @media (max-width: 1023px) {
+    font-size: 1.4rem;
+  }
+  @media (max-width: 767px) {
+    font-size: 1rem;
+  }
+}
+
+.swiper-item-content {
+  display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+}
+
+.swiper-pagination.pagination-item.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic {
+  // left: 54% !important;
+  // @media (max-width: 1199px) {
+  //   left: 56% !important;
+  // }
+  // @media (max-width: 991px) {
+  //   left: 58% !important;
+  // }
+  // @media (max-width: 767px) {
+  //   left: 67.4% !important;
+  // }
+}
+
+
