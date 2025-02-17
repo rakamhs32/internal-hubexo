@@ -14,12 +14,14 @@ $subtitle = get_field('sub_title');
             <?php if (have_rows('journey')): ?>
                 <?php while (have_rows('journey')): the_row();
                     $description = get_sub_field('description');
+                    $description_wysiwyg = get_sub_field('description_wysiwyg');
                     $year = get_sub_field('year');
                 ?>
                 <div class="swiper-slide swiper-item" data-year="<?= $year; ?>">
                     <div class="swiper-item-content">
-                        <?= $description ?>
+                        <?= $description_wysiwyg ?>
                     </div>
+                    <p class="text-for-scroll">scroll for see more contents</p>
                 </div>
                 <?php endwhile; ?>
                 <?php endif; ?>

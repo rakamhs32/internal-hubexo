@@ -18,3 +18,24 @@
 	color: var(--earth);
 	text-decoration: none;
 }
+
+#menu-footer li ul {
+	display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: space-around;
+    gap: 12px;
+    margin-top: 1rem;
+    position: relative;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+#menu-footer li a {
+	font-size: 1.2rem;
+}
+
+#menu-footer li ul li a {
+	font-size: 1rem;
+	font-weight: 400;
+}

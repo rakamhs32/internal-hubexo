@@ -32,7 +32,7 @@ $locationBlocks = get_field('location_blocks');
                             <h3 class="snug small-title--bold location-card-center">
                                 <?= esc_html($locationBlock['title']); ?>
                                 <p>
-                                    <a href="mailto:<?= esc_html(antispambot($locationBlock['email_address'])); ?>" target="_blank" class="blueprint--button">Email us <?php get_template_part('parts/svg/right-arrow'); ?></a>
+                                    <a href="mailto:<?= esc_html(antispambot($locationBlock['email_address'])); ?>" target="_blank" class="blueprint--button mail--button">Email us <?php get_template_part('parts/svg/right-arrow'); ?></a>
                                 </p>
                             </h3>
                             <div class="location-card__content">
@@ -44,8 +44,12 @@ $locationBlocks = get_field('location_blocks');
                                             <div class="phone-numb">
                                                 <?php if (!empty($contact['icon'])): ?>
                                                     <img src="<?= esc_url($contact['icon']['url']); ?>" alt="<?= esc_attr($contact['icon']['alt']); ?>" class="icon-size-medium" />
+                                                <?php else: ?>
+                                                    <img src="" alt="" style="display: none;" />
                                                 <?php endif; ?>
-                                                <p><?= esc_html($contact['number']); ?></p>
+                                                <p>
+                                                    <a href=""><?= esc_html($contact['number']); ?></a>
+                                                </p>
                                             </div>
                                         </div>
                                     <?php endforeach; ?>

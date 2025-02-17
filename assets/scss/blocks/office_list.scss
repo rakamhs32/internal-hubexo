@@ -73,12 +73,23 @@
     margin-top: .5rem;
 }
 
-.phone-numb p {
+.phone-numb p a {
     margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: inherit;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .locations.map-none {
     position: relative;
     top: 0px;
     margin-bottom: 0px;
+}
+
+.mail--button {
+    min-width: 150px;
 }

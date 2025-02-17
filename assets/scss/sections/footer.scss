@@ -47,7 +47,7 @@
 	display: flex;
 	justify-content: space-between;
 	color: var(--earth);
-	align-items: center;
+	align-items: start;
 	margin-top: 60px;
 	span {
 		font-size: 16px;
@@ -58,3 +58,9 @@
 		row-gap: 48px;
 	}
 }
+
+.site-footer--grid span {
+	font-size: 1.2rem;
+}
+
+
