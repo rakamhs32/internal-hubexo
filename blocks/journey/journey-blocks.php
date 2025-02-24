@@ -21,7 +21,6 @@ $subtitle = get_field('sub_title');
                     <div class="swiper-item-content">
                         <?= $description_wysiwyg ?>
                     </div>
-                    <p class="text-for-scroll">scroll for see more contents</p>
                 </div>
                 <?php endwhile; ?>
                 <?php endif; ?>

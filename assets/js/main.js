@@ -9,11 +9,13 @@ import logoCarousel from "./modules/logoCarousel";
 import testimonials from "./modules/testimonials";
 import infiniteScroll from "./modules/infiniteScroll";
 import fpnBlocks from "./modules/fpnBlocks";
+import officeListTwo from "./modules/officeListTwo";
 import header from "./modules/header";
 import { createHero } from "./modules/introDots";
 import { stats } from "./modules/stats";
 import { linkListMobileTriggers } from "./modules/linkList";
 import { iconBlocks } from "./modules/iconBlocks";
+import numberBlocks from "./modules/numberBlocks";
 
 function init() {
   header.init();
@@ -26,6 +28,8 @@ function init() {
   basicIntersections.init();
   infiniteScroll.init();
   fpnBlocks.init();
+  officeListTwo.init();
+  numberBlocks.init();
   // journey.init();
   createHero();
   stats();

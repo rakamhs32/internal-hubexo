@@ -36,9 +36,15 @@ $locationBlocks = get_field('location_blocks');
                                 </p>
                             </h3>
                             <div class="location-card__content">
-                                <p><?= esc_html($locationBlock['description']); ?></p>
+                                <p><?= esc_html($locationBlock['address_1']); ?></p>
+                                <p><?= esc_html($locationBlock['address_2']); ?></p>
+                                <p>
+                                    <span><?= esc_html($locationBlock['city']); ?></span>
+                                    <span><?= esc_html($locationBlock['country']); ?></span>
+                                    <span><?= esc_html($locationBlock['area_code']); ?></span>
+                                </p>
 
-                                <?php if (!empty($locationBlock['contact_list'])): ?>
+                               <?php if (!empty($locationBlock['contact_list'])): ?>
                                     <?php foreach ($locationBlock['contact_list'] as $contact): ?>
                                         <div class="loopnumb">
                                             <div class="phone-numb">

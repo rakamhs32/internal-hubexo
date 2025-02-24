@@ -115,3 +115,20 @@
 .icon-block p {
   margin-top: 10px;
 }
+
+.blueprint--button svg {
+  margin: 0rem !important;
+}
+
+.blueprint--button.icon-blocks--button {
+  background-color: var(--plum);
+  border: 1px solid var(--plum);
+  color: var(--earth);
+  margin-top: 1rem;
+  &:hover {
+    background-color: var(--atomicYellow);
+    border: 1px solid var(--atomicYellow);
+    color: var(--plum);
+  }
+
+}

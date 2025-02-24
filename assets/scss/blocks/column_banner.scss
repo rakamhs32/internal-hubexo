@@ -1,0 +1,10 @@
+.hero-banner .container.right {
+  display: grid;
+  justify-content: end;
+  text-align: left;
+}
+
+.hero-banner--image.right {
+  right: inherit;
+  left: 0;
+}

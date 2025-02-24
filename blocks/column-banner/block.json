@@ -1,0 +1,16 @@
+{
+  "name": "acf/column-banner",
+  "title": "Column banner",
+  "description": "Column banner",
+  "style": [],
+  "category": "hubexo",
+  "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 6.48438H2C1.72386 6.48438 1.5 6.70823 1.5 6.98437V16.9844C1.5 17.2605 1.72386 17.4844 2 17.4844H22C22.2761 17.4844 22.5 17.2605 22.5 16.9844V6.98438C22.5 6.70823 22.2761 6.48438 22 6.48438ZM2 4.98438C0.895431 4.98438 0 5.87981 0 6.98437V16.9844C0 18.0889 0.89543 18.9844 2 18.9844H22C23.1046 18.9844 24 18.0889 24 16.9844V6.98438C24 5.87981 23.1046 4.98438 22 4.98438H2Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.033 10.4926H4.03296V8.99261H14.033V10.4926Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.03577 12.7261C4.03577 12.3119 4.37155 11.9761 4.78577 11.9761H8.24146C8.65567 11.9761 8.99146 12.3119 8.99146 12.7261C8.99146 13.1403 8.65567 13.4761 8.24146 13.4761H4.78577C4.37155 13.4761 4.03577 13.1403 4.03577 12.7261Z\" fill=\"#1E1E1E\"/></svg>",
+  "keywords": ["Column banner"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "column-banner.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

@@ -19,10 +19,10 @@ body:has(main.earth-bg) .header-bg .header-nav {
   border-color: transparent;
 }
 body:has(main.earth-bg) .sub-menu:after {
-  content: "";
+  // content: "";
   width: 40px;
   height: 15px;
-  background: var(--earth);
+  // background: var(--earth);
   position: absolute;
   top: 0;
   left: 10%;

@@ -1,0 +1,57 @@
+blocker
+: 
+""
+data
+: 
+(12) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+debug
+: 
+"<!--\t\tCountry: Indonesia\n<br>\t\tCountry code: ID\n<br>\t\tState: Banten\n<br>\t\tState code: BT\n<br>\t\tCity: Tangerang\n<br>\t\tZip: 15810\n<br>\t\tContinent: Asia\n<br>\t\tGeolocation: { <br>\n\t\tTime zone: +07:00\n<br>\t\tAccuracy radius: 20\n<br>\t\tLat: -6.1770\n<br>\t\tLng: 106.6284\n<br>\t\t}<br>\n\t\tDefault IP: 111.94.197.193\n<br>\t\tIp being used: 111.94.197.193\n<br>\t\tGeot Version: \t\tPHP Version: 8.2.27\n<br>\t\tGeo Method: by_ip\n<br>\t\tHost:   54.252.222.112\t\t-->"
+geo
+: 
+city
+: 
+{data: {…}, default_locale: 'en'}
+continent
+: 
+{data: {…}, default_locale: 'en'}
+country
+: 
+data
+: 
+iso_code
+: 
+"ID"
+names
+: 
+{de: 'Indonesien', en: 'Indonesia', es: 'Indonesia', fr: 'Indonésie', ja: 'インドネシア共和国', …}
+[[Prototype]]
+: 
+Object
+default_locale
+: 
+"en"
+[[Prototype]]
+: 
+Object
+geolocation
+: 
+{data: {…}, default_locale: 'en'}
+state
+: 
+{data: {…}, default_locale: 'en'}
+[[Prototype]]
+: 
+Object
+posts
+: 
+{remove: Array(0), hide: Array(0)}
+redirect
+: 
+false
+success
+: 
+1
+[[Prototype]]
+: 
+Object

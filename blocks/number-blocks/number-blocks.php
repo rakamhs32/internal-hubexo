@@ -21,7 +21,7 @@ $style = get_field('style');
                 <?php foreach ($iconBlocks as $i => $iconBlock): ?>
                     <div class="icon-block number-block" style="--n: <?= $i ?>">
                         <!-- <img src="<?= $iconBlock['icon']['url']; ?>" alt="<?= $iconBlock['icon']['alt']; ?>" class="icon-size-default"> -->
-                        <h3 class="small-title--bold snug title--number"><?= $iconBlock['title']; ?></h3>
+                        <h3 class="small-title--bold snug title--number" data-count="<?= $iconBlock['title']; ?>">0+</h3>
                         <p><?= $iconBlock['text']; ?></p>
                     </div>
                 <?php endforeach; ?>

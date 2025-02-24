@@ -8,7 +8,7 @@ $title = get_field('title');
 <div class="content-panel link-list white-text plum-bg fade-in-stagger">
     <?php if (!empty($title)): ?>
         <div class="container fade-in">
-            <h2 class="h5 snug">Our values</h2>
+            <h2 class="h5 snug"><?= $title ?></h2>
         </div>
     <?php endif; ?>
     <div class="container">

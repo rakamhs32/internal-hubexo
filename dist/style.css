@@ -4323,6 +4323,22 @@ body.has-promo-banner .header-pad {
   margin-top: 10px;
 }
 
+.blueprint--button svg {
+  margin: 0rem !important;
+}
+
+.blueprint--button.icon-blocks--button {
+  background-color: var(--plum);
+  border: 1px solid var(--plum);
+  color: var(--earth);
+  margin-top: 1rem;
+}
+.blueprint--button.icon-blocks--button:hover {
+  background-color: var(--atomicYellow);
+  border: 1px solid var(--atomicYellow);
+  color: var(--plum);
+}
+
 .logo-slider {
   margin-top: clamp(3.75rem, 3.29rem + 1.9vw, 5rem);
 }
@@ -5555,6 +5571,17 @@ main.plum-bg .contacts h2 {
   margin-bottom: 0rem;
 }
 
+.location-card__content {
+  margin-top: 1.6rem;
+}
+
+.location-card__content p,
+.location-card__content a,
+.location-card__content li {
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+}
+
 .office-name {
   position: relative;
 }
@@ -5603,19 +5630,22 @@ main.plum-bg .contacts h2 {
 }
 
 .loopnumb {
-  margin-top: 1rem;
+  margin-top: 1.6rem;
 }
 
 .phone-numb {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 0.5rem;
+}
+
+.phone-numb p {
+  margin-top: 0rem;
 }
 
 .phone-numb p a {
   margin-top: 0;
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 1.07rem + 0.2vw, 1.25rem);
   font-weight: 500;
   text-decoration: inherit;
 }
@@ -5630,7 +5660,7 @@ main.plum-bg .contacts h2 {
 }
 
 .mail--button {
-  min-width: 150px;
+  min-width: 180px;
 }
 
 .swiper-item {
@@ -5776,7 +5806,6 @@ main.plum-bg .contacts h2 {
   width: 75%;
   color: var(--earth);
   max-height: 160px;
-  overflow-y: auto;
 }
 
 .swiper-item-content a,
@@ -5944,6 +5973,181 @@ main.plum-bg .contacts h2 {
   flex-direction: column;
 }
 
+.hero-banner .container.right {
+  display: grid;
+  justify-content: end;
+  text-align: left;
+}
+
+.hero-banner--image.right {
+  right: inherit;
+  left: 0;
+}
+
+.main-office-list p,
+.main-office-list svg,
+.main-office-list a {
+  color: var(--earth);
+  text-decoration: none;
+  margin-top: 0rem;
+}
+
+.main-office-list svg {
+  font-size: 18px;
+  color: var(--earth);
+}
+
+.main-office-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-office-content p {
+  font-weight: 600;
+}
+
+.container-office {
+  padding: 0rem;
+  margin: 0rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 991px) {
+  .container-office {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container-office li {
+  text-decoration: none;
+  list-style: none;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.main-office-list {
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--earth);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 0rem;
+}
+
+.main-office-list:hover,
+.main-office-list:focus,
+.main-office-list:active {
+  background-color: var(--earth);
+  transition: all 0.3s ease;
+  color: var(--plum);
+}
+
+.main-office-list:hover .sub-office,
+.main-office-list:focus .sub-office,
+.main-office-list:active .sub-office,
+.main-office-list:hover a,
+.main-office-list:focus a,
+.main-office-list:active a,
+.main-office-list:hover span,
+.main-office-list:focus span,
+.main-office-list:active span {
+  color: var(--plum) !important;
+}
+
+.main-office-list:hover img,
+.main-office-list:focus img,
+.main-office-list:active img {
+  filter: brightness(1) invert(0);
+}
+
+.main-office-list img,
+.main-office-list img,
+.main-office-list img {
+  filter: brightness(0) invert(1);
+}
+
+.main-office-list:hover p,
+.main-office-list:focus p,
+.main-office-list:active p {
+  color: var(--plum);
+}
+
+.main-office-list:hover svg,
+.main-office-list:focus svg,
+.main-office-list:active svg {
+  color: var(--plum);
+}
+
+.sub-office-list {
+  /* display: none; */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.sub-office-list.show {
+  display: contents;
+  opacity: 1;
+  max-height: 100px;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.sub-office {
+  margin-top: 1.5rem;
+  /* padding: 1.2rem 1rem; */
+  /* border-bottom: 1px solid var(--earth); */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sub-office:hover,
+.sub-office:focus,
+.sub-office:active {
+  transition: all 0.3s ease;
+  color: var(--plum);
+}
+
+.sub-office:hover p,
+.sub-office:focus p,
+.sub-office:active p {
+  color: var(--plum);
+}
+
+.sub-office:hover svg,
+.sub-office:focus svg,
+.sub-office:active svg {
+  color: var(--plum);
+}
+
+.sub-office-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-office {
+  display: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  margin-top: 1rem;
+}
+
+.address-office.show {
+  display: block;
+  opacity: 1;
+  max-height: 100%;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  margin-top: 1rem;
+}
+
+.yellow-title--section {
+  margin-bottom: 2rem;
+}
+
 /* Components                --- */
 .header-message {
   background-color: var(--plum);
@@ -5994,6 +6198,503 @@ main.plum-bg .contacts h2 {
   stroke: var(--white);
 }
 
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: var(--earth);
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 45%;
+  right: 1.2rem;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-color: var(--plum) transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--plum) transparent;
+  top: 30%;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: var(--plum);
+  padding: 1rem 3rem 1rem 2rem;
+  border: 1px solid transparent;
+  /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: -moz-max-content;
+  width: max-content;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.select-selected {
+  border-radius: 1000px;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: var(--earth);
+  top: 120%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 1rem;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  height: 190px;
+  overflow: scroll;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div {
+  padding: 0.5rem 2.5rem;
+  width: 100%;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bar-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-continue {
+  padding: 1rem 1rem 1rem 1rem;
+  width: -moz-max-content;
+  width: max-content;
+  height: 4rem;
+  font-size: 1rem;
+  background-color: var(--atomicYellow);
+}
+
+.button-continue:hover {
+  border: 1px solid var(--earth);
+}
+
+.submit-button {
+  background: none;
+  border: none;
+}
+
+.button-container {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.region-bar {
+  min-height: 10rem;
+  background-color: var(--plum);
+  position: absolute;
+  top: 0;
+  z-index: 90010;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.region-bar.close-bar {
+  top: -1000%;
+  transition: all ease-in-out 0.3s;
+}
+
+.title-and-icon {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: start;
+}
+
+.title-content--bar {
+  font-size: 1.4rem;
+  color: var(--atomicYellow);
+  margin: 0rem;
+  font-weight: 600;
+  text-align: start;
+}
+
+.description-banner a,
+.description-banner p {
+  font-size: 1.2rem;
+  color: var(--earth);
+  margin: 0rem;
+}
+
+.title-and-icon svg path {
+  fill: var(--atomicYellow);
+}
+
+.description-banner {
+  margin-top: 1.4rem;
+}
+
+.close-button {
+  padding: 0.5rem;
+  border: 1px solid var(--earth);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+.close-button--at-mobile {
+  padding: 0.5rem;
+  border: 1px solid var(--earth);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+  cursor: pointer;
+  right: 2rem;
+  position: absolute;
+  top: 1.5rem;
+}
+
+.close-button svg,
+.close-button--at-mobile svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  fill: var(--earth);
+}
+
+.close-button svg path,
+.close-button--at-mobile svg path {
+  fill: var(--earth);
+  stroke: var(--earth);
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .select-items div,
+  .select-selected {
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+  }
+  .select-selected:after {
+    right: 0.8rem;
+  }
+  .button-container {
+    gap: 1rem;
+  }
+  .button-continue {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .bar-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .title-content--bar {
+    font-size: 1rem;
+  }
+  .description-banner a,
+  .description-banner p {
+    font-size: 0.8rem;
+  }
+  .select-selected {
+    font-size: 1rem;
+    padding: 1rem 2rem !important;
+    border-radius: 40px;
+    height: 4rem;
+  }
+  .select-selected:after {
+    right: 0.8rem;
+    border: 6px solid transparent;
+    position: absolute;
+    content: "";
+    top: 45%;
+    width: 0;
+    height: 0;
+    border-color: var(--plum) transparent transparent transparent;
+  }
+  .button-continue {
+    padding: 1rem 1rem 1rem 1rem !important;
+    width: -moz-max-content;
+    width: max-content;
+    height: 3rem;
+    font-size: 1rem;
+  }
+  .title-and-icon svg {
+    width: 1.2rem;
+  }
+  .close-button {
+    display: none !important;
+  }
+  .close-button--at-mobile {
+    display: flex !important;
+  }
+  .region-bar {
+    padding: 5rem 0rem 2rem 0rem !important;
+  }
+}
+/*the container must be positioned relative:*/
+.lang-custom-select {
+  position: relative;
+}
+
+.lang-custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.lang-select-selected:after {
+  position: absolute;
+  content: "";
+  top: 45%;
+  right: 1.2rem;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-color: var(--earth) transparent transparent transparent;
+}
+
+.lang-select-selected:hover:after {
+  border-color: var(--plum) transparent transparent transparent;
+  color: var(--plum);
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.lang-select-selected.select-arrow-active:hover:after,
+.lang-select-selected.select-arrow-active:focus:after {
+  border-color: transparent transparent var(--plum) transparent;
+}
+
+.lang-select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--earth) transparent;
+  top: 30%;
+}
+
+/*style the items (options), including the selected item:*/
+.lang-select-items div,
+.lang-select-selected {
+  color: var(--plum);
+  padding: 1rem 2rem 1rem 2rem;
+  /* border: 1px solid var(--earth); */
+  /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 20rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.lang-select-selected {
+  border-radius: 1000px;
+  justify-self: center;
+}
+
+/*style items (options):*/
+.lang-select-items {
+  position: absolute;
+  background-color: var(--earth);
+  bottom: 120%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 1rem;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.lang-select-items div {
+  padding: 0.5rem 2rem;
+  width: 100%;
+}
+
+.lang-select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.lang-select-items div span svg {
+  width: 10px;
+  height: 10px;
+}
+
+.bar-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-continue {
+  padding: 1rem 2rem 1rem 2rem;
+  width: -moz-max-content;
+  width: max-content;
+  height: 4rem;
+  font-size: 1rem;
+  background-color: var(--atomicYellow);
+}
+
+.button-continue:hover {
+  border: 1px solid var(--earth);
+}
+
+.submit-button {
+  background: none;
+  border: none;
+}
+
+.button-container {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.language-bar {
+  min-height: 10rem;
+  background-color: var(--plum);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.language-bar.close-bar {
+  top: -120%;
+  transition: all ease-in-out 0.3s;
+}
+
+.title-and-icon {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: start;
+}
+
+.title-content--bar {
+  font-size: 1.4rem;
+  color: var(--atomicYellow);
+  margin: 0rem;
+  font-weight: 600;
+  text-align: start;
+}
+
+.description-banner a,
+.description-banner p {
+  font-size: 1.2rem;
+  color: var(--earth);
+  margin: 0rem;
+}
+
+.title-and-icon svg path {
+  fill: var(--atomicYellow);
+}
+
+.description-banner {
+  margin-top: 1.4rem;
+}
+
+.close-button {
+  padding: 0.5rem;
+  border: 1px solid var(--earth);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+.close-button svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  fill: var(--earth);
+}
+
+.close-button svg path {
+  fill: var(--earth);
+  stroke: var(--earth);
+}
+
+.site-footer--social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lang-select-selected {
+  background-color: transparent;
+  border: 1px solid var(--earth);
+  color: var(--earth);
+  transition: all ease-in-out 0.3s;
+}
+
+.lang-select-selected:hover,
+.lang-select-selected:focus {
+  background-color: var(--earth);
+  border: 1px solid var(--earth);
+  transition: all ease-in-out 0.3s;
+  color: var(--plum);
+}
+
+.lang-select-selected span svg {
+  height: 10px;
+  width: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .lang-select-items div, .lang-select-selected {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+  .button-container {
+    gap: 1rem;
+  }
+  .button-continue {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .language-bar {
+    display: none;
+  }
+}
 .header-nav {
   display: flex;
   flex-direction: column;

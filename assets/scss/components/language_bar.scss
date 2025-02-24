@@ -1,0 +1,230 @@
+ /*the container must be positioned relative:*/
+ .lang-custom-select {
+    position: relative;
+}
+
+.lang-custom-select select {
+    display: none;
+    /*hide original SELECT element:*/
+}
+
+ .lang-select-selected:after {
+     position: absolute;
+     content: "";
+     top: 45%;
+     right: 1.2rem;
+     width: 0;
+     height: 0;
+     border: 8px solid transparent;
+     border-color: var(--earth) transparent transparent transparent;
+ }
+
+ .lang-select-selected:hover:after {
+     border-color: var(--plum) transparent transparent transparent;
+     color: var(--plum);
+ }
+
+/*point the arrow upwards when the select box is open (active):*/
+.lang-select-selected.select-arrow-active:hover:after,
+.lang-select-selected.select-arrow-active:focus:after {
+    border-color: transparent transparent var(--plum) transparent;
+}
+
+.lang-select-selected.select-arrow-active:after {
+    border-color: transparent transparent var(--earth) transparent;
+    top: 30%;
+}
+
+/*style the items (options), including the selected item:*/
+.lang-select-items div,
+.lang-select-selected {
+    color: var(--plum);
+    padding: 1rem 2rem 1rem 2rem;
+    /* border: 1px solid var(--earth); */
+    /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
+    cursor: pointer;
+    user-select: none;
+    width: 20rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.lang-select-selected {
+    border-radius: 1000px;
+    justify-self: center;
+}
+
+/*style items (options):*/
+.lang-select-items {
+    position: absolute;
+    background-color: var(--earth);
+    bottom: 120%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 1rem;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.lang-select-items div {
+    padding: .5rem 2rem;
+    width: 100%;
+}
+
+.lang-select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.lang-select-items div span svg {
+    width: 10px;
+    height: 10px;
+}
+
+.bar-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button-continue {
+    padding: 1rem 2rem 1rem 2rem;
+    width: max-content;
+    height: 4rem;
+    font-size: 1rem;
+    background-color: var(--atomicYellow);
+}
+
+.button-continue:hover {
+    border: 1px solid var(--earth);
+}
+
+.submit-button {
+    background: none;
+    border: none;
+}
+
+.button-container {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.language-bar {
+    min-height: 10rem;
+    background-color: var(--plum);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+    transition: all ease-in-out .3s;
+}
+
+.language-bar.close-bar {
+    top: -120%;
+    transition: all ease-in-out .3s;
+}
+
+.title-and-icon {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    justify-content: start;
+}
+
+.title-content--bar {
+    font-size: 1.4rem;
+    color: var(--atomicYellow);
+    margin: 0rem;
+    font-weight: 600;
+    text-align: start;
+}
+
+.description-banner a,
+.description-banner p {
+    font-size: 1.2rem;
+    color: var(--earth);
+    margin: 0rem;
+}
+
+.title-and-icon svg path {
+    fill: var(--atomicYellow);
+}
+
+.description-banner {
+    margin-top: 1.4rem;
+}
+
+.close-button {
+    padding: .5rem;
+    border: 1px solid var(--earth);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+.close-button svg {
+    width: .8rem;
+    height: .8rem;
+    fill: var(--earth);
+}
+
+.close-button svg path {
+    fill: var(--earth);
+    stroke: var(--earth);
+}
+
+.site-footer--social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang-select-selected {
+    background-color: transparent;
+    border: 1px solid var(--earth);
+    color: var(--earth);
+    transition: all ease-in-out .3s;
+}
+
+.lang-select-selected:hover,
+.lang-select-selected:focus {
+    background-color: var(--earth);
+    border: 1px solid var(--earth);
+    transition: all ease-in-out .3s;
+    color: var(--plum);
+}
+
+.lang-select-selected span svg {
+    height: 10px;
+    width: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .lang-select-items div, .lang-select-selected {
+        padding: .5rem 1rem .5rem 1rem;
+    }
+    .button-container {
+        gap: 1rem;
+    }
+    .button-continue {
+        padding: .5rem 2rem .5rem 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .language-bar {
+        display: none;
+    }
+}

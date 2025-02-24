@@ -4337,11 +4337,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_testimonials__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/testimonials */ "./assets/js/modules/testimonials.js");
 /* harmony import */ var _modules_infiniteScroll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/infiniteScroll */ "./assets/js/modules/infiniteScroll.js");
 /* harmony import */ var _modules_fpnBlocks__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/fpnBlocks */ "./assets/js/modules/fpnBlocks.js");
-/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/header */ "./assets/js/modules/header.js");
-/* harmony import */ var _modules_introDots__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/introDots */ "./assets/js/modules/introDots.js");
-/* harmony import */ var _modules_stats__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/stats */ "./assets/js/modules/stats.js");
-/* harmony import */ var _modules_linkList__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/linkList */ "./assets/js/modules/linkList.js");
-/* harmony import */ var _modules_iconBlocks__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/iconBlocks */ "./assets/js/modules/iconBlocks.js");
+/* harmony import */ var _modules_officeListTwo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/officeListTwo */ "./assets/js/modules/officeListTwo.js");
+/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/header */ "./assets/js/modules/header.js");
+/* harmony import */ var _modules_introDots__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/introDots */ "./assets/js/modules/introDots.js");
+/* harmony import */ var _modules_stats__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/stats */ "./assets/js/modules/stats.js");
+/* harmony import */ var _modules_linkList__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/linkList */ "./assets/js/modules/linkList.js");
+/* harmony import */ var _modules_iconBlocks__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/iconBlocks */ "./assets/js/modules/iconBlocks.js");
+/* harmony import */ var _modules_numberBlocks__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/numberBlocks */ "./assets/js/modules/numberBlocks.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
@@ -4362,8 +4364,10 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 
 
 
+
+
 function init() {
-  _modules_header__WEBPACK_IMPORTED_MODULE_10__["default"].init();
+  _modules_header__WEBPACK_IMPORTED_MODULE_11__["default"].init();
   _modules_promoBanner__WEBPACK_IMPORTED_MODULE_1__["default"].init();
   _modules_headerNav__WEBPACK_IMPORTED_MODULE_0__["default"].init();
   _modules_dotsStrip__WEBPACK_IMPORTED_MODULE_5__["default"].init();
@@ -4373,11 +4377,13 @@ function init() {
   _modules_basicIntersections__WEBPACK_IMPORTED_MODULE_4__["default"].init();
   _modules_infiniteScroll__WEBPACK_IMPORTED_MODULE_8__["default"].init();
   _modules_fpnBlocks__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+  _modules_officeListTwo__WEBPACK_IMPORTED_MODULE_10__["default"].init();
+  _modules_numberBlocks__WEBPACK_IMPORTED_MODULE_16__["default"].init();
   // journey.init();
-  (0,_modules_introDots__WEBPACK_IMPORTED_MODULE_11__.createHero)();
-  (0,_modules_stats__WEBPACK_IMPORTED_MODULE_12__.stats)();
-  (0,_modules_linkList__WEBPACK_IMPORTED_MODULE_13__.linkListMobileTriggers)();
-  (0,_modules_iconBlocks__WEBPACK_IMPORTED_MODULE_14__.iconBlocks)();
+  (0,_modules_introDots__WEBPACK_IMPORTED_MODULE_12__.createHero)();
+  (0,_modules_stats__WEBPACK_IMPORTED_MODULE_13__.stats)();
+  (0,_modules_linkList__WEBPACK_IMPORTED_MODULE_14__.linkListMobileTriggers)();
+  (0,_modules_iconBlocks__WEBPACK_IMPORTED_MODULE_15__.iconBlocks)();
   var videoLightbox = glightbox__WEBPACK_IMPORTED_MODULE_3___default()(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
     selector: ".glightbox-video",
     skin: "video",
@@ -5306,6 +5312,106 @@ __webpack_require__.r(__webpack_exports__);
     // }).mount({ AutoScroll });
   },
   destroy: function destroy() {}
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/numberBlocks.js":
+/*!*******************************************!*\
+  !*** ./assets/js/modules/numberBlocks.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var numberBlocks = {
+  init: function init() {
+    this.countElements = document.querySelectorAll('.title--number');
+    this.observeElements();
+  },
+  observeElements: function observeElements() {
+    var _this = this;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          _this.startCounting(entry.target);
+          observer.unobserve(entry.target); // Stop observing after counting
+        }
+      });
+    });
+    this.countElements.forEach(function (el) {
+      observer.observe(el);
+    });
+  },
+  startCounting: function startCounting(el) {
+    var countTo = parseInt(el.getAttribute('data-count').replace('+', ''));
+    var count = 0;
+    var _updateCount = function updateCount() {
+      var increment = Math.ceil(countTo / 100);
+      count += increment;
+      if (count > countTo) {
+        count = countTo;
+      }
+      el.textContent = count + '+';
+      if (count < countTo) {
+        requestAnimationFrame(_updateCount);
+      }
+    };
+    _updateCount();
+  },
+  destroy: function destroy() {
+    // If you need to clean up, you can implement this method
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (numberBlocks);
+
+/***/ }),
+
+/***/ "./assets/js/modules/officeListTwo.js":
+/*!********************************************!*\
+  !*** ./assets/js/modules/officeListTwo.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    var toggleSubOfficeList = function toggleSubOfficeList(event) {
+      event.stopPropagation();
+      var mainOfficeList = event.currentTarget.closest('.main-office-list');
+      var subOfficeLists = mainOfficeList.querySelectorAll('.sub-office-list');
+      subOfficeLists.forEach(function (list) {
+        list.classList.toggle('show');
+      });
+    };
+    var toggleAddressOffice = function toggleAddressOffice(event) {
+      event.stopPropagation();
+      var subOffice = event.currentTarget.closest('.sub-office');
+      var addressOffice = subOffice.querySelector('.address-office');
+      addressOffice.classList.toggle('show');
+    };
+    document.querySelectorAll('.main-office-content').forEach(function (element) {
+      element.addEventListener('click', toggleSubOfficeList);
+    });
+    document.querySelectorAll('.sub-office-content').forEach(function (element) {
+      element.addEventListener('click', toggleAddressOffice);
+    });
+  },
+  destroy: function destroy() {
+    document.querySelectorAll('.main-office-content').forEach(function (element) {
+      element.removeEventListener('click', toggleSubOfficeList);
+    });
+    document.querySelectorAll('.sub-office-content').forEach(function (element) {
+      element.removeEventListener('click', toggleAddressOffice);
+    });
+  }
 });
 
 /***/ }),

@@ -1,5 +1,6 @@
 <header class="site-header at-top <?= is_front_page() ? 'hide' : '' ?>" id="header">
 	<?php get_template_part('parts/shared/header/header-message'); ?>
+	<?php get_template_part('parts/shared/header/location-bar'); ?>
 	<div class="container is-wide site-header--container">
 		<div class="site-header--home-link">
 			<a href="<?= get_home_url(); ?>">
