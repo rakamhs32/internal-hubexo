@@ -1,3 +1,43 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Retrieve country data from local storage
+        var countryData = localStorage.getItem('country_data');
+        if (countryData) {
+            countryData = JSON.parse(countryData);
+            var categoryName = countryData.iso_code;
+            
+            // Send category name to PHP
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "<?php echo admin_url('admin-ajax.php'); ?>", true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    console.log(xhr.responseText);
+                }
+            };
+            xhr.send("action=set_category&category_name=" + categoryName);
+        }
+    });
+</script>
+
+<?php
+// Add action to handle the AJAX request
+add_action('wp_ajax_set_category', 'set_category');
+add_action('wp_ajax_nopriv_set_category', 'set_category');
+
+function set_category() {
+    if (isset($_POST['category_name'])) {
+        $category_name = sanitize_text_field($_POST['category_name']);
+        set_transient('category_name', $category_name, 60*60*24); // Store category name for 24 hours
+        echo 'Category name set to: ' . $category_name;
+    }
+    wp_die();
+}
+
+// Retrieve the category name from transient
+$cat_name = get_transient('category_name');
+?>
+
 <div class="content-panel no-bg">
     <div class="container">
         <div class="blog-post--grid-title">
@@ -6,21 +46,18 @@
         <div class="blog-post-grid sec-post-grid" id="posts-wrap">
             <?php
             $blogs = new WP_Query([
-                'post_type' => array(''),
+                'post_type' => array('post'), // Specify post type
                 'posts_per_page' => 3,
                 'post_status' => 'publish',
-                'category_name' => '',
+                'category_name' => $cat_name, // Use the category name
                 'orderby' => 'date',
                 'order' => 'DESC',
-
             ]);
 
             if ($blogs->have_posts()) :
                 $count = 1;
                 while ($blogs->have_posts()) : $blogs->the_post();
-
             ?>
-
                     <div class="blog-post-block fade-in">
                         <a href="<?= the_permalink(); ?>" class="block-link">
                             <div class="image-wrap">
@@ -28,7 +65,6 @@
                             </div>
                             <div class="blog-post-block--text">
                                 <span class="blog-post-block--meta"><span><?php echo get_the_date('j M Y'); ?></span>
-                                    <!-- <?php if ($locations): ?><span class="blog-post-block--meta-locations"><?= $locations ?></span><?php endif ?> -->
                                 </span>
                                 <h3 class="small-title--bold blog-post-block--title"><?= the_title(); ?></h3>
                             </div>
@@ -41,10 +77,7 @@
                                 </svg>
                             </button>
                         </a>
-                        <?php // the_category(); 
-                        ?>
                     </div>
-
             <?php
                     $count++;
                 endwhile;

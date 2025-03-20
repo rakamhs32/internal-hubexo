@@ -18,13 +18,19 @@ $style = get_field('style');
         </div>
         <?php if (!empty($iconBlocks)): ?>
             <div class="icon-blocks--grid is-<?= $columns; ?> container">
-                <?php foreach ($iconBlocks as $i => $iconBlock): ?>
-                    <div class="icon-block" style="--n: <?= $i ?>">
-                        <img src="<?= $iconBlock['icon']['url']; ?>" alt="<?= $iconBlock['icon']['alt']; ?>" class="icon-size-default">
-                        <h3 class="small-title--bold snug"><?= $iconBlock['title']; ?></h3>
-                        <p><?= $iconBlock['text']; ?></p>
-                    </div>
-                <?php endforeach; ?>
+            <?php foreach ($iconBlocks as $i => $iconBlock): ?>
+                <div class="icon-block" style="--n: <?= $i ?>">
+                <img src="<?= $iconBlock['icon']['url']; ?>" alt="<?= $iconBlock['icon']['alt']; ?>" class="icon-size-default">
+                <h3 class="small-title--bold snug"><?= $iconBlock['title']; ?></h3>
+                <p><?= $iconBlock['text']; ?></p>
+                <?php if (!empty($iconBlock['button_url']) && !empty($iconBlock['button_text'])): ?>
+                    <p>
+                    <a href="<?= $iconBlock['button_url']; ?>"
+                        class="blueprint--button icon-blocks--button plum-bg"><?= $iconBlock['button_text']; ?><?php get_template_part('parts/svg/right-arrow'); ?></a>
+                    </p>
+                <?php endif; ?>
+                </div>
+            <?php endforeach; ?>
             </div>
         <?php endif; ?>
     </div>

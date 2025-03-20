@@ -27,6 +27,7 @@ $socialLinks = get_field('links', 'options');
                         <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
+                <?php get_template_part('parts/shared/header/language-bar'); ?>
             </nav>
         </div>
         <div class="site-footer--grid">

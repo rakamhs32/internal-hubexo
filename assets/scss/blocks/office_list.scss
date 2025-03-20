@@ -16,6 +16,18 @@
     margin-bottom: 0rem;
 }
 
+.location-card__content {
+    margin-top: 1.6rem;
+}
+
+.location-card__content p,
+.location-card__content a,
+.location-card__content li {
+    margin-top: .4rem;
+    font-size: 1.2rem;
+}
+
+
 .office-name {
     position: relative;
 }
@@ -63,19 +75,22 @@
 }
 
 .loopnumb {
-    margin-top: 1rem;
+    margin-top: 1.6rem;
 }
 
 .phone-numb {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-top: .5rem;
+}
+
+.phone-numb p {
+    margin-top: 0rem;
 }
 
 .phone-numb p a {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: clamp(1.125rem, 1.07rem + 0.2vw, 1.25rem);
     font-weight: 500;
     text-decoration: inherit;
 
@@ -91,5 +106,5 @@
 }
 
 .mail--button {
-    min-width: 150px;
+    min-width: 180px;
 }
