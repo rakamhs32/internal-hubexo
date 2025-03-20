@@ -27,6 +27,7 @@
     "@googlemaps/js-api-loader": "^1.16.2",
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "@splidejs/splide-extension-grid": "^0.4.1",
     "browser-sync": "^3.0.3",
     "fslightbox": "^3.4.1",
     "glightbox": "^3.2.0",

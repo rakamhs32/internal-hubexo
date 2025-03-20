@@ -7,9 +7,16 @@ $link = get_field('link');
 if (!empty($link)) {
     $link_target = $link['target'] ? $link['target'] : '_self';
 }
+
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="content-panel image-and-text-cta">
+<div class="content-panel image-and-text-cta" data-country="<?= esc_attr($countries) ?>">
     <div class="image-and-text-cta--image-wrap">
         <?php if (!empty($image)): ?>
             <picture>

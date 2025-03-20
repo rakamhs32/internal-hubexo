@@ -6,9 +6,15 @@ if (!empty($link)) {
     $link_target = $link['target'] ? $link['target'] : '_self';
 }
 
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="hero-banner plum-bg header-pad <?php if ($bannerBg != "none"): ?>has-pattern<?php endif; ?>">
+<div class="hero-banner plum-bg header-pad <?php if ($bannerBg != "none"): ?>has-pattern<?php endif; ?>" data-country="<?= esc_attr($countries) ?>">
     <div class="container snug-child">
         <h1 class="h2">
             <?php if (!empty($title)): ?>

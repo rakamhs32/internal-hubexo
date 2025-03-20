@@ -1,4 +1,15 @@
-<div class="content-panel fpn-blocks yellow-bg" <?= getBlockId($block) ?>>
+<?php
+
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
+
+?>
+
+<div class="content-panel fpn-blocks yellow-bg" data-country="<?= esc_attr($countries) ?>">
     <div class="container fpn-blocks">
         <h2><?= get_field('title'); ?></h2>
         <?php if (have_rows('fpn_blocks')): ?>

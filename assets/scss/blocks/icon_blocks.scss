@@ -103,7 +103,7 @@
   }
 
   @media (max-width: 767px) {
-    min-width: 311px;
+    min-width: auto;
   }
 }
 
@@ -114,6 +114,10 @@
 
 .icon-block p {
   margin-top: 10px;
+}
+
+.icon-block-description {
+  min-height: 110px;
 }
 
 .blueprint--button svg {
@@ -132,3 +136,61 @@
   }
 
 }
+
+.blueprint--button.icon-blocks--button.plum-bg.outline-button {
+  background-color: transparent;
+    color: var(--plum);
+}
+
+.blueprint--button.icon-blocks--button.plum-bg.outline-button:hover {
+  background-color: var(--plum);
+  color: var(--earth);
+  border: 1px solid var(--plum);
+}
+
+.blueprint--button.icon-blocks--button.plum-bg.text-button {
+  border: none;
+  background-color: transparent;
+  color: var(--plum);
+  padding: 0rem;
+  font-size: 1.2rem;
+}
+
+.blueprint--button.icon-blocks--button.plum-bg.text-button svg {
+  display: none;
+}
+
+.blueprint--button.icon-blocks--button.plum-bg.text-button:hover {
+  border: none;
+  background-color: transparent;
+  color: var(--plum);
+  text-decoration: underline;
+}
+
+.blueprint--button.icon-blocks--button.solid-button {
+  background-color: var(--plum);
+  border: none;
+  color: var(--earth);
+  margin-top: 1rem;
+  min-width: fit-content;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid var(--plum);
+    color: var(--plum);
+    transition: all 0.3s ease;
+    
+  }
+}
+
+.blueprint--button.icon-blocks--button.solid-button svg {
+  color: var(--earth);
+  transition: all 0.3s ease;
+}
+
+.blueprint--button.icon-blocks--button.solid-button:hover svg {
+  color: var(--plum);
+  transition: all 0.3s ease;
+}
+
+

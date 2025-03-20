@@ -3,9 +3,15 @@
 $listItems = get_field('links');
 $title = get_field('title');
 
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="content-panel link-list white-text plum-bg fade-in-stagger">
+<div class="content-panel link-list white-text plum-bg fade-in-stagger" data-country="<?= esc_attr($countries) ?>">
     <?php if (!empty($title)): ?>
         <div class="container fade-in">
             <h2 class="h5 snug"><?= $title ?></h2>
@@ -20,6 +26,7 @@ $title = get_field('title');
                     $link_target = $link['target'] ? $link['target'] : '_self';
                 }
                 $title = $listItem['title'];
+                $icon = $listItem['icon'];
             ?>
                 <li style="--n: <?= $n ?>">
                     <div class="container">
@@ -28,7 +35,14 @@ $title = get_field('title');
                                 <span class="h2 snug link-list--title"><?= $link['title']; ?></span>
                             <?php else: ?>
                                 <div class="no-link">
-                                    <span class="h2 snug link-list--title"><?= $title; ?></span>
+                                    <div class="h2 snug link-list--title with-icon" >
+                                        <span><?= $title; ?></span>
+                                        <?php if (!empty($icon)): ?>
+                                            <img src="<?= $icon['url']; ?>" alt="<?= $icon['alt'];  ?>">
+                                        <?php else: ?>
+                                            <img style="display: none;">
+                                        <?php endif; ?>
+                                    </div>
                                 <?php endif; ?>
                                 <?php if (! empty($link)): ?>
                                     <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="link-list--arrow">

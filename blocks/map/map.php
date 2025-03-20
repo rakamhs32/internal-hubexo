@@ -3,9 +3,15 @@
 $image = get_field('map_image');
 $locationBlocks = get_field('location_blocks');
 
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="content-panel earth-bg map">
+<div class="content-panel earth-bg map" data-country="<?= esc_attr($countries) ?>">
     <div class="container">
         <picture>
             <source

@@ -1,6 +1,12 @@
 <?php
-$bannerBg = get_field('banner_background');
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 
+$bannerBg = get_field('banner_background');
 
 if ($bannerBg && $bannerBg != "none") {
     get_template_part("blocks/column-banner/pattern-column-banner");
@@ -17,7 +23,7 @@ if ($bannerBg && $bannerBg != "none") {
 
 ?>
 
-    <div class="hero-banner plum-bg header-pad">
+    <div class="hero-banner plum-bg header-pad" data-country="<?= esc_attr($countries) ?>">
         <div class="container snug-child <?= $position ?>">
             <h1 class="h2">
                 <?php if (!empty($title)): ?>

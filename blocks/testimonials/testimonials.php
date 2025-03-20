@@ -2,9 +2,15 @@
 
 $testimonials = get_field('testimonials');
 
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="content-panel testimonials white-text plum-bg">
+<div class="content-panel testimonials white-text plum-bg" data-country="<?= esc_attr($countries) ?>">
     <div class="container text-center fade-in">
         <?php get_template_part('parts/svg/mic'); ?>
         <?php if (!empty($testimonials)): ?>

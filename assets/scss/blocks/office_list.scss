@@ -23,8 +23,9 @@
 .location-card__content p,
 .location-card__content a,
 .location-card__content li {
-    margin-top: .4rem;
-    font-size: 1.2rem;
+    margin-top: 0rem;
+    font-size: clamp(1.125rem, 1.07rem + 0.2vw, 1.25rem);
+    font-weight: 500;
 }
 
 
@@ -107,4 +108,14 @@
 
 .mail--button {
     min-width: 180px;
+}
+
+.address-with-icon {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.address-list p {
+    margin-top: 0rem;
 }

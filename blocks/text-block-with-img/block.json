@@ -1,0 +1,16 @@
+{
+  "name": "acf/text-block-with-image",
+  "title": "Text Block With Image",
+  "description": "Text Block With Image",
+  "style": [],
+  "category": "hubexo",
+  "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20 6.76929H4V5.26929H20V6.76929Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20 10.2498H4V8.74976H20V10.2498Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20 13.7302H4V12.2302H20V13.7302Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 17.2107H4V15.7107H14V17.2107Z\" fill=\"#1E1E1E\"/></svg>",
+  "keywords": ["Text Block With Image"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "text-block-with-image.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

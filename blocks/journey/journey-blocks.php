@@ -1,12 +1,19 @@
 <?php
 $title = get_field('title');
 $subtitle = get_field('sub_title');
+
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="content-panel plum-bg">
+<div class="content-panel plum-bg text-block white-text" data-country="<?= esc_attr($countries) ?>">
     <div class="container">
-        <div class="head-journey">
-            <h2 class="title-journey"><?= $title; ?></h2>
+        <div class="head-journey text-block--text snug-child">
+            <h2 class=""><?= $title; ?></h2>
             <p class="subtitle-journey"><?= $subtitle; ?></p>
         </div>
         <div class="swiper mySwiper">
