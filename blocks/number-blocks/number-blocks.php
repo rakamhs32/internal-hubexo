@@ -6,9 +6,15 @@ $background = get_field('background');
 $columns = get_field('columns');
 $style = get_field('style');
 
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="content-panel icon-blocks <?php if ($style != "pattern"): ?>has-image<?php endif; ?> plum-bg">
+<div class="content-panel icon-blocks <?php if ($style != "pattern"): ?>has-image<?php endif; ?> plum-bg" data-country="<?= esc_attr($countries) ?>">
     <?php if (!empty($background)): ?>
         <img src="<?= $background['url']; ?>" alt="" class="icon-blocks--background">
     <?php endif; ?>
@@ -19,9 +25,9 @@ $style = get_field('style');
         <?php if (!empty($iconBlocks)): ?>
             <div class="icon-blocks--grid is-<?= $columns; ?> container">
                 <?php foreach ($iconBlocks as $i => $iconBlock): ?>
-                    <div class="icon-block number-block" style="--n: <?= $i ?>">
+                    <div class="icon-block stat-block--stat number-block" style="--n: <?= $i ?>">
                         <!-- <img src="<?= $iconBlock['icon']['url']; ?>" alt="<?= $iconBlock['icon']['alt']; ?>" class="icon-size-default"> -->
-                        <h3 class="small-title--bold snug title--number" data-count="<?= $iconBlock['title']; ?>">0+</h3>
+                        <h3 class="small-title--bold snug title--number stat-block--number"><?= $iconBlock['title']; ?></h3>
                         <p><?= $iconBlock['text']; ?></p>
                     </div>
                 <?php endforeach; ?>

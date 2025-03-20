@@ -1,0 +1,17 @@
+{
+    "name": "acf/blog-post-grid-two",
+    "title": "Blog post grid two",
+    "description": "Blog post grid two",
+    "style": [],
+    "category": "hubexo",
+    "icon": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.0186 7.46484H5.02246C4.74632 7.46484 4.52246 7.6887 4.52246 7.96484V15.9917C4.52246 16.2678 4.74632 16.4917 5.02246 16.4917H19.0186C19.2947 16.4917 19.5186 16.2678 19.5186 15.9917V7.96484C19.5186 7.6887 19.2947 7.46484 19.0186 7.46484ZM5.02246 5.96484C3.91789 5.96484 3.02246 6.86027 3.02246 7.96484V15.9917C3.02246 17.0963 3.91789 17.9917 5.02246 17.9917H19.0186C20.1231 17.9917 21.0186 17.0963 21.0186 15.9917V7.96484C21.0186 6.86027 20.1231 5.96484 19.0186 5.96484H5.02246Z\" fill=\"#1E1E1E\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.8205 14.604C12.3569 14.9905 11.6834 14.9905 11.2198 14.604L3.48539 8.15663L4.44585 7.00445L12.0202 13.3184L19.5945 7.00445L20.5549 8.15663L12.8205 14.604Z\" fill=\"#1E1E1E\"/></svg>",
+    "keywords": ["Blog post grid two"],
+    "acf": {
+      "mode": "preview",
+      "renderTemplate": "blog-post-grid-two.php"
+    },
+    "supports": {
+      "anchor": true
+    }
+  }
+  

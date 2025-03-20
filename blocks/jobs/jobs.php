@@ -2,9 +2,16 @@
 $title = get_field('title');
 $jobs = get_field('jobs');
 
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
+
 ?>
 
-<div class="content-panel jobs aluminium-bg" <?= getBlockId($block) ?>>
+<div class="content-panel jobs aluminium-bg" <?= getBlockId($block) ?> data-country="<?= esc_attr($countries) ?>">
     <div class="container snug-child">
         <h2 class="h5"><?= $title; ?></h2>
         <?php if (!empty($jobs)): ?>

@@ -15,8 +15,15 @@ if (!empty($image)) {
     $image_alt = $image['alt'];
     $image_title = $image['title'];
 }
+
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
-<div class="hero-banner plum-bg header-pad text-block text-block-image white-text head-text--block-section">
+<div class="hero-banner plum-bg header-pad text-block text-block-image white-text head-text--block-section" data-country="<?= esc_attr($countries) ?>">
     <div class="container fade-in container-overflowhidden">
         <div class="text-block--image">
             <div class="text-block--text content-block--text snug-child">

@@ -2,9 +2,15 @@
 
 $contactBlocks = get_field('contact_blocks');
 
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="content-panel">
+<div class="content-panel" data-country="<?= esc_attr($countries) ?>">
     <div class="container">
         <div class="contacts fade-in">
             <h2 class="h5 snug"><?= get_field('title'); ?></h2>

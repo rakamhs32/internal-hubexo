@@ -172,3 +172,16 @@ img.animation-404 {
 		}
 	}
 }
+
+body.has-promo-banner .header-pad {
+	padding-top: clamp(23rem, 24rem + 2.3vw, 24rem) !important;
+}
+
+body.has-promo-banner .header-pad.shorted {
+	padding-top: clamp(10rem, 14rem + 2.3vw, 14rem) !important;
+	transition: all ease-in	.3s;
+}
+
+.homepage-banner.header-pad-two.short {
+	padding-top: 10rem !important;
+}

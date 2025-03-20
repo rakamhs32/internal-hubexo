@@ -1,8 +1,15 @@
 <?php
 $title = get_field('title');
+
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="content-panel plum-bg">
+<div class="content-panel plum-bg" data-country="<?= esc_attr($countries) ?>">
     <div class="container white-text">
         <div class="yellow-title--section fade-in in-view">
             <h2 class="h5 snug"><?= $title ?></h2>
@@ -15,7 +22,7 @@ $title = get_field('title');
                     <li class="main-office-list">
                         <div class="main-office">
                             <div class="main-office-content">
-                                <p class="h2"><?= $title ?></p>
+                                <p class="h6"><?= $title ?></p>
                                 <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.625156 8L13.8846 8" stroke="currentcolor" stroke-width="1.84615" stroke-miterlimit="10"></path>
                                     <path d="M10.4715 15.3846C10.4715 11.3231 13.4254 8 17.0356 8" stroke="currentcolor" stroke-width="1.84615" stroke-miterlimit="10"></path>

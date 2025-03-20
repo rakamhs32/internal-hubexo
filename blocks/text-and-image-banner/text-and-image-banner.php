@@ -8,9 +8,15 @@ if (!empty($link)) {
 }
 $image = get_field('image');
 
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="text-and-image-banner aluminium-bg">
+<div class="text-and-image-banner aluminium-bg" data-country="<?= esc_attr($countries) ?>">
     <div class="text-and-image-banner--bg-wrap header-pad">
         <?php if (!empty($image)): ?>
             <picture>

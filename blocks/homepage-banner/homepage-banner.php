@@ -8,13 +8,20 @@ if (!empty($link)) {
 }
 $stats = get_field('stats');
 
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
+
 ?>
 <div style="display: none !important">
     <!-- This is hidden, but controls the animation -->
     <canvas id="hero-path-canvas" width="25" height="21"></canvas>
 </div>
 
-<div class="homepage-banner header-pad">
+<div class="homepage-banner header-pad-two" data-country="<?= esc_attr($countries) ?>">
     <div class="hero-wrap">
         <div class="hero-inner-wrap">
             <canvas id="hero-circles"></canvas>
@@ -42,7 +49,8 @@ $stats = get_field('stats');
             <div class="homepage-banner--text snug-child">
                 <p class="small-title"><?= $text; ?></p>
                 <?php if (!empty($link)): ?>
-                    <a href="<?= $link['url']; ?>" class="blueprint--button"><?= $link['title']; ?> <?php get_template_part('parts/svg/right-arrow'); ?></a>
+                    <a href="<?= $link['url']; ?>"
+                       class="blueprint--button"><?= $link['title']; ?><?php get_template_part('parts/svg/right-arrow'); ?></a>
                 <?php endif; ?>
             </div>
         </div>
@@ -50,7 +58,7 @@ $stats = get_field('stats');
             <div class="stat-blocks">
                 <?php foreach ($stats as $stat):
                     $image = $stat['icon'];
-                ?>
+                    ?>
                     <div class="stat-block">
                         <img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" class="icon-size-default">
                         <div class="stat-block--stat">

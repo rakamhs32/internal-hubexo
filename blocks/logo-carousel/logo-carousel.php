@@ -3,9 +3,16 @@
 $title = get_field('title');
 $logos = get_field('logos');
 $showRegions = get_field('show_regions');
+
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
 
-<div class="content-panel half-space logo-carousel white-bg fade-in">
+<div class="content-panel half-space logo-carousel white-bg fade-in" data-country="<?= esc_attr($countries) ?>">
     <div class="container">
         <h2 class="h5 snug <?= the_field('center_title'); ?>"><?= $title; ?></h2>
     </div>

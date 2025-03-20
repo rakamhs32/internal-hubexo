@@ -1,6 +1,122 @@
 .sec-post-grid {
-    padding: 4rem 0rem;
-    @media (max-width: 767px) {
-        padding: 2rem 0rem;
-    }
+  padding: 4rem 0rem;
+  @media (max-width: 767px) {
+    padding: 2rem 0rem;
+  }
+}
+
+.content-excerpt {
+  margin-top: .5rem;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Adjust the number of lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+.blog-post-block {
+  min-height: 540px;
+}
+
+.blog-post-block--text {
+  height: 260px;
+}
+
+.card-news {
+  padding-top: 4rem;
+}
+
+.card-news.plum-color {
+  background-color: var(--plum);
+}
+
+.title-news.plum-color {
+  color: var(--earth);
+}
+
+.blueprint--button.icon-blocks--button.plum-bg.outline-button.plum-color {
+  color: var(--earth);
+  border: 1px solid var(--earth);
+  transition: all 0.3s ease;
+}
+
+.blueprint--button.icon-blocks--button.plum-bg.outline-button.plum-color:hover {
+  color: var(--plum);
+  border: 1px solid var(--earth);
+  background-color: var(--earth);
+  transition: all 0.3s ease;
+}
+
+.card-news.earth-color {
+  background-color: var(--earth);
+}
+
+.title-news.earth-color {
+  color: var(--plum);
+}
+
+.blueprint--button.icon-blocks--button.plum-bg.outline-button.earth-color {
+  color: var(--plum);
+  border: 1px solid var(--plum);
+  transition: all 0.3s ease;
+}
+
+.blueprint--button.icon-blocks--button.plum-bg.outline-button.earth-color:hover {
+  background-color: var(--plum);
+  color: var(--earth);
+  border: 1px solid var(--plum);
+  transition: all 0.3s ease;
+}
+
+.blueprint--button.icon-blocks--button.blog-post-grid-one.plum-bg.outline-button.earth-color {
+  color: var(--plum);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.blueprint--button.icon-blocks--button.blog-post-grid-one.plum-bg.outline-button.earth-color:hover {
+  background-color: var(--plum);
+  color: var(--earth);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.title-page--custom {
+  margin-bottom: 4rem;
+}
+
+.blueprint--button.icon-blocks--button.blog-post-grid-one.plum-bg.outline-button.plum-color {
+  color: var(--earth);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.blueprint--button.icon-blocks--button.blog-post-grid-one.plum-bg.outline-button.plum-color:hover {
+  color: var(--plum);
+  background-color: var(--earth);
+  transition: all 0.3s ease;
+}
+
+.blueprint--button.icon-blocks--button.blog-post-grid-one.plum-bg.outline-button svg {
+  rotate: -90deg;
+  width: 24px;
+  height: auto;
+}
+
+.blueprint--button.icon-blocks--button.blog-post-grid-one.plum-bg.outline-button svg path {
+  stroke: var(--plum);
+}
+
+.blueprint--button.icon-blocks--button.blog-post-grid-one.plum-bg.outline-button:hover svg path {
+  stroke: var(--plum);
+}
+
+.blueprint--button.icon-blocks--button.blog-post-grid-one.plum-bg.outline-button.earth-color svg path {
+  stroke: var(--plum);
+}
+
+.blueprint--button.icon-blocks--button.blog-post-grid-one.plum-bg.outline-button.earth-color:hover svg path {
+  stroke: var(--earth);
 }

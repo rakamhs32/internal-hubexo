@@ -21,8 +21,17 @@ if (!empty($background_image)) {
     $background_image_alt = $background_image['alt'];
     $background_image_title = $background_image['title'];
 }
+
+$buttonType = get_field('button_type');
+
+$selectCountry = get_field('select_country'); // Get the selected countries as an array
+if ($selectCountry && is_array($selectCountry)) {
+    $countries = implode(',', $selectCountry);
+} else {
+    $countries = '';
+}
 ?>
-<div class="hero-banner plum-bg header-pad text-block text-block-image white-text head-text--block-section">
+<div class="hero-banner plum-bg header-pad text-block text-block-image white-text head-text--block-section" data-country="<?= esc_attr($countries) ?>">
     <div class="container fade-in">
         <div class="text-block--image">
             <div class="text-block--text content-block--text snug-child">
@@ -35,7 +44,7 @@ if (!empty($background_image)) {
                 <?= get_field('text'); ?>
                 <?php if (!empty($link)): ?>
                     <p><a href="<?= $link['url']; ?>" target="<?= esc_attr($link_target); ?>"
-                            class="blueprint--button"><?= $link['title']; ?><?php get_template_part('parts/svg/right-arrow'); ?></a>
+                            class="blueprint--button <?= $buttonType ?>"><?= $link['title']; ?><?php get_template_part('parts/svg/right-arrow'); ?></a>
                     </p>
                 <?php endif; ?>
             </div>
