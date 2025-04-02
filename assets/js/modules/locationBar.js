@@ -1,5 +1,11 @@
-// location-bar.js
 export default {
+    // Store handler references at the module level
+    handlers: {
+        closeAllSelect: null,
+        redirectToRegionalSite: null,
+        locationBtnClick: null
+    },
+
     init() {
         // Override console.log for country data storage
         this.setupConsoleLogOverride();
@@ -61,7 +67,7 @@ export default {
             'DE': 'WE'
         };
 
-        const apacCountries = ['NZZ'];
+        const apacCountries = ['SG', 'MY', 'HK', 'PH', 'TH', 'VN', 'ID', 'AU'];
         const otherRegionCountries = [
             'US', 'CA', 'SE', 'DK', 'FI', 'NO', 'CZ', 'SK', 'PL',
             'GB', 'IE', 'ES', 'PT', 'AT', 'CH', 'DE', 'NZ', 'SG',
@@ -101,7 +107,6 @@ export default {
 
         // Setup Custom Select
         this.setupCustomSelect();
-        document.addEventListener("click", this.closeAllSelect);
 
         // Setup Regional Redirect
         this.setupRegionalRedirect(countryIsoMap);
@@ -112,6 +117,7 @@ export default {
 
     handleCountryData(countryRegionMap, countryIsoMap, apacCountries, otherRegionCountries) {
         const countryDataString = localStorage.getItem('country_data');
+
         if (countryDataString) {
             try {
                 const countryData = JSON.parse(countryDataString);
@@ -134,13 +140,13 @@ export default {
                     titleElement.textContent = `You are viewing content for Hubexo Asia Pacific`;
                 }
 
-                if (regionBar) {
-                    if (apacCountries.includes(countryCode)) {
-                        regionBar.classList.add('hidden');
-                    } else if (otherRegionCountries.includes(countryCode)) {
-                        regionBar.classList.remove('hidden');
-                    }
-                }
+                // if (regionBar) {
+                //     if (apacCountries.includes(countryCode)) {
+                //         regionBar.classList.add('hidden');
+                //     } else if (otherRegionCountries.includes(countryCode)) {
+                //         regionBar.classList.remove('hidden');
+                //     }
+                // }
             } catch (e) {
                 console.error('Error parsing country data:', e);
             }
@@ -149,6 +155,10 @@ export default {
 
     setupCustomSelect() {
         const customSelects = document.getElementsByClassName("custom-select");
+
+        // Store the handler reference for later removal
+        this.handlers.closeAllSelect = this.closeAllSelect.bind(this);
+
         Array.from(customSelects).forEach(customSelect => {
             // Remove any existing custom select elements to prevent duplication
             const existingElements = customSelect.querySelectorAll('.select-selected, .wrap-card');
@@ -178,7 +188,7 @@ export default {
             globalRegionDiv.appendChild(globalText);
 
             // Global region click event
-            const that = this; // Preserve the module's `this` for inner functions
+            const module = this; // Preserve the module's `this` for inner functions
             globalRegionDiv.addEventListener("click", function (e) {
                 const wrapCardElement = this.parentNode;
                 const selectedElement = wrapCardElement.previousSibling;
@@ -208,7 +218,7 @@ export default {
                     optionDiv.insertAdjacentText('beforeend', option.innerHTML);
 
                     optionDiv.addEventListener("click", function (e) {
-                        that.updateSelection(this, select);
+                        module.updateSelection(this, select);
                     });
                     itemsDiv.appendChild(optionDiv);
                 }
@@ -219,7 +229,7 @@ export default {
 
             selectedDiv.addEventListener("click", function (e) {
                 e.stopPropagation();
-                that.closeAllSelect(this);
+                module.handlers.closeAllSelect(this);
 
                 const wrapCardElement = this.nextSibling;
                 if (wrapCardElement) {
@@ -233,6 +243,9 @@ export default {
                 }
             });
         });
+
+        // Use the stored reference
+        document.addEventListener("click", this.handlers.closeAllSelect);
     },
 
     updateSelection(clickedOption, select) {
@@ -305,9 +318,8 @@ export default {
 
         if (!select || !continueButton) return;
 
-        const that = this;
-
-        function redirectToRegionalSite(event) {
+        // Store the handler reference
+        this.handlers.redirectToRegionalSite = (event) => {
             event.preventDefault();
             const selectedOption = select.options[select.selectedIndex];
             const mainDomain = 'hubexo.com';
@@ -358,10 +370,10 @@ export default {
             } else {
                 window.location.href = `https://${mainDomain}`;
             }
-        }
+        };
 
-        form.addEventListener('submit', redirectToRegionalSite);
-        continueButton.addEventListener('click', redirectToRegionalSite);
+        form.addEventListener('submit', this.handlers.redirectToRegionalSite);
+        continueButton.addEventListener('click', this.handlers.redirectToRegionalSite);
     },
 
     setupCloseBarButton(button, element) {
@@ -390,11 +402,14 @@ export default {
         const locationBtn = document.getElementById('locationBtn');
 
         if (locationBtn && regionBar) {
-            locationBtn.addEventListener('click', function () {
+            // Store the handler reference
+            this.handlers.locationBtnClick = function () {
                 regionBar.style.display = 'block';
                 regionBar.style.opacity = '1';
                 locationBtn.classList.remove('active');
-            });
+            };
+
+            locationBtn.addEventListener('click', this.handlers.locationBtnClick);
         }
 
         this.setupCloseBarButton(closeBarButton, regionBar);
@@ -402,30 +417,31 @@ export default {
     },
 
     destroy() {
-        // Clean up event listeners if needed
-        document.removeEventListener("click", this.closeAllSelect);
+        // Use the stored handler references to remove event listeners
+        if (this.handlers.closeAllSelect) {
+            document.removeEventListener("click", this.handlers.closeAllSelect);
+        }
 
         // Remove form event listeners
         const form = document.querySelector('.button-container');
         const continueButton = form?.querySelector('.submit-button');
 
-        if (form) {
-            form.removeEventListener('submit', this.redirectToRegionalSite);
+        if (form && this.handlers.redirectToRegionalSite) {
+            form.removeEventListener('submit', this.handlers.redirectToRegionalSite);
         }
 
-        if (continueButton) {
-            continueButton.removeEventListener('click', this.redirectToRegionalSite);
+        if (continueButton && this.handlers.redirectToRegionalSite) {
+            continueButton.removeEventListener('click', this.handlers.redirectToRegionalSite);
         }
 
         // Remove location button event listener
         const locationBtn = document.getElementById('locationBtn');
-        if (locationBtn) {
-            const newLocationBtn = locationBtn.cloneNode(true);
-            locationBtn.parentNode.replaceChild(newLocationBtn, locationBtn);
+        if (locationBtn && this.handlers.locationBtnClick) {
+            locationBtn.removeEventListener('click', this.handlers.locationBtnClick);
         }
 
-        // Restore original console.log
-        // Note: This part is tricky as we don't have a reference to the original
-        // It's better to avoid overriding native functions if possible
+        // Restore original console.log if needed
+        // Note: This is challenging to implement correctly
+        // The best approach would be to store the original console.log in init()
     }
 };

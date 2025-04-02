@@ -13,7 +13,12 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
 
+.plum-color .blog-post-block--text .blog-post-block--meta,
+.plum-color .blog-post-block--text .small-title--bold.blog-post-block--title,
+.plum-color .blog-post-block--text .content-excerpt {
+  color: var(--plum);
 }
 
 .blog-post-block {

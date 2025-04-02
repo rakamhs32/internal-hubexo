@@ -6,8 +6,10 @@
         </svg>
     </div>
     <div class="input-search--content">
-        <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-            <input class="input-search" type="search" placeholder="Search Hubexo Asia Pacific..." id="contentSearch" name="s"
+        <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <input class="input-search" type="search" placeholder="Search Hubexo APAC..."
+                   id="contentSearch"
+                   name="s"
                    value="<?php echo get_search_query(); ?>">
             <input class="submit-search" type="submit" value="Search">
         </form>

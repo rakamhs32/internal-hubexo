@@ -31,7 +31,7 @@
     width: 14px;
     height: 14px;
     transform: translateY(-50%);
-    background-image: url(http://54.252.222.112/wp-content/uploads/2025/03/drop-chevron.png);
+    background-image: url(https://apac.hubexo.com/wp-content/uploads/2025/03/drop-chevron.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -89,7 +89,7 @@
   width: 14px;
   height: 14px;
   transform: translateY(-50%);
-  background-image: url(http://54.252.222.112/wp-content/uploads/2025/03/drop-chevron.png);
+  background-image: url(https://apac.hubexo.com/wp-content/uploads/2025/03/drop-chevron.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -309,8 +309,12 @@
 
 /* Optional: Add a fade-in animation */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .region-bar.fade-in {
@@ -329,7 +333,7 @@
   justify-content: start;
 }
 
-.title-and-icon img{
+.title-and-icon img {
   width: 30px;
   height: auto;
 }
@@ -409,6 +413,7 @@
     display: none;
   }
 }
+
 .menu-open .site-header .region-bar .header-nav ul {
   @media (max-width: 767px) {
     padding-top: 360px;
