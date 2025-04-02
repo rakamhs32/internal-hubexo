@@ -1,38 +1,43 @@
 <?php
-$title = get_field('title');
-$jobs = get_field('jobs');
+$title = get_field( 'title' );
+$jobs  = get_field( 'jobs' );
 
-$selectCountry = get_field('select_country'); // Get the selected countries as an array
-if ($selectCountry && is_array($selectCountry)) {
-    $countries = implode(',', $selectCountry);
+$selectCountry = get_field( 'select_country' ); // Get the selected countries as an array
+if ( $selectCountry && is_array( $selectCountry ) ) {
+	$countries = implode( ',', $selectCountry );
 } else {
-    $countries = '';
+	$countries = '';
 }
 
+$BlockId  = get_field( 'block_id' );
+$BlockCss = get_field( 'block_css' );
 ?>
 
-<div class="content-panel jobs aluminium-bg" <?= getBlockId($block) ?> data-country="<?= esc_attr($countries) ?>">
+<div class="content-panel jobs aluminium-bg <?= $BlockCss; ?>" <?= getBlockId( $block ) ?>
+     data-country="<?= esc_attr( $countries ) ?>"
+     id="<?= $BlockId; ?>">
     <div class="container snug-child">
         <h2 class="h5"><?= $title; ?></h2>
-        <?php if (!empty($jobs)): ?>
+		<?php if ( ! empty( $jobs ) ): ?>
             <div class="jobs-grid">
-                <?php foreach ($jobs as $i => $job):
-                    $link = $job['link'];
-                    if (!empty($link)) {
-                        $link_target = $link['target'] ? $link['target'] : '_self';
-                    }
-                ?>
+				<?php foreach ( $jobs as $i => $job ):
+					$link = $job['link'];
+					if ( ! empty( $link ) ) {
+						$link_target = $link['target'] ? $link['target'] : '_self';
+					}
+					?>
                     <div class="job-card" style="--n: <?= $i ?>">
                         <h3 class="snug small-title--bold">
-                            <?= $job['title']; ?>
-                            <?php get_template_part('parts/svg/jobs'); ?>
+							<?= $job['title']; ?>
+							<?php get_template_part( 'parts/svg/jobs' ); ?>
                         </h3>
-                        <?php if (!empty($link)): ?>
-                            <p><a href="<?= $link['url']; ?>" target="<?= esc_attr($link_target); ?>" class="blueprint--button"><?= $link['title']; ?></a></p>
-                        <?php endif; ?>
+						<?php if ( ! empty( $link ) ): ?>
+                            <p><a href="<?= $link['url']; ?>" target="<?= esc_attr( $link_target ); ?>"
+                                  class="blueprint--button"><?= $link['title']; ?></a></p>
+						<?php endif; ?>
                     </div>
-                <?php endforeach; ?>
+				<?php endforeach; ?>
             </div>
-        <?php endif; ?>
+		<?php endif; ?>
     </div>
 </div>

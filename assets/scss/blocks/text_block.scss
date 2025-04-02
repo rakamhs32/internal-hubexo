@@ -1,41 +1,181 @@
 .text-block--text {
-	width: 66.666%;
-	@media (max-width: 991px) {
-		width: 100%;
-	}
-	p {
-		max-width: 46ch;
-	}
+  width: 66.666%;
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+
+  p {
+    max-width: 46ch;
+  }
 }
 
 .text-block h1,
 .text-block h2 {
-	@extend .h5;
+  @extend .h5;
 }
+
 .text-block h3,
 .text-block h4,
 .text-block h5,
 .text-block h6 {
-	@extend .h6;
+  @extend .h6;
 }
 
 .text-block ul {
-	padding: 0;
-	list-style: none;
+  padding: 0;
+  list-style: none;
 }
+
 .text-block li {
-	@extend .p;
-	margin-top: 25px !important;
-	position: relative;
-	display: flex;
-	gap: 10px;
-	align-items: flex-start;
-	&:first-child {
-		margin-top: 0;
-	}
-	&:before {
-		content: "–";
-		top: 0;
-		left: 0;
-	}
+  @extend .p;
+  margin-top: 25px !important;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:before {
+    content: "–";
+    top: 0;
+    left: 0;
+  }
+}
+
+.text-block--text.snug-child.text-block-with--shortcode.center-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.text-block--text.snug-child.text-block-with--shortcode.right-form,
+.text-block--text.snug-child.text-block-with--shortcode.left-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+
+.text-block--text.snug-child.text-block-with--shortcode .text-content p {
+  max-width: 100%;
+}
+
+.plum-bg .text-block--text.snug-child.text-block-with--shortcode .gfield_label {
+  color: var(--earth);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.earth-bg .gform_title {
+  color: var(--plum);
+}
+
+.earth-bg .text-block--text.snug-child.text-block-with--shortcode .gfield_label {
+  color: var(--plum);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.plum-bg .text-block--text.snug-child.text-block-with--shortcode .ginput_container span label,
+.plum-bg .text-block--text.snug-child.text-block-with--shortcode .gfield_description {
+  color: var(--earth);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.earth-bg .text-block--text.snug-child.text-block-with--shortcode .ginput_container span label,
+.earth-bg .text-block--text.snug-child.text-block-with--shortcode .gfield_description {
+  color: var(--plum);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.text-block--text.snug-child.text-block-with--shortcode .text-content {
+  order: 1;
+}
+
+.text-block--text.snug-child.text-block-with--shortcode .block-shortcode {
+  order: 2;
+}
+
+.text-block--text.snug-child.text-block-with--shortcode.left-form .text-content {
+  order: 2;
+}
+
+.text-block--text.snug-child.text-block-with--shortcode.left-form .block-shortcode {
+  order: 1;
+}
+
+.plum-bg .text-block--text.snug-child.text-block-with--shortcode .block-shortcode .gform-footer.gform_footer.top_label input {
+  font-weight: 600;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 16px 24px;
+  border-radius: 100px;
+  line-height: 20px;
+  border: 1px solid var(--atomicYellow);
+  font-size: clamp(0.938rem, 0.855rem + 0.3vw, 1.125rem);
+  outline: none;
+  transition: color 0.3sease-in-out, background-color 0.3sease-in-out, border-color 0.3sease-in-out;
+  background-color: var(--atomicYellow);
+  color: var(--plum);
+  text-decoration: none;
+}
+
+.earth-bg .text-block--text.snug-child.text-block-with--shortcode .block-shortcode .gform-footer.gform_footer.top_label input {
+  font-weight: 600;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 16px 24px;
+  border-radius: 100px;
+  line-height: 20px;
+  border: 1px solid var(--plum);
+  font-size: clamp(0.938rem, 0.855rem + 0.3vw, 1.125rem);
+  outline: none;
+  transition: color 0.3sease-in-out, background-color 0.3sease-in-out, border-color 0.3sease-in-out;
+  background-color: transparent;
+  color: var(--plum);
+  text-decoration: none;
+}
+
+.plum-bg .text-block--text.snug-child.text-block-with--shortcode .block-shortcode .gform-footer.gform_footer.top_label input:hover {
+  background-color: transparent;
+  color: var(--earth);
+  border-color: var(--earth);
+  transition: color 0.3sease-in-out, background-color 0.3sease-in-out, border-color 0.3sease-in-out;
+}
+
+.earth-bg .text-block--text.snug-child.text-block-with--shortcode .block-shortcode .gform-footer.gform_footer.top_label input:hover {
+  background-color: var(--plum);
+  color: var(--earth);
+  border-color: var(--plum);
+  transition: color 0.3sease-in-out, background-color 0.3sease-in-out, border-color 0.3sease-in-out;
+}
+
+.white-text.earth-bg p,
+.white-text.earth-bg a,
+.white-text.earth-bg li,
+.white-text.earth-bg h1,
+.white-text.earth-bg h2,
+.white-text.earth-bg h3,
+.white-text.earth-bg h4,
+.white-text.earth-bg h5,
+.white-text.earth-bg h6, {
+  color: var(--plum);
+}
+
+.hs-fieldtype-text label span {
+  color: var(--earth) !important;
 }

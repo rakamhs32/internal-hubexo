@@ -186,6 +186,19 @@
     justify-content: center;
     border-radius: 0px 0px 30px 10px;
   }
+  @media (max-width: 767px) {
+    position: absolute;
+    bottom: -45px;
+    transition: all 0.3s ease;
+    display: flex;
+    right: 0;
+    background-color: var(--plum);
+    padding: 10px 20px;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 30px 10px;
+  }
 }
 
 .location--search:hover {

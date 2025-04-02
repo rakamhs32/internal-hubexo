@@ -1,126 +1,126 @@
 select {
-    -webkit-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .select-article-button {
-    position: relative;
+  position: relative;
 }
 
 .sort-date,
 .sort-by-page {
-    position: absolute;
-    content: "";
-    top: 50%;
-    right: 1.2rem;
-    width: 14px;
-    height: 14px;
-    transform: translateY(-50%);
-    background-image: url('http://54.252.222.112/wp-content/uploads/2025/03/drop-chevron.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 1.2rem;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%);
+  background-image: url('https://apac.hubexo.com/wp-content/uploads/2025/03/drop-chevron.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 }
 
 .nav-article {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--plum);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--plum);
 
-    @media (max-width: 991px) {
-        flex-direction: column;
-        gap: 2rem;
-        justify-content: start;
-        align-items: baseline;
-    }
+  @media (max-width: 991px) {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: start;
+    align-items: baseline;
+  }
 }
 
 .article-nav-next-prev {
-    display: flex;
-    gap: .5rem;
+  display: flex;
+  gap: .5rem;
 }
 
 .article-nav-next-prev button {
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    border: 1px solid var(--plum);
-    font-weight: 400;
-    font-size: 1rem;
-    color: var(--plum);
-    transition: all ease .3s;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid var(--plum);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--plum);
+  transition: all ease .3s;
 }
 
 .article-nav-next-prev button:hover {
-    background: var(--plum);
-    color: var(--earth);
-    transition: all ease .3s;
+  background: var(--plum);
+  color: var(--earth);
+  transition: all ease .3s;
 }
 
 .sort-by select {
-    padding: 6px 40px 6px 12px;
-    border: 1px solid var(--plum);
-    border-radius: 4px;
-    margin: 0 8px;
-    background: transparent;
+  padding: 6px 40px 6px 12px;
+  border: 1px solid var(--plum);
+  border-radius: 4px;
+  margin: 0 8px;
+  background: transparent;
 }
 
 .result-page select {
-    padding: 6px 30px 6px 12px;
-    border-radius: 4px;
-    margin: 0 8px;
-    border: 1px solid var(--plum);
-    background: transparent;
+  padding: 6px 30px 6px 12px;
+  border-radius: 4px;
+  margin: 0 8px;
+  border: 1px solid var(--plum);
+  background: transparent;
 }
 
 .article-sortby {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 
-    @media (max-width: 991px) {
-        flex-direction: column;
-        gap: 2rem;
-        justify-content: start;
-        align-items: baseline;
-    }
+  @media (max-width: 991px) {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: start;
+    align-items: baseline;
+  }
 }
 
 .sort-by,
 .result-page {
-    display: flex;
-    align-items: center;
-    position: relative;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .article-nav-next-prev button[disabled] {
-    opacity: 0.5;
-    cursor: not-allowed;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .article-nav-next-prev button[disabled]:hover {
-    background: transparent;
-    color: var(--plum);
+  background: transparent;
+  color: var(--plum);
 }
 
 .source-link {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .source-link a {
-    text-decoration: none;
-    font-weight: 400;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 .source-link a:hover {
-    text-decoration: underline;
-    font-weight: 600;
+  text-decoration: underline;
+  font-weight: 600;
 }

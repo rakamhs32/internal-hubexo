@@ -97,6 +97,41 @@ export default {
                 });
         };
 
+        const performSearchMobile = (inputElement, listContentUpdateMobile, showCardContentMobile, loadingDivMobile, v) => {
+            const searchTermMobile = inputElement.value.trim();
+
+            if (searchTermMobile.length < 2) {
+                listContentUpdateMobile.innerHTML = '';
+                showCardContentMobile.classList.remove('active');
+                loadingDivMobile.style.display = 'none';
+                return;
+            }
+
+            loadingDivMobile.style.display = 'flex';
+            showCardContentMobile.classList.add('active');
+            listContentUpdateMobile.innerHTML = '';
+
+            fetch(`${wp_ajax_object.ajax_url}?action=hubexo_search&query=${encodeURIComponent(searchTermMobile)}`)
+                .then(response => response.json())
+                .then(data => {
+                    loadingDivMobile.style.display = 'none';
+                    if (data.success && data.data.length > 0) {
+                        listContentUpdate.innerHTML = '';
+                        data.data.forEach(result => {
+                            const itemClone = listItemMobile.cloneNode(true);
+                            itemClone.querySelector('.title--search-mobile').textContent = result.title;
+                            listContentUpdateMobile.appendChild(itemClone);
+                        });
+                    } else {
+                        listContentUpdateMobile.innerHTML = '<p>No results found.</p>';
+                    }
+                })
+                .catch(error => {
+                    loadingDivMobile.style.display = 'none';
+                    console.error('Search error:', error);
+                });
+        };
+
         // Desktop search bar elements
         const menuItem = document.getElementById('menu-item-1759');
         const searchBar = document.getElementById('searchBar');
@@ -145,7 +180,7 @@ export default {
             searchBarMobile.classList.add('active');
         };
         const closeSearchBarMobile = () => searchBarMobile.classList.remove('active');
-        const searchMobile = debounce(() => performSearch(contentSearchMobile, listContentUpdateMobile, showCardContentMobile, loadingDivMobile, listItemMobile), 500);
+        const searchMobile = debounce(() => performSearchMobile(contentSearchMobile, listContentUpdateMobile, showCardContentMobile, loadingDivMobile, listItemMobile), 500);
 
         if (menuItemMobile && searchBarMobile) {
             menuItemMobile.addEventListener('click', openSearchBarMobile);
@@ -158,14 +193,14 @@ export default {
 
         // Store event listeners for cleanup
         this.eventListeners = {
-            desktop: { openSearchBarDesktop, closeSearchBarDesktop, searchDesktop },
-            mobile: { openSearchBarMobile, closeSearchBarMobile, searchMobile }
+            desktop: {openSearchBarDesktop, closeSearchBarDesktop, searchDesktop},
+            mobile: {openSearchBarMobile, closeSearchBarMobile, searchMobile}
         };
     },
 
     destroy() {
         // Remove all event listeners for desktop
-        const { desktop, mobile } = this.eventListeners;
+        const {desktop, mobile} = this.eventListeners;
 
         const menuItem = document.getElementById('menu-item-1759');
         const searchBar = document.getElementById('searchBar');

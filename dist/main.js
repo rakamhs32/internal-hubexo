@@ -24,11 +24,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_officeListTwo__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/officeListTwo */ "./assets/js/modules/officeListTwo.js");
 /* harmony import */ var _modules_searchBar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/searchBar */ "./assets/js/modules/searchBar.js");
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/header */ "./assets/js/modules/header.js");
-/* harmony import */ var _modules_locationBar__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/locationBar */ "./assets/js/modules/locationBar.js");
-/* harmony import */ var _modules_introDots__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/introDots */ "./assets/js/modules/introDots.js");
-/* harmony import */ var _modules_stats__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/stats */ "./assets/js/modules/stats.js");
-/* harmony import */ var _modules_linkList__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/linkList */ "./assets/js/modules/linkList.js");
-/* harmony import */ var _modules_iconBlocks__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/iconBlocks */ "./assets/js/modules/iconBlocks.js");
+/* harmony import */ var _modules_introDots__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/introDots */ "./assets/js/modules/introDots.js");
+/* harmony import */ var _modules_stats__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/stats */ "./assets/js/modules/stats.js");
+/* harmony import */ var _modules_linkList__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/linkList */ "./assets/js/modules/linkList.js");
+/* harmony import */ var _modules_iconBlocks__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/iconBlocks */ "./assets/js/modules/iconBlocks.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
@@ -51,10 +50,8 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 
 
 
-
 function init() {
   _modules_header__WEBPACK_IMPORTED_MODULE_13__["default"].init();
-  _modules_locationBar__WEBPACK_IMPORTED_MODULE_14__["default"].init();
   _modules_promoBanner__WEBPACK_IMPORTED_MODULE_1__["default"].init();
   _modules_hamburgerNav__WEBPACK_IMPORTED_MODULE_0__["default"].init();
   _modules_dotsStrip__WEBPACK_IMPORTED_MODULE_5__["default"].init();
@@ -67,10 +64,10 @@ function init() {
   _modules_infiniteScroll__WEBPACK_IMPORTED_MODULE_9__["default"].init();
   _modules_fpnBlocks__WEBPACK_IMPORTED_MODULE_10__["default"].init();
   _modules_searchBar__WEBPACK_IMPORTED_MODULE_12__["default"].init();
-  (0,_modules_introDots__WEBPACK_IMPORTED_MODULE_15__.createHero)();
-  (0,_modules_stats__WEBPACK_IMPORTED_MODULE_16__.stats)();
-  (0,_modules_linkList__WEBPACK_IMPORTED_MODULE_17__.linkListMobileTriggers)();
-  (0,_modules_iconBlocks__WEBPACK_IMPORTED_MODULE_18__.iconBlocks)();
+  (0,_modules_introDots__WEBPACK_IMPORTED_MODULE_14__.createHero)();
+  (0,_modules_stats__WEBPACK_IMPORTED_MODULE_15__.stats)();
+  (0,_modules_linkList__WEBPACK_IMPORTED_MODULE_16__.linkListMobileTriggers)();
+  (0,_modules_iconBlocks__WEBPACK_IMPORTED_MODULE_17__.iconBlocks)();
   var videoLightbox = glightbox__WEBPACK_IMPORTED_MODULE_3___default()(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
     selector: ".glightbox-video",
     skin: "video",
@@ -904,414 +901,6 @@ var linkListMobileTriggers = function linkListMobileTriggers() {
 
 /***/ }),
 
-/***/ "./assets/js/modules/locationBar.js":
-/*!******************************************!*\
-  !*** ./assets/js/modules/locationBar.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-// location-bar.js
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    // Override console.log for country data storage
-    this.setupConsoleLogOverride();
-
-    // Initialize all features
-    this.initializeFeatures();
-  },
-  setupConsoleLogOverride: function setupConsoleLogOverride() {
-    var originalConsoleLog = console.log;
-    console.log = function () {
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-      originalConsoleLog.apply(console, args);
-      if (args.length > 0 && _typeof(args[0]) === 'object') {
-        var data = args[0];
-        if (data.geo && data.geo.country && data.geo.country.data) {
-          var countryData = data.geo.country.data;
-          var countryInfo = {
-            iso_code: countryData.iso_code,
-            names: countryData.names
-          };
-          try {
-            localStorage.setItem('country_data', JSON.stringify(countryInfo));
-            console.log('Country data saved to local storage:', countryInfo);
-          } catch (e) {
-            console.error('Error saving country data to localStorage:', e);
-          }
-        }
-      }
-    };
-  },
-  initializeFeatures: function initializeFeatures() {
-    // Country mappings and configuration
-    var countryRegionMap = {
-      'AU': 'APAC',
-      'NZ': 'APAC',
-      'SG': 'APAC',
-      'MY': 'APAC',
-      'ID': 'APAC',
-      'HK': 'APAC',
-      'PH': 'APAC',
-      'TH': 'APAC',
-      'VN': 'APAC',
-      'US': 'NA',
-      'CA': 'NA',
-      'SE': 'NEE',
-      'DK': 'NEE',
-      'FI': 'NEE',
-      'NO': 'NEE',
-      'CZ': 'NEE',
-      'SK': 'NEE',
-      'PL': 'NEE',
-      'AT': 'NEE',
-      'CH': 'NEE',
-      'GB': 'UKI',
-      'IE': 'UKI',
-      'ES': 'WE',
-      'PT': 'WE',
-      'DE': 'WE'
-    };
-    var apacCountries = ['NZZ'];
-    var otherRegionCountries = ['US', 'CA', 'SE', 'DK', 'FI', 'NO', 'CZ', 'SK', 'PL', 'GB', 'IE', 'ES', 'PT', 'AT', 'CH', 'DE', 'NZ', 'SG', 'MY', 'HK', 'PH', 'TH', 'VN', 'ID', 'AU'];
-    var countryIsoMap = {
-      'AU': 'Australia',
-      'AT': 'Austria',
-      'CA': 'Canada',
-      'CZ': 'Czech Republic',
-      'DK': 'Denmark',
-      'FI': 'Finland',
-      'DE': 'Germany',
-      'HK': 'Hong Kong',
-      'ID': 'Indonesia',
-      'IE': 'Ireland',
-      'MY': 'Malaysia',
-      'NZ': 'New Zealand',
-      'NO': 'Norway',
-      'PH': 'Philippines',
-      'PL': 'Poland',
-      'PT': 'Portugal',
-      'SG': 'Singapore',
-      'SK': 'Slovakia',
-      'ES': 'Spain',
-      'SE': 'Sweden',
-      'CH': 'Switzerland',
-      'TH': 'Thailand',
-      'GB': 'United Kingdom',
-      'US': 'USA',
-      'VN': 'Vietnam'
-    };
-
-    // Handle country data from localStorage
-    this.handleCountryData(countryRegionMap, countryIsoMap, apacCountries, otherRegionCountries);
-
-    // Setup Custom Select
-    this.setupCustomSelect();
-    document.addEventListener("click", this.closeAllSelect);
-
-    // Setup Regional Redirect
-    this.setupRegionalRedirect(countryIsoMap);
-
-    // Setup Close Bar Button
-    this.setupCloseBarButtons();
-  },
-  handleCountryData: function handleCountryData(countryRegionMap, countryIsoMap, apacCountries, otherRegionCountries) {
-    var countryDataString = localStorage.getItem('country_data');
-    if (countryDataString) {
-      try {
-        var countryData = JSON.parse(countryDataString);
-        var countryCode = countryData.iso_code;
-        var region = countryRegionMap[countryCode] || '';
-        var regionBar = document.getElementById('regionBar');
-        var titleElement = document.querySelector('.title-content--bar');
-
-        // Add new option at the top (position 1)
-        var selectElement = document.getElementById('OptionCountry');
-        if (selectElement && countryCode) {
-          var newOption = document.createElement('option');
-          newOption.value = region;
-          newOption.textContent = countryIsoMap[countryCode] || countryCode;
-          selectElement.insertBefore(newOption, selectElement.firstChild);
-          selectElement.selectedIndex = 0;
-        }
-        if (titleElement && region) {
-          titleElement.textContent = "You are viewing content for Hubexo Asia Pacific";
-        }
-        if (regionBar) {
-          if (apacCountries.includes(countryCode)) {
-            regionBar.classList.add('hidden');
-          } else if (otherRegionCountries.includes(countryCode)) {
-            regionBar.classList.remove('hidden');
-          }
-        }
-      } catch (e) {
-        console.error('Error parsing country data:', e);
-      }
-    }
-  },
-  setupCustomSelect: function setupCustomSelect() {
-    var _this = this;
-    var customSelects = document.getElementsByClassName("custom-select");
-    Array.from(customSelects).forEach(function (customSelect) {
-      // Remove any existing custom select elements to prevent duplication
-      var existingElements = customSelect.querySelectorAll('.select-selected, .wrap-card');
-      existingElements.forEach(function (el) {
-        return el.remove();
-      });
-      var select = customSelect.getElementsByTagName("select")[0];
-      var selectedDiv = document.createElement("DIV");
-      selectedDiv.setAttribute("class", "select-selected");
-      selectedDiv.textContent = select.options[select.selectedIndex].innerHTML;
-      customSelect.appendChild(selectedDiv);
-      var wrapCard = document.createElement("DIV");
-      wrapCard.setAttribute("class", "wrap-card select-hide");
-
-      // Create global region div
-      var globalRegionDiv = document.createElement("DIV");
-      globalRegionDiv.setAttribute("class", "global-top--region");
-      globalRegionDiv.setAttribute("id", "globalTopRegion");
-      var globalIcon = document.createElement("IMG");
-      globalIcon.src = "".concat(window.location.origin, "/wp-content/themes/hubexo/img/global-icon-region.svg");
-      var globalText = document.createElement("P");
-      globalText.textContent = "Global";
-      globalRegionDiv.appendChild(globalIcon);
-      globalRegionDiv.appendChild(globalText);
-
-      // Global region click event
-      var that = _this; // Preserve the module's `this` for inner functions
-      globalRegionDiv.addEventListener("click", function (e) {
-        var wrapCardElement = this.parentNode;
-        var selectedElement = wrapCardElement.previousSibling;
-        selectedElement.textContent = "Global";
-        wrapCardElement.classList.add("select-hide");
-        selectedElement.classList.remove("select-arrow-active");
-        select.value = "";
-        var event = new Event('change');
-        select.dispatchEvent(event);
-      });
-      wrapCard.appendChild(globalRegionDiv);
-      var itemsDiv = document.createElement("DIV");
-      itemsDiv.setAttribute("class", "select-items select-hide");
-      Array.from(select.options).forEach(function (option) {
-        if (option.hasAttribute('data-icon')) {
-          var optionDiv = document.createElement("DIV");
-          var icon = document.createElement("IMG");
-          icon.src = option.dataset.icon;
-          icon.className = "select-option-icon";
-          optionDiv.appendChild(icon);
-          optionDiv.insertAdjacentText('beforeend', option.innerHTML);
-          optionDiv.addEventListener("click", function (e) {
-            that.updateSelection(this, select);
-          });
-          itemsDiv.appendChild(optionDiv);
-        }
-      });
-      wrapCard.appendChild(itemsDiv);
-      customSelect.appendChild(wrapCard);
-      selectedDiv.addEventListener("click", function (e) {
-        e.stopPropagation();
-        that.closeAllSelect(this);
-        var wrapCardElement = this.nextSibling;
-        if (wrapCardElement) {
-          wrapCardElement.classList.toggle("select-hide");
-        }
-        var selectItems = this.nextSibling.querySelector('.select-items');
-        if (selectItems) {
-          selectItems.classList.toggle("select-hide");
-          this.classList.toggle("select-arrow-active");
-        }
-      });
-    });
-  },
-  updateSelection: function updateSelection(clickedOption, select) {
-    var customSelect = select.closest('.custom-select');
-    if (!customSelect) return;
-    var selected = customSelect.querySelector('.select-selected');
-    if (!selected) return;
-    Array.from(select.options).forEach(function (option, index) {
-      if (option.innerHTML === clickedOption.textContent) {
-        select.selectedIndex = index;
-        selected.textContent = option.innerHTML;
-        var sameAsSelected = clickedOption.parentNode.getElementsByClassName("same-as-selected");
-        Array.from(sameAsSelected).forEach(function (element) {
-          element.removeAttribute("class");
-        });
-        clickedOption.setAttribute("class", "same-as-selected");
-      }
-    });
-    selected.click();
-  },
-  closeAllSelect: function closeAllSelect(elmnt) {
-    var selectItems = document.getElementsByClassName("select-items");
-    var selectSelected = document.getElementsByClassName("select-selected");
-    var wrapCards = document.getElementsByClassName("wrap-card");
-    var globalRegions = document.getElementsByClassName("global-top--region");
-    var arrNo = [];
-    Array.from(selectSelected).forEach(function (item, index) {
-      if (elmnt === item) {
-        arrNo.push(index);
-      } else {
-        item.classList.remove("select-arrow-active");
-      }
-    });
-
-    // Handle select items
-    Array.from(selectItems).forEach(function (item, index) {
-      if (!arrNo.includes(index)) {
-        item.classList.add("select-hide");
-      }
-    });
-
-    // Handle wrap cards (which contain global-top--region)
-    Array.from(wrapCards).forEach(function (item, index) {
-      if (!arrNo.includes(index)) {
-        item.classList.add("select-hide");
-      }
-    });
-
-    // Handle global regions specifically
-    Array.from(globalRegions).forEach(function (region) {
-      var parentWrapCard = region.closest('.wrap-card');
-      if (parentWrapCard && !arrNo.includes(Array.from(wrapCards).indexOf(parentWrapCard))) {
-        parentWrapCard.classList.add("select-hide");
-      }
-    });
-  },
-  setupRegionalRedirect: function setupRegionalRedirect(countryIsoMap) {
-    var form = document.querySelector('.button-container');
-    if (!form) return;
-    var select = form.querySelector('select');
-    var continueButton = form.querySelector('.submit-button');
-    if (!select || !continueButton) return;
-    var that = this;
-    function redirectToRegionalSite(event) {
-      event.preventDefault();
-      var selectedOption = select.options[select.selectedIndex];
-      var mainDomain = 'hubexo.com';
-      if (selectedOption && selectedOption.value) {
-        var region = selectedOption.value;
-        var selectedOptionText = selectedOption.textContent.trim();
-
-        // Find the ISO code that corresponds to the selected country name
-        var selectedIsoCode = '';
-        for (var _i = 0, _Object$entries = Object.entries(countryIsoMap); _i < _Object$entries.length; _i++) {
-          var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
-            code = _Object$entries$_i[0],
-            name = _Object$entries$_i[1];
-          if (name === selectedOptionText) {
-            selectedIsoCode = code;
-            break;
-          }
-        }
-
-        // If we found a matching ISO code, update the localStorage
-        if (selectedIsoCode) {
-          // Create country data object
-          var countryInfo = {
-            iso_code: selectedIsoCode,
-            names: {
-              en: selectedOptionText
-            }
-          };
-
-          // Save to localStorage
-          try {
-            localStorage.setItem('country_data', JSON.stringify(countryInfo));
-            console.log('Country data updated in local storage:', countryInfo);
-          } catch (e) {
-            console.error('Error saving country data to localStorage:', e);
-          }
-
-          // Check if this is an APAC country
-          var apacCountries = ['AU', 'NZ', 'SG', 'MY', 'ID', 'HK', 'PH', 'TH', 'VN'];
-          if (region === 'APAC' || apacCountries.includes(selectedIsoCode)) {
-            // For APAC countries, just reload the current page
-            location.reload();
-            return; // Exit the function to prevent further execution
-          }
-        }
-
-        // For non-APAC countries, redirect to the regional subdomain
-        window.location.href = "https://".concat(region.toLowerCase(), ".").concat(mainDomain);
-      } else {
-        window.location.href = "https://".concat(mainDomain);
-      }
-    }
-    form.addEventListener('submit', redirectToRegionalSite);
-    continueButton.addEventListener('click', redirectToRegionalSite);
-  },
-  setupCloseBarButton: function setupCloseBarButton(button, element) {
-    if (!button || !element) return;
-    button.addEventListener('click', function () {
-      element.classList.add('close-bar');
-      element.style.display = 'none';
-      var heroBanner = document.querySelector('.hero-banner.plum-bg.header-pad-two');
-      var locationBtn = document.getElementById('locationBtn');
-      var homepageBanner = document.querySelector('.homepage-banner');
-      var headerPad = document.querySelector('.header-pad-two');
-      if (heroBanner) heroBanner.classList.add('shorted');
-      if (locationBtn) locationBtn.classList.add('active');
-      if (homepageBanner) homepageBanner.classList.add('shorted');
-      if (headerPad) headerPad.classList.add('shorted');
-    });
-  },
-  setupCloseBarButtons: function setupCloseBarButtons() {
-    var regionBar = document.getElementById('regionBar');
-    var closeBarButton = document.getElementById('CloseBarButton');
-    var closeBarButtonMobile = document.getElementById('CloseBarButtonMobile');
-    var locationBtn = document.getElementById('locationBtn');
-    if (locationBtn && regionBar) {
-      locationBtn.addEventListener('click', function () {
-        regionBar.style.display = 'block';
-        regionBar.style.opacity = '1';
-        locationBtn.classList.remove('active');
-      });
-    }
-    this.setupCloseBarButton(closeBarButton, regionBar);
-    this.setupCloseBarButton(closeBarButtonMobile, regionBar);
-  },
-  destroy: function destroy() {
-    // Clean up event listeners if needed
-    document.removeEventListener("click", this.closeAllSelect);
-
-    // Remove form event listeners
-    var form = document.querySelector('.button-container');
-    var continueButton = form === null || form === void 0 ? void 0 : form.querySelector('.submit-button');
-    if (form) {
-      form.removeEventListener('submit', this.redirectToRegionalSite);
-    }
-    if (continueButton) {
-      continueButton.removeEventListener('click', this.redirectToRegionalSite);
-    }
-
-    // Remove location button event listener
-    var locationBtn = document.getElementById('locationBtn');
-    if (locationBtn) {
-      var newLocationBtn = locationBtn.cloneNode(true);
-      locationBtn.parentNode.replaceChild(newLocationBtn, locationBtn);
-    }
-
-    // Restore original console.log
-    // Note: This part is tricky as we don't have a reference to the original
-    // It's better to avoid overriding native functions if possible
-  }
-});
-
-/***/ }),
-
 /***/ "./assets/js/modules/logoCarousel.js":
 /*!*******************************************!*\
   !*** ./assets/js/modules/logoCarousel.js ***!
@@ -1644,6 +1233,36 @@ __webpack_require__.r(__webpack_exports__);
         console.error('Search error:', error);
       });
     };
+    var performSearchMobile = function performSearchMobile(inputElement, listContentUpdateMobile, showCardContentMobile, loadingDivMobile, v) {
+      var searchTermMobile = inputElement.value.trim();
+      if (searchTermMobile.length < 2) {
+        listContentUpdateMobile.innerHTML = '';
+        showCardContentMobile.classList.remove('active');
+        loadingDivMobile.style.display = 'none';
+        return;
+      }
+      loadingDivMobile.style.display = 'flex';
+      showCardContentMobile.classList.add('active');
+      listContentUpdateMobile.innerHTML = '';
+      fetch("".concat(wp_ajax_object.ajax_url, "?action=hubexo_search&query=").concat(encodeURIComponent(searchTermMobile))).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        loadingDivMobile.style.display = 'none';
+        if (data.success && data.data.length > 0) {
+          listContentUpdate.innerHTML = '';
+          data.data.forEach(function (result) {
+            var itemClone = listItemMobile.cloneNode(true);
+            itemClone.querySelector('.title--search-mobile').textContent = result.title;
+            listContentUpdateMobile.appendChild(itemClone);
+          });
+        } else {
+          listContentUpdateMobile.innerHTML = '<p>No results found.</p>';
+        }
+      })["catch"](function (error) {
+        loadingDivMobile.style.display = 'none';
+        console.error('Search error:', error);
+      });
+    };
 
     // Desktop search bar elements
     var menuItem = document.getElementById('menu-item-1759');
@@ -1699,7 +1318,7 @@ __webpack_require__.r(__webpack_exports__);
       return searchBarMobile.classList.remove('active');
     };
     var searchMobile = debounce(function () {
-      return performSearch(contentSearchMobile, listContentUpdateMobile, showCardContentMobile, loadingDivMobile, listItemMobile);
+      return performSearchMobile(contentSearchMobile, listContentUpdateMobile, showCardContentMobile, loadingDivMobile, listItemMobile);
     }, 500);
     if (menuItemMobile && searchBarMobile) {
       menuItemMobile.addEventListener('click', openSearchBarMobile);

@@ -12,7 +12,6 @@ import fpnBlocks from "./modules/fpnBlocks";
 import officeListTwo from "./modules/officeListTwo";
 import searchBar from "./modules/searchBar";
 import header from "./modules/header";
-import locationBar from "./modules/locationBar";
 import {createHero} from "./modules/introDots";
 import {stats} from "./modules/stats";
 import {linkListMobileTriggers} from "./modules/linkList";
@@ -20,7 +19,6 @@ import {iconBlocks} from "./modules/iconBlocks";
 
 function init() {
     header.init();
-    locationBar.init();
     promoBanner.init();
     hamburgerNav.init();
     dotsStrip.init();

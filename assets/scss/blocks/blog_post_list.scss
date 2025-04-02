@@ -71,3 +71,8 @@ blog-post-block--meta {
   }
 
 }
+
+.blog-post-block--meta.hide,
+.blog-post-block--meta .hide {
+  display: none;
+}
