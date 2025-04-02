@@ -6,6 +6,7 @@
   padding: 12px;
   display: flex;
   justify-content: center;
+  position: relative;
   background-color: var(--earth);
   border: 1px solid var(--earth);
 }
@@ -221,7 +222,8 @@ body:has(main.earth-bg) .sub-menu:after {
   }
 
   a:hover,
-  .current-menu-item a {
+  .current-menu-item a:hover,
+  .current-menu-item a:focus,{
     text-decoration: underline;
   }
 }
@@ -257,4 +259,8 @@ body:has(main.earth-bg) .sub-menu:after {
     font-size: 16px;
     font-weight: 600;
   }
+}
+
+.menu-header-container {
+  z-index: 100;
 }

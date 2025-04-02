@@ -1,46 +1,57 @@
 <?php
-$link = get_field('link');
-if (!empty($link)) {
-    $link_target = $link['target'] ? $link['target'] : '_self';
+$link = get_field( 'link' );
+if ( ! empty( $link ) ) {
+	$link_target = $link['target'] ? $link['target'] : '_self';
 }
-$logo = get_field('logo');
-if (!empty($logo)) {
-    $logo_url = $logo['url'];
-    $logo_alt = $logo['alt'];
-    $logo_title = $logo['title'];
+$logo = get_field( 'logo' );
+if ( ! empty( $logo ) ) {
+	$logo_url   = $logo['url'];
+	$logo_alt   = $logo['alt'];
+	$logo_title = $logo['title'];
 }
-$image = get_field('image');
-if (!empty($image)) {
-    $image_url = $image['url'];
-    $image_alt = $image['alt'];
-    $image_title = $image['title'];
+$image = get_field( 'image' );
+if ( ! empty( $image ) ) {
+	$image_url   = $image['url'];
+	$image_alt   = $image['alt'];
+	$image_title = $image['title'];
 }
+
+$selectCountry = get_field( 'select_country' ); // Get the selected countries as an array
+if ( $selectCountry && is_array( $selectCountry ) ) {
+	$countries = implode( ',', $selectCountry );
+} else {
+	$countries = '';
+}
+
+$BlockId  = get_field( 'block_id' );
+$BlockCss = get_field( 'block_css' );
 ?>
-<div class="hero-banner plum-bg header-pad text-block text-block-image white-text head-text--block-section">
+<div class="hero-banner plum-bg header-pad text-block text-block-image white-text head-text--block-section <?= $BlockCss; ?>"
+     data-country="<?= esc_attr( $countries ) ?>" id="<?= $BlockId; ?>">
     <div class="container fade-in container-overflowhidden">
         <div class="text-block--image">
             <div class="text-block--text content-block--text snug-child">
-                <?php if (!empty($logo)): ?>
+				<?php if ( ! empty( $logo ) ): ?>
                     <div class="logo-block--text">
-                        <img src="<?= esc_url($logo_url); ?>" alt="<?= esc_attr($logo_alt); ?>"
-                             title="<?= esc_attr($logo_title); ?>">
+                        <img src="<?= esc_url( $logo_url ); ?>" alt="<?= esc_attr( $logo_alt ); ?>"
+                             title="<?= esc_attr( $logo_title ); ?>">
                     </div>
-                <?php endif; ?>
-                <?= get_field('text'); ?>
-                <?php if (!empty($link)): ?>
-                    <p><a href="<?= $link['url']; ?>" target="<?= esc_attr($link_target); ?>"
-                          class="blueprint--button"><?= $link['title']; ?><?php get_template_part('parts/svg/right-arrow'); ?></a>
+				<?php endif; ?>
+				<?= get_field( 'text' ); ?>
+				<?php if ( ! empty( $link ) ): ?>
+                    <p><a href="<?= $link['url']; ?>" target="<?= esc_attr( $link_target ); ?>"
+                          class="blueprint--button"><?= $link['title']; ?><?php get_template_part( 'parts/svg/right-arrow' ); ?></a>
                     </p>
-                <?php endif; ?>
+				<?php endif; ?>
             </div>
             <div class="image-block--content">
-                <?php if (!empty($image)): ?>
+				<?php if ( ! empty( $image ) ): ?>
                     <div class="image-block--details">
-                        <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr($image_alt); ?>"
-                             title="<?= esc_attr($image_title); ?>">
+                        <img src="<?= esc_url( $image_url ); ?>" alt="<?= esc_attr( $image_alt ); ?>"
+                             title="<?= esc_attr( $image_title ); ?>">
                         <div class="block-yellow-two"></div>
                     </div>
-                <?php endif; ?>
+				<?php endif; ?>
             </div>
         </div>
     </div>

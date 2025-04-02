@@ -3,7 +3,6 @@
 $socialLinks = get_field('links', 'options');
 
 ?>
-
 <footer class="site-footer">
     <div class="container">
         <div class="site-footer--logos">
@@ -17,7 +16,7 @@ $socialLinks = get_field('links', 'options');
                             $link = $socialLink['link'];
                             $link_target = $link['target'] ? $link['target'] : '_self';
                             $icon = $socialLink['icon'];
-                        ?>
+                            ?>
                             <li>
                                 <a href="<?= $link['url']; ?>" target="_blank">
                                     <span class="sr-only"><?= $link['title']; ?></span>
@@ -34,8 +33,24 @@ $socialLinks = get_field('links', 'options');
             <nav class="footer-nav">
                 <?php wp_nav_menu(["theme_location" => "footer"]) ?>
             </nav>
+            <nav class="footer-addon-nav on-mobile">
+                <?php
+                wp_nav_menu([
+                    "theme_location" => "footer-addon",
+                    "walker" => new Separator_Walker_Nav_Menu()
+                ]);
+                ?>
+            </nav>
             <span>&copy; Hubexo, <?= date("Y"); ?></span>
         </div>
+        <nav class="footer-addon-nav">
+            <?php
+            wp_nav_menu([
+                "theme_location" => "footer-addon",
+                "walker" => new Separator_Walker_Nav_Menu()
+            ]);
+            ?>
+        </nav>
     </div>
     <svg class="pattern-a is-yellow">
         <g></g>

@@ -33,6 +33,7 @@
   align-items: center;
   padding-block: stretch(12px, 40px);
   transition: padding 0.3s ease-in-out;
+  position: relative;
   .site-header.header-bg & {
     padding-block: stretch(12px, 24px);
   }

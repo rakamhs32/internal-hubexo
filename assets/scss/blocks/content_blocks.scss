@@ -140,3 +140,25 @@
 		padding: clamp(3.75rem, 7.46rem + 5.6vw, 9.5rem) 0;
 	}
 }
+
+.blueprint--button.outline-btn {
+    border: 1px solid var(--earth);
+    font-size: clamp(0.938rem, 0.855rem + 0.3vw, 1.125rem);
+    outline: none;
+    background-color: transparent;
+    color: var(--earth);
+}
+
+.blueprint--button.outline-btn svg path {
+	stroke: var(--earth);
+}
+
+.blueprint--button.outline-btn:hover {
+	background-color: var(--earth);
+	border: 1px solid var(--earth);
+	color: var(--plum);
+}
+
+.blueprint--button.outline-btn:hover svg path {
+	stroke: var(--plum);
+}

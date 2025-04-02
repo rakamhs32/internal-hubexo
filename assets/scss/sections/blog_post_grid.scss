@@ -132,8 +132,18 @@ body.blog {
 }
 .nav-links {
   display: flex;
-
   justify-content: center;
   gap: 10px;
   align-items: center;
+}
+
+.blog-post--grid-title {
+  display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.blog-post--grid-title p,
+.blog-post--grid-title p a {
+  margin-top: 0rem;
 }
