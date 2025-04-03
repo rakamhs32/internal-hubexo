@@ -85,11 +85,11 @@
                 // Convert user country to uppercase for case-insensitive comparison
                 const upperUserCountry = userCountry.toUpperCase();
 
-                const targetCountries = ['SE', 'DK', 'FI', 'NO', 'CZ', 'SK', 'PL', 'AT', 'CH'];
+                const targetCountries = ['ID', 'HK', 'TH', 'VN'];
 
                 // Special mapping for country-specific URL parameters
                 const countryParamOverrides = {
-                    'DK': 'da'
+                    'ID': 'id'
                 };
 
                 // Function to get the URL country parameter (with fallback to iso_code)
