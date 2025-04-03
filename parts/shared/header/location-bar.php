@@ -61,15 +61,27 @@ $show             = get_field( 'show_location_banner', 'options' );
                     'DE': 'WE'
                 };
 
-                const neeCountries = ['SE', 'DA', 'FI', 'NO', 'CZ', 'SK', 'PL', 'AT', 'CH'];// Added ID and AU to ensure they're included
-                const otherRegionCountries = ['US', 'CA', 'GB', 'IE', 'ES', 'PT', 'DE'];
+                // APAC countries
+                const neeCountries = ['SE', 'DA', 'FI', 'NO', 'CZ', 'SK', 'PL', 'AT', 'CH'];
+
+                // Other region countries (NA, APAC, WE)
+                const otherRegionCountries = [
+                    // APAC countries
+                    'AU', 'NZ', 'SG', 'MY', 'ID', 'HK', 'PH', 'TH', 'VN',
+                    // NA countries
+                    'US', 'CA',
+                    // WE countries
+                    'ES', 'PT', 'DE',
+                    // UKI countries
+                    'GB', 'IE'
+                ];
 
                 const countryIsoMap = {
                     'AU': 'Australia',
                     'AT': 'Austria',
                     'CA': 'Canada',
                     'CZ': 'Czech Republic',
-                    'DA': 'Denmark',
+                    'DK': 'Denmark',
                     'FI': 'Finland',
                     'DE': 'Germany',
                     'HK': 'Hong Kong',
@@ -117,13 +129,13 @@ $show             = get_field( 'show_location_banner', 'options' );
                             titleElement.textContent = `You are viewing content for Hubexo Asia Pacific`;
                         }
 
-                        // if (regionBar) {
-                        //     if (apacCountries.includes(currentCountryCode)) {
-                        //         regionBar.classList.add('hidden');
-                        //     } else if (otherRegionCountries.includes(currentCountryCode)) {
-                        //         regionBar.classList.remove('hidden');
-                        //     }
-                        // }
+                        if (regionBar) {
+                            if (neeCountries.includes(currentCountryCode)) {
+//                                 regionBar.classList.add('hidden');
+                            } else if (otherRegionCountries.includes(currentCountryCode)) {
+//                                 regionBar.classList.remove('hidden');
+                            }
+                        }
                     } catch (e) {
                         console.error('Error parsing country data:', e);
                     }
@@ -346,28 +358,27 @@ $show             = get_field( 'show_location_banner', 'options' );
                         const selectedCountryName = selectedOption.textContent.trim();
                         const selectedCountryCode = getCountryCodeFromSelection(selectedCountryName);
 
-                        // Get lowercase country code for the URL
+                        // Country-specific URL code (lowercase ISO)
                         const countryUrlCode = selectedCountryCode ? getUrlCountryParam(selectedCountryCode) : '';
 
-                        // Check if we need to handle APAC special case
-                        if (region === 'NEE') {
-                            const currentRegion = countryRegionMap[currentCountryCode];
-                            if (currentRegion === 'NEE') {
-                                if (selectedCountryCode && selectedCountryCode !== currentCountryCode) {
-                                    updateLocalStorageCountry(selectedCountryCode);
-                                    window.location.href = `https://${region.toLowerCase()}.${mainDomain}/${countryUrlCode}`;
-                                    return;
-                                }
-                            }
-                        }
+                        // Array of APAC countries requiring deeper filtering
+                        const neeSpecificCountries = ['SE', 'DA', 'FI', 'NO', 'CZ', 'SK', 'PL', 'AT', 'CH'];
 
-                        // Default redirection handling
-                        if (countryUrlCode) {
-                            window.location.href = `https://${region.toLowerCase()}.${mainDomain}/${countryUrlCode}`;
+                        // Deeper filtering for APAC region based on provided countries
+                        if (region === 'NEE' && countryUrlCode) {
+                            if (neeSpecificCountries.includes(selectedCountryCode)) {
+                                // Redirect specific APAC countries to their country-specific URL
+                                window.location.href = `https://${region.toLowerCase()}.${mainDomain}/${countryUrlCode}`;
+                            } else {
+                                // Redirect other APAC countries to the APAC region homepage
+                                window.location.href = `https://${region.toLowerCase()}.${mainDomain}`;
+                            }
                         } else {
+                            // Default handling for all other regions & cases
                             window.location.href = `https://${region.toLowerCase()}.${mainDomain}`;
                         }
                     } else {
+                        // Fallback if no option is explicitly selected
                         window.location.href = `https://${mainDomain}`;
                     }
                 }
