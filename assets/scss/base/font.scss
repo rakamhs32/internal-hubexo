@@ -1,0 +1,30 @@
+// Heading styles using rem units for better accessibility and scalability
+h1 {
+  font-size: 2.5rem;    // 40px (when base is 16px)
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2rem;      // 32px
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.75rem;   // 28px
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 1.5rem;    // 24px
+  margin-bottom: 0.5em;
+}
+
+h5 {
+  font-size: 1.25rem;   // 20px
+  margin-bottom: 0.5em;
+}
+
+h6 {
+  font-size: 1rem;      // 16px
+  margin-bottom: 0.5em;
+}

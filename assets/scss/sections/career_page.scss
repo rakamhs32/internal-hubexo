@@ -1,0 +1,126 @@
+.page-title {
+  font-size: 3.5em;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--plum);
+}
+.page-description {
+  margin-top: 1.5em;
+  color: var(--plum);
+}
+.page-description p {
+  margin-top: .4em;
+  font-size: 1em;
+}
+.list-category-career {
+  margin-top: 2.5em;
+  display: flex;
+  gap: 1em;
+  width: fit-content;
+  @media (max-width: 1023px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+  }
+  @media (max-width: 991px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+  @media (max-width: 767px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+  @media (max-width: 564px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+}
+.btn-category-item {
+  font-size: 1em;
+  padding: .5em 1em;
+  background-color: transparent;
+  border: 1px solid var(--plum);
+  border-radius: 100em;
+  font-weight: 500;
+  min-height: 3.8rem;
+}
+.btn-category-item:hover {
+  background-color: var(--plum);
+  color: var(--earth);
+  transition: all .3s ease;
+}
+.btn-category-item.active {
+  background-color: var(--plum);
+  color: var(--earth);
+  transition: all .3s ease;
+}
+.career-list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.career-list-head h4 {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--plum);
+  line-height: normal;
+  margin-top: 0em;
+}
+.career-list-head a {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--plum);
+  line-height: normal;
+  text-decoration: none;
+}
+.career-list-container {
+  border-top: 1px solid var(--plum);
+  padding: 1.5em 0em;
+}
+.career-list-category {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.career-list-body {
+  margin-top: 1.5em;
+}
+.career-list-body p {
+  margin-top: .4em;
+}
+.career-list-category {
+  margin-top: 1.5em;
+}
+.career-list-category button {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  font-size: 1em;
+  padding: .5em .5em;
+  background-color: transparent;
+  border: 1px solid var(--plum);
+  border-radius: 100em;
+  font-weight: 500;
+}
+.career-list-category button:hover,
+.career-list-category button svg:hover {
+  background-color: var(--plum);
+  color: var(--earth);
+  transition: all .3s ease;
+  fill: var(--earth);
+}
+
+.career-list-category button:hover svg {
+  fill: var(--earth) !important;
+}
+
+.career-list-category button:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.container-job-list {
+  margin-top: 2.5rem;
+}

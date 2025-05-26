@@ -29,6 +29,6 @@ if (!empty($location) && !is_wp_error($location)) {
             </svg>
         </button>
     </a>
-    <?php // the_category(); 
+    <?php // the_category();
     ?>
 </div>

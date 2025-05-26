@@ -39,7 +39,7 @@
 .lang-select-items div,
 .lang-select-selected {
     color: var(--plum);
-    padding: 1rem 2rem 1rem 2rem;
+    padding: .5rem 1rem .5rem 1rem;
     /* border: 1px solid var(--earth); */
     /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
     cursor: pointer;
@@ -96,9 +96,9 @@
 }
 
 .button-continue {
-    padding: 1rem 2rem 1rem 2rem;
+    padding: .5rem 1rem .5rem 1rem;
     width: max-content;
-    height: 4rem;
+    height: 3rem;
     font-size: 1rem;
     background-color: var(--atomicYellow);
 }
@@ -115,7 +115,7 @@
 .button-container {
     align-items: center;
     display: flex;
-    gap: 1rem;
+    gap: .8rem;
 }
 
 .language-bar {
@@ -142,7 +142,7 @@
 }
 
 .title-content--bar {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--atomicYellow);
     margin: 0rem;
     font-weight: 600;
@@ -151,7 +151,7 @@
 
 .description-banner a,
 .description-banner p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--earth);
     margin: 0rem;
 }
@@ -160,12 +160,16 @@
     fill: var(--atomicYellow);
 }
 
+.title-and-icon img {
+    width: 30px;
+}
+
 .description-banner {
-    margin-top: 1.4rem;
+    margin-top: 1rem;
 }
 
 .close-button {
-    padding: .5rem;
+    padding: .25rem;
     border: 1px solid var(--earth);
     display: flex;
     justify-content: center;
@@ -175,8 +179,8 @@
 }
 
 .close-button svg {
-    width: .8rem;
-    height: .8rem;
+    width: .6rem;
+    height: .6rem;
     fill: var(--earth);
 }
 

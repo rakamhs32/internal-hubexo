@@ -1,26 +1,36 @@
 <?php
 
-$title = get_field('title');
-$text = get_field('text');
-$link = get_field('link');
-if (!empty($link)) {
-    $link_target = $link['target'] ? $link['target'] : '_self';
+$title = get_field( 'title' );
+$text  = get_field( 'text' );
+$link  = get_field( 'link' );
+if ( ! empty( $link ) ) {
+	$link_target = $link['target'] ? $link['target'] : '_self';
 }
-$stats = get_field('stats');
+$stats = get_field( 'stats' );
 
+$selectCountry = get_field( 'select_country' ); // Get the selected countries as an array
+if ( $selectCountry && is_array( $selectCountry ) ) {
+	$countries = implode( ',', $selectCountry );
+} else {
+	$countries = '';
+}
+
+$BlockId  = get_field( 'block_id' );
+$BlockCss = get_field( 'block_css' );
 ?>
 <div style="display: none !important">
     <!-- This is hidden, but controls the animation -->
     <canvas id="hero-path-canvas" width="25" height="21"></canvas>
 </div>
 
-<div class="homepage-banner header-pad">
+<div class="homepage-banner header-pad-two <?= $BlockCss; ?>" data-country="<?= esc_attr( $countries ); ?>"
+     id="<?= $BlockId; ?>">
     <div class="hero-wrap">
         <div class="hero-inner-wrap">
             <canvas id="hero-circles"></canvas>
         </div>
     </div>
-    <?php /* 
+	<?php /*
     Another old version
     <div class="hero-wrap">
         <div class="hero-inner-wrap">
@@ -41,16 +51,17 @@ $stats = get_field('stats');
             </div>
             <div class="homepage-banner--text snug-child">
                 <p class="small-title"><?= $text; ?></p>
-                <?php if (!empty($link)): ?>
-                    <a href="<?= $link['url']; ?>" class="blueprint--button"><?= $link['title']; ?> <?php get_template_part('parts/svg/right-arrow'); ?></a>
-                <?php endif; ?>
+				<?php if ( ! empty( $link ) ): ?>
+                    <a href="<?= $link['url']; ?>"
+                       class="blueprint--button"><?= $link['title']; ?><?php get_template_part( 'parts/svg/right-arrow' ); ?></a>
+				<?php endif; ?>
             </div>
         </div>
-        <?php if (!empty($stats)): ?>
+		<?php if ( ! empty( $stats ) ): ?>
             <div class="stat-blocks">
-                <?php foreach ($stats as $stat):
-                    $image = $stat['icon'];
-                ?>
+				<?php foreach ( $stats as $stat ):
+					$image = $stat['icon'];
+					?>
                     <div class="stat-block">
                         <img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" class="icon-size-default">
                         <div class="stat-block--stat">
@@ -58,11 +69,11 @@ $stats = get_field('stats');
                             <span class="stat-block--title snug"><?= $stat['description']; ?></span>
                         </div>
                     </div>
-                <?php endforeach; ?>
+				<?php endforeach; ?>
             </div>
-        <?php endif; ?>
+		<?php endif; ?>
     </div>
-    <?php /*
+	<?php /*
     <svg class="pattern-a is-yellow">
         <g></g>
     </svg>

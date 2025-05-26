@@ -1,0 +1,47 @@
+// Modify the performSearch function to work with both desktop and mobile
+const performSearch = (inputElement, listContentUpdate, showCardContent, loadingDiv, listItem, isMobile = false) => {
+    const searchTerm = inputElement.value.trim();
+
+    if (searchTerm.length < 2) {
+        listContentUpdate.innerHTML = '';
+        showCardContent.classList.remove('active');
+        loadingDiv.style.display = 'none';
+        return;
+    }
+
+    loadingDiv.style.display = 'flex';
+    showCardContent.classList.add('active');
+    listContentUpdate.innerHTML = '';
+
+    fetch(`${wp_ajax_object.ajax_url}?action=hubexo_search&query=${encodeURIComponent(searchTerm)}`)
+        .then(response => response.json())
+        .then(data => {
+            loadingDiv.style.display = 'none';
+            if (data.success && data.data.length > 0) {
+                listContentUpdate.innerHTML = '';
+                data.data.forEach(result => {
+                    const itemClone = listItem.cloneNode(true);
+
+                    // Use the appropriate class name based on whether it's mobile or desktop
+                    const titleSelector = isMobile ? '.title--search-mobile' : '.title--search';
+                    const titleElement = itemClone.querySelector(titleSelector);
+
+                    if (titleElement) {
+                        titleElement.textContent = result.title;
+                    }
+
+                    listContentUpdate.appendChild(itemClone);
+                });
+            } else {
+                listContentUpdate.innerHTML = '<p>No results found.</p>';
+            }
+        })
+        .catch(error => {
+            loadingDiv.style.display = 'none';
+            console.error('Search error:', error);
+        });
+};
+
+// Then update the function calls to specify if it's mobile
+const searchDesktop = debounce(() => performSearch(contentSearch, listContentUpdate, showCardContent, loadingDivDesktop, listItem, false), 500);
+const searchMobile = debounce(() => performSearch(contentSearchMobile, listContentUpdateMobile, showCardContentMobile, loadingDivMobile, listItemMobile, true), 500);

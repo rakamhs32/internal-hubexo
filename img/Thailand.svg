@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>03 Icon/04 Flag/Thailand</title>
+    <g id="03-Icon/04-Flag/Thailand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="flag-thailand" transform="translate(3.000000, 3.000000)">
+            <g id="Group" transform="translate(0.000000, 3.000000)" fill="#F5F5F5">
+                <path d="M0.151171875,0 C0.052734375,0.363861386 0,0.75 0,1.1509901 L0,3 L18,3 L18,1.1509901 C18,0.753712871 17.9472656,0.367574257 17.8488281,0 L0.151171875,0 Z" id="Path"></path>
+                <path d="M0,10.8490099 C0,11.2462871 0.0527446767,11.6324257 0.151201407,12 L17.8487986,12 C17.9472553,11.6361386 18,11.25 18,10.8490099 L18,9 L0,9 L0,10.8490099 Z" id="Path"></path>
+            </g>
+            <g id="Group" fill="#FF4B55">
+                <path d="M3.57281939,18 L14.430757,18 C16.1331214,17.8774752 17.5457977,16.6485149 18,15 L-4.54844495e-14,15 C0.457778661,16.6522277 1.8668786,17.8774752 3.57281939,18 Z" id="Path"></path>
+                <path d="M14.4271806,-2.84147705e-15 L3.569243,-2.84147705e-15 C1.8668786,0.122524752 0.454202265,1.35148515 -2.27266123e-14,3 L18,3 C17.5422213,1.34777228 16.1331214,0.122524752 14.4271806,-2.84147705e-15 Z" id="Path"></path>
+            </g>
+            <rect id="Rectangle" fill="#41479B" x="0" y="5" width="18" height="6"></rect>
+        </g>
+    </g>
+</svg>

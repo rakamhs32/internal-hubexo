@@ -1,6 +1,1582 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./assets/js/main.js":
+/*!***************************!*\
+  !*** ./assets/js/main.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_hamburgerNav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/hamburgerNav */ "./assets/js/modules/hamburgerNav.js");
+/* harmony import */ var _modules_promoBanner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/promoBanner */ "./assets/js/modules/promoBanner.js");
+/* harmony import */ var _modules_teamMembers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/teamMembers */ "./assets/js/modules/teamMembers.js");
+/* harmony import */ var glightbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! glightbox */ "./node_modules/glightbox/dist/js/glightbox.min.js");
+/* harmony import */ var glightbox__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(glightbox__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_basicIntersections__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/basicIntersections */ "./assets/js/modules/basicIntersections.js");
+/* harmony import */ var _modules_dotsStrip__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/dotsStrip */ "./assets/js/modules/dotsStrip.js");
+/* harmony import */ var _modules_logoCarousel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/logoCarousel */ "./assets/js/modules/logoCarousel.js");
+/* harmony import */ var _modules_logoCarouselGrid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/logoCarouselGrid */ "./assets/js/modules/logoCarouselGrid.js");
+/* harmony import */ var _modules_testimonials__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/testimonials */ "./assets/js/modules/testimonials.js");
+/* harmony import */ var _modules_infiniteScroll__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/infiniteScroll */ "./assets/js/modules/infiniteScroll.js");
+/* harmony import */ var _modules_fpnBlocks__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/fpnBlocks */ "./assets/js/modules/fpnBlocks.js");
+/* harmony import */ var _modules_officeListTwo__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/officeListTwo */ "./assets/js/modules/officeListTwo.js");
+/* harmony import */ var _modules_searchBar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/searchBar */ "./assets/js/modules/searchBar.js");
+/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/header */ "./assets/js/modules/header.js");
+/* harmony import */ var _modules_introDots__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/introDots */ "./assets/js/modules/introDots.js");
+/* harmony import */ var _modules_stats__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/stats */ "./assets/js/modules/stats.js");
+/* harmony import */ var _modules_linkList__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/linkList */ "./assets/js/modules/linkList.js");
+/* harmony import */ var _modules_iconBlocks__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/iconBlocks */ "./assets/js/modules/iconBlocks.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function init() {
+  _modules_header__WEBPACK_IMPORTED_MODULE_13__["default"].init();
+  _modules_promoBanner__WEBPACK_IMPORTED_MODULE_1__["default"].init();
+  _modules_hamburgerNav__WEBPACK_IMPORTED_MODULE_0__["default"].init();
+  _modules_dotsStrip__WEBPACK_IMPORTED_MODULE_5__["default"].init();
+  _modules_officeListTwo__WEBPACK_IMPORTED_MODULE_11__["default"].init();
+  _modules_logoCarousel__WEBPACK_IMPORTED_MODULE_6__["default"].init();
+  _modules_logoCarouselGrid__WEBPACK_IMPORTED_MODULE_7__["default"].init();
+  _modules_testimonials__WEBPACK_IMPORTED_MODULE_8__["default"].init();
+  _modules_teamMembers__WEBPACK_IMPORTED_MODULE_2__["default"].init();
+  _modules_basicIntersections__WEBPACK_IMPORTED_MODULE_4__["default"].init();
+  _modules_infiniteScroll__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+  _modules_fpnBlocks__WEBPACK_IMPORTED_MODULE_10__["default"].init();
+  _modules_searchBar__WEBPACK_IMPORTED_MODULE_12__["default"].init();
+  (0,_modules_introDots__WEBPACK_IMPORTED_MODULE_14__.createHero)();
+  (0,_modules_stats__WEBPACK_IMPORTED_MODULE_15__.stats)();
+  (0,_modules_linkList__WEBPACK_IMPORTED_MODULE_16__.linkListMobileTriggers)();
+  (0,_modules_iconBlocks__WEBPACK_IMPORTED_MODULE_17__.iconBlocks)();
+  var videoLightbox = glightbox__WEBPACK_IMPORTED_MODULE_3___default()(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
+    selector: ".glightbox-video",
+    skin: "video",
+    touchNavigation: true,
+    loop: false,
+    keyboardNavigation: false
+  }, "touchNavigation", false), "autoplayVideos", true), "openEffect", "fade"), "closeEffect", "fade"), "slideEffect", "fade"));
+}
+document.addEventListener("DOMContentLoaded", function () {
+  init();
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/basicIntersections.js":
+/*!*************************************************!*\
+  !*** ./assets/js/modules/basicIntersections.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   moreThan15Percent: () => (/* binding */ moreThan15Percent)
+/* harmony export */ });
+// Basic, just if they are intersecting at all
+function anyIntersectionAtAll(entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      setTimeout(function () {
+        return entry.target.classList.add("in-view");
+      }, 0);
+      // remove the item from funning again
+      Intersections.inViewObserver.unobserve(entry.target);
+    } else {
+      // entry.target.classList.remove("in-view");
+    }
+  });
+}
+function moreThan15Percent(entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting && (entry.intersectionRatio > 0.15 || entry.intersectionRatio * entry.boundingClientRect.height > window.innerHeight * 0.15)) {
+      setTimeout(function () {
+        return entry.target.classList.add("in-view");
+      }, 0);
+      // remove the item from funning again
+      Intersections.inViewObserver.unobserve(entry.target);
+    } else {
+      // entry.target.classList.remove("in-view");
+    }
+  });
+}
+var Intersections = {
+  inViewObserver: new IntersectionObserver(moreThan15Percent, {
+    threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+  }),
+  init: function init() {
+    var _this = this;
+    document.querySelectorAll(".fade-in, .fade-up, .fade-in-stagger, .job-card, .location-card").forEach(function (pie) {
+      _this.inViewObserver.observe(pie);
+    });
+  },
+  destroy: function destroy() {
+    this.inViewObserver.disconnect();
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Intersections);
+
+/***/ }),
+
+/***/ "./assets/js/modules/classes/InView.js":
+/*!*********************************************!*\
+  !*** ./assets/js/modules/classes/InView.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ InView)
+/* harmony export */ });
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var InView = /*#__PURE__*/function () {
+  function InView(element, args) {
+    _classCallCheck(this, InView);
+    this.settings = _objectSpread({
+      amount: 0.15,
+      delay: 100
+    }, args);
+    this.boundCallBack = this.callback.bind(this);
+    this.inViewObserver = new IntersectionObserver(this.boundCallBack, {
+      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+    });
+    this.inViewObserver.observe(element);
+  }
+  return _createClass(InView, [{
+    key: "callback",
+    value: function callback(entries) {
+      var _this = this;
+      entries.forEach(function (entry) {
+        var test = entry.isIntersecting && (entry.intersectionRatio > _this.settings.amount || entry.intersectionRatio * entry.boundingClientRect.height > window.innerHeight * _this.settings.amount);
+        if (test) {
+          setTimeout(function () {
+            _this.inView(entry);
+          }, _this.settings.delay);
+          // remove the item from funning again
+          _this.inViewObserver.unobserve(entry.target);
+        } else {
+          // entry.target.classList.remove("in-view");
+        }
+      });
+    }
+  }, {
+    key: "inView",
+    value: function inView(entry) {
+      return entry.target.classList.add("in-view");
+    }
+  }, {
+    key: "outView",
+    value: function outView(entry) {
+      return;
+    }
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this.inViewObserver.disconnect();
+    }
+  }]);
+}();
+
+
+/***/ }),
+
+/***/ "./assets/js/modules/classes/Rollup.js":
+/*!*********************************************!*\
+  !*** ./assets/js/modules/classes/Rollup.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ RollUp)
+/* harmony export */ });
+/* harmony import */ var _InView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InView */ "./assets/js/modules/classes/InView.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
+function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
+function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
+function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
+
+var RollUp = /*#__PURE__*/function (_InView) {
+  function RollUp(el, mods) {
+    var _this;
+    _classCallCheck(this, RollUp);
+    _this = _callSuper(this, RollUp, [el]);
+    _this.el = el;
+    _this.destroyed = false;
+    _this.original = _this.el.innerText;
+    _this.settings = _objectSpread(_objectSpread({}, _this.settings), {}, {
+      duration: 2000,
+      isInt: true
+    }, mods);
+    _this.nan = false;
+    _this.getNumber();
+    if (_this.nan) return _possibleConstructorReturn(_this);
+    _this.makeFormatter();
+    _this.progress = 0;
+    _this.dir = null;
+    _this.format(_this.progress);
+    return _this;
+  }
+  _inherits(RollUp, _InView);
+  return _createClass(RollUp, [{
+    key: "getNumber",
+    value: function getNumber() {
+      var match = this.original.match(/[0-9,.]+/gm);
+      if (!match) {
+        this.nan = true;
+        return false;
+      }
+      var num = match[0];
+      if (num.indexOf(".") >= 0) {
+        this.parse = parseFloat;
+        this.decimals = num.split(".")[1].length;
+      } else {
+        this.decimals = 0;
+        this.parse = parseInt;
+      }
+      var bits = this.original.split(num);
+      this.prepend = bits[0];
+      this.append = bits[1];
+      var plainNumber = num.replace(/,/g, "");
+      this.el.innerText = 0;
+      this.value = this.parse(plainNumber);
+    }
+  }, {
+    key: "makeFormatter",
+    value: function makeFormatter() {
+      var args = {
+        minimumFractionDigits: this.decimals,
+        maximumFractionDigits: this.decimals
+      };
+
+      // Currencies
+      if (this.prepend == "$") {
+        args.style = "currency";
+        args.currency = "USD";
+      } else if (this.prepend == "£") {
+        args.style = "currency";
+        args.currency = "GBP";
+      } else if (this.prepend == "€") {
+        args.style = "currency";
+        args.currency = "EUR";
+      }
+
+      // Plus
+      if (this.settings.hasPlus) {
+        args.signDisplay = "always";
+      }
+      this.formatter = new Intl.NumberFormat(window.navigator.userLanguage || window.navigator.language, args);
+    }
+  }, {
+    key: "ease",
+    value: function ease(t) {
+      return Math.sqrt(1 - Math.pow(t - 1, 2));
+      return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+      // const sqt = t * t;
+      // return sqt / (2.0 * (sqt - t) + 1.0);
+    }
+  }, {
+    key: "loop",
+    value: function loop() {
+      // if (this.destroyed) return;
+      if (!this.dir) return;
+      if (this.dir == "up") {
+        this.progress = this.ease(Math.min(1, 1 - (this.finishTime - Date.now()) / this.settings.duration));
+      } else {
+        this.progress = this.ease(Math.max(0, (this.finishTime - Date.now()) / this.settings.duration));
+      }
+      this.format();
+      if (this.dir == "down" && this.progress > 0 || this.dir == "up" && this.progress < 1) {
+        // setTimeout(this.loop.bind(this), 50);
+        requestAnimationFrame(this.loop.bind(this));
+      } else {
+        this.dir = false;
+      }
+    }
+  }, {
+    key: "up",
+    value: function up() {
+      if (this.nan) return;
+      this.finishTime = Date.now() + this.settings.duration;
+      this.dir = "up";
+      this.loop();
+    }
+  }, {
+    key: "down",
+    value: function down() {
+      if (this.nan) return;
+      this.finishTime = Date.now() + this.settings.duration;
+      this.dir = "down";
+      this.loop();
+    }
+  }, {
+    key: "format",
+    value: function format() {
+      this.el.innerText = "".concat(this.formatter.format(this.progress * this.value)).concat(this.append);
+    }
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this.destroyed = true;
+    }
+  }, {
+    key: "inView",
+    value: function inView(entry) {
+      this.up();
+    }
+  }, {
+    key: "outView",
+    value: function outView(entry) {}
+  }]);
+}(_InView__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+/***/ }),
+
+/***/ "./assets/js/modules/dotsStrip.js":
+/*!****************************************!*\
+  !*** ./assets/js/modules/dotsStrip.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    var masterPatternA = document.querySelector("#master-pattern-a");
+    var circleGroup = masterPatternA.querySelector("#master-pattern-a-group");
+    var aInstances = Array.from(document.querySelectorAll(".pattern-a"));
+    var fillChildren = function fillChildren() {
+      aInstances.forEach(function (pattern) {
+        var group = pattern.querySelector("g");
+        while (group.firstChild) {
+          group.removeChild(group.firstChild);
+        }
+        var clone = circleGroup.cloneNode(true);
+        group.appendChild(clone);
+      });
+    };
+    var settings = {
+      gridSize: 32
+    };
+    var grid = [];
+    var fillGrid = function fillGrid() {
+      grid.length = 0;
+      while (circleGroup.firstChild) {
+        circleGroup.removeChild(circleGroup.firstChild);
+      }
+      for (var row = 0; row < settings.rows; row++) {
+        for (var col = 0; col <= settings.cols; col++) {
+          var center = {
+            x: col * settings.gridSize + settings.offsetX,
+            y: row * settings.gridSize
+          };
+          var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          circle.setAttribute("cx", center.x);
+          circle.setAttribute("cy", center.y);
+          circle.setAttribute("r", settings.gridSize / 2);
+          circle.setAttribute("fill", "currentColor");
+          circle.style.setProperty("--x", col);
+          circle.style.setProperty("--y", row);
+          grid.push({
+            circle: circle,
+            center: center
+          });
+          circleGroup.appendChild(circle);
+        }
+      }
+      fillChildren();
+    };
+    var setViewBox = function setViewBox() {
+      masterPatternA.setAttribute("viewBox", "0 0 ".concat(settings.width, " ").concat(settings.height));
+      aInstances.forEach(function (pattern) {
+        return pattern.setAttribute("viewBox", "0 0 ".concat(settings.width, " ").concat(settings.height));
+      });
+    };
+    var reset = function reset() {
+      settings.width = window.innerWidth;
+      settings.height = settings.gridSize * 2.5;
+
+      // Calculate the number of rows and columns
+      settings.cols = Math.ceil(settings.width / settings.gridSize);
+      settings.rows = Math.ceil(settings.height / settings.gridSize);
+
+      // Calculate the offset to center the grid
+      settings.offsetX = (settings.width - settings.cols * settings.gridSize) / 2;
+      settings.offsetY = (settings.height - settings.rows * settings.gridSize) / 2;
+      setViewBox();
+      fillGrid();
+    };
+    reset();
+    window.addEventListener("resize", reset);
+  }
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/fpnBlocks.js":
+/*!****************************************!*\
+  !*** ./assets/js/modules/fpnBlocks.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    var _this = this;
+    var itemColumns = document.querySelectorAll('.item-column');
+    itemColumns.forEach(function (itemColumn) {
+      // Add event listeners for mouseenter and mouseleave
+      itemColumn.addEventListener('mouseenter', _this.handleMouseEnter);
+      itemColumn.addEventListener('mouseleave', _this.handleMouseLeave);
+    });
+  },
+  destroy: function destroy() {
+    var _this2 = this;
+    var itemColumns = document.querySelectorAll('.item-column');
+    itemColumns.forEach(function (itemColumn) {
+      // Remove event listeners for mouseenter and mouseleave
+      itemColumn.removeEventListener('mouseenter', _this2.handleMouseEnter);
+      itemColumn.removeEventListener('mouseleave', _this2.handleMouseLeave);
+    });
+  },
+  handleMouseEnter: function handleMouseEnter(event) {
+    var itemColumn = event.currentTarget;
+    itemColumn.classList.add('plum-bg');
+    var iconImg = itemColumn.querySelector('.icon-item img');
+    if (iconImg) {
+      iconImg.classList.add('filter-white');
+    }
+    var itemLink = itemColumn.querySelector('.item-content a');
+    if (itemLink) {
+      itemLink.classList.add('filter-white');
+      itemLink.classList.add('hidden');
+    }
+    var hoverDescription = itemColumn.querySelector('.hover-description');
+    if (hoverDescription) {
+      hoverDescription.classList.add('visible');
+    }
+  },
+  handleMouseLeave: function handleMouseLeave(event) {
+    var itemColumn = event.currentTarget;
+    itemColumn.classList.remove('plum-bg');
+    var iconImg = itemColumn.querySelector('.icon-item img');
+    if (iconImg) {
+      iconImg.classList.remove('filter-white');
+    }
+    var itemLink = itemColumn.querySelector('.item-content a');
+    if (itemLink) {
+      itemLink.classList.remove('filter-white');
+      itemLink.classList.remove('hidden');
+    }
+    var hoverDescription = itemColumn.querySelector('.hover-description');
+    if (hoverDescription) {
+      hoverDescription.classList.remove('visible');
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/hamburgerNav.js":
+/*!*******************************************!*\
+  !*** ./assets/js/modules/hamburgerNav.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    if (!document.querySelector("#hamburger")) {
+      return;
+    }
+    var navButton = document.querySelector("#hamburger");
+    var navText = document.querySelector(".hamburger--text");
+    navButton.addEventListener("click", function () {
+      this.classList.toggle("is-active");
+      document.body.classList.toggle("menu-open");
+      if (navText.textContent === "Menu") {
+        navText.textContent = "Close";
+      } else {
+        navText.textContent = "Menu";
+      }
+    });
+    var mobileButtons = document.querySelectorAll(".mobile-button");
+    mobileButtons.forEach(function (mobileButton) {
+      mobileButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        mobileButton.closest("li").classList.toggle("active");
+      });
+    });
+  },
+  destroy: function destroy() {}
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/header.js":
+/*!*************************************!*\
+  !*** ./assets/js/modules/header.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var cycle = function cycle(logo) {
+  if (logo.classList.contains("animating")) {
+    return;
+  }
+  logo.classList.add("animating");
+  logo.addEventListener("animationend", function () {
+    logo.classList.remove("animating");
+  }, {
+    once: true
+  });
+};
+var _intermittentCycle = function intermittentCycle(logo) {
+  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  var rate = 10;
+  var rand = 10;
+  var t = Math.round((Math.random() * rand + rate + n / 3) * 1000);
+  console.log("Cycling in ".concat(t / 1000, "s"));
+  n++;
+  setTimeout(function () {
+    cycle(logo);
+    _intermittentCycle(logo, n);
+  }, t);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    if (!document.querySelector("#header")) {
+      return;
+    }
+    var logo = document.querySelector(".animated-hubexo-logo");
+    logo.addEventListener("pointerenter", function () {
+      cycle(logo);
+    });
+    _intermittentCycle(logo);
+    var lastScrollTop = 0; // Initialize lastScrollTop
+    var navbar = document.getElementById("header");
+    if (navbar.classList.contains("hide")) {
+      setTimeout(function () {
+        if (window.scrollY < 10) {
+          navbar.classList.remove("hide");
+        }
+      }, 20);
+    }
+    function handleScroll() {
+      // Check if we're at the top of the page
+      if (window.scrollY < 3) {
+        navbar.classList.remove("header-bg");
+      } else {
+        navbar.classList.add("header-bg");
+      }
+    }
+    window.addEventListener("scroll", function () {
+      var scrollTop = document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        navbar.classList.add("hide");
+      } else {
+        // Scrolling up
+        navbar.classList.remove("hide");
+      }
+
+      // Update lastScrollTop after handling the scroll direction
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll values
+
+      handleScroll();
+    });
+  },
+  destroy: function destroy() {}
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/iconBlocks.js":
+/*!*****************************************!*\
+  !*** ./assets/js/modules/iconBlocks.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   iconBlocks: () => (/* binding */ iconBlocks)
+/* harmony export */ });
+/* harmony import */ var _classes_InView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes/InView */ "./assets/js/modules/classes/InView.js");
+
+var iconBlocks = function iconBlocks() {
+  Array.from(document.querySelectorAll(".icon-block")).forEach(function (iconBlock) {
+    new _classes_InView__WEBPACK_IMPORTED_MODULE_0__["default"](iconBlock, {});
+  });
+};
+
+/***/ }),
+
+/***/ "./assets/js/modules/infiniteScroll.js":
+/*!*********************************************!*\
+  !*** ./assets/js/modules/infiniteScroll.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _modules_basicIntersections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/basicIntersections */ "./assets/js/modules/basicIntersections.js");
+var InfiniteScroll = __webpack_require__(/*! infinite-scroll */ "./node_modules/infinite-scroll/js/index.js");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    if (document.querySelector(".next-link")) {
+      var elem = document.querySelector("#posts-wrap");
+      var infScroll = new InfiniteScroll(elem, {
+        // options
+        path: ".next-link",
+        append: ".blog-post-block",
+        history: false
+      });
+      infScroll.on("append", function (response, path, items) {
+        _modules_basicIntersections__WEBPACK_IMPORTED_MODULE_0__["default"].init();
+      });
+    }
+  },
+  destroy: function destroy() {}
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/introDots.js":
+/*!****************************************!*\
+  !*** ./assets/js/modules/introDots.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createHero: () => (/* binding */ createHero)
+/* harmony export */ });
+/* harmony import */ var simplex_noise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! simplex-noise */ "./node_modules/simplex-noise/dist/esm/simplex-noise.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+
+var dist = function dist(p1, p2) {
+  return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+};
+var lerp = function lerp(v0, v1, t) {
+  return (1 - t) * v0 + t * v1;
+};
+
+// initialize the noise function
+var noise3D = (0,simplex_noise__WEBPACK_IMPORTED_MODULE_0__.createNoise3D)();
+var settings = {
+  width: 25,
+  height: 25
+};
+var mouse = {
+  x: 12.5,
+  y: 12.5
+};
+var heroCirclePattern = document.querySelector("#hero-circles");
+var heroCircleArray = [];
+var makeHeroCircles = function makeHeroCircles() {
+  for (var y = 0; y < settings.height; y++) {
+    for (var x = 0; x < settings.width; x++) {
+      // const circle = document.createElementNS(
+      //   "http://www.w3.org/2000/svg",
+      //   "circle"
+      // );
+      // circle.setAttribute("r", 0);
+      // circle.setAttribute("cx", 30 + x * 60);
+      // circle.setAttribute("cy", 30 + y * 60);
+      // circle.setAttribute("fill", "#C8D2D2");
+      heroCircleArray.push({
+        r: 0
+      });
+    }
+  }
+};
+var createHero = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+    var ctx, isIntersecting, callback, observer, t, last, _draw;
+    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+      while (1) switch (_context2.prev = _context2.next) {
+        case 0:
+          if (heroCirclePattern) {
+            _context2.next = 2;
+            break;
+          }
+          return _context2.abrupt("return");
+        case 2:
+          makeHeroCircles();
+          heroCirclePattern.width = 1500;
+          heroCirclePattern.height = 1500;
+          ctx = heroCirclePattern.getContext("2d"); // Define the isIntersecting variable
+          isIntersecting = false; // Define the callback function that will be triggered when the intersection occurs
+          callback = function callback(entries, observer) {
+            entries.forEach(function (entry) {
+              // Update the isIntersecting variable based on whether the element is intersecting
+              isIntersecting = entry.isIntersecting;
+            });
+          }; // Create a new Intersection Observer
+          observer = new IntersectionObserver(callback); // Start observing the target div
+          observer.observe(heroCirclePattern);
+          document.documentElement.addEventListener("mousemove", function (e) {
+            // Mouse position relative to heroCirclePattern
+
+            var rect = heroCirclePattern.getBoundingClientRect();
+            mouse.x = (e.clientX - rect.left) / rect.width * settings.width;
+            mouse.y = (e.clientY - rect.top) / rect.height * settings.height;
+          });
+          t = Date.now();
+          last = Date.now();
+          _draw = /*#__PURE__*/function () {
+            var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+              var dt, scale, maximumDistance, i, x, y, noise, mouseDistance, mouseDistanceModifier, n;
+              return _regeneratorRuntime().wrap(function _callee$(_context) {
+                while (1) switch (_context.prev = _context.next) {
+                  case 0:
+                    requestAnimationFrame(_draw);
+                    if (isIntersecting) {
+                      _context.next = 3;
+                      break;
+                    }
+                    return _context.abrupt("return");
+                  case 3:
+                    t = Date.now();
+                    dt = t - last;
+                    if (!(dt < 1000 / 30)) {
+                      _context.next = 7;
+                      break;
+                    }
+                    return _context.abrupt("return");
+                  case 7:
+                    last = t;
+                    scale = 0.1;
+                    maximumDistance = dist({
+                      x: 0,
+                      y: 0
+                    }, {
+                      x: settings.width,
+                      y: settings.height
+                    });
+                    ctx.clearRect(0, 0, heroCirclePattern.width, heroCirclePattern.height);
+                    ctx.fillStyle = "#C8D2D2";
+                    for (i = 0; i < heroCircleArray.length; i++) {
+                      x = i % settings.width;
+                      y = Math.floor(i / settings.width);
+                      noise = noise3D(x * scale, y * scale, t / 3000) + 0.3;
+                      mouseDistance = dist({
+                        x: x,
+                        y: y
+                      }, {
+                        x: mouse.x,
+                        y: mouse.y
+                      }); //  Old version:
+                      mouseDistanceModifier = mouseDistance * 5 / maximumDistance;
+                      noise *= Math.min(1, mouseDistanceModifier * 2);
+                      n = Math.min(1, Math.max(0, noise)); // With lerp
+                      heroCircleArray[i].r = lerp(heroCircleArray[i].r, n, 0.3);
+                      ctx.beginPath();
+                      ctx.arc(30 + x * 60, 30 + y * 60, heroCircleArray[i].r * 25, 0, 2 * Math.PI);
+                      ctx.fill();
+
+                      // Without lerp
+                      // heroCircleArray[i].circle.setAttribute("r", n * 25);
+                    }
+                  case 13:
+                  case "end":
+                    return _context.stop();
+                }
+              }, _callee);
+            }));
+            return function draw() {
+              return _ref2.apply(this, arguments);
+            };
+          }();
+          requestAnimationFrame(_draw);
+        case 15:
+        case "end":
+          return _context2.stop();
+      }
+    }, _callee2);
+  }));
+  return function createHero() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+/***/ }),
+
+/***/ "./assets/js/modules/linkList.js":
+/*!***************************************!*\
+  !*** ./assets/js/modules/linkList.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   linkListMobileTriggers: () => (/* binding */ linkListMobileTriggers)
+/* harmony export */ });
+var linkListMobileTriggers = function linkListMobileTriggers() {
+  var triggers = Array.from(document.querySelectorAll(".link-list--trigger"));
+  triggers.forEach(function (trigger) {
+    var li = trigger.closest("li");
+    trigger.addEventListener("click", function (e) {
+      if (li.classList.contains("hovered")) {
+        return true;
+      }
+      triggers.forEach(function (t) {
+        return t.closest("li").classList.remove("hovered");
+      });
+      e.preventDefault();
+      e.stopPropagation();
+      li.classList.toggle("hovered");
+    });
+  });
+};
+
+/***/ }),
+
+/***/ "./assets/js/modules/logoCarousel.js":
+/*!*******************************************!*\
+  !*** ./assets/js/modules/logoCarousel.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
+/* harmony import */ var _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide-extension-auto-scroll */ "./node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.esm.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    document.querySelectorAll(".logo-slider").forEach(function (carousel) {
+      return new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide(carousel, {
+        // perPage: 7,
+        autoWidth: true,
+        type: "loop",
+        arrows: false,
+        gap: 20,
+        pagination: false,
+        autoScroll: {
+          speed: 0.5,
+          pauseOnHover: false
+        }
+        // breakpoints: {
+        //   991: {
+        //     perPage: 5,
+        //   },
+        //   767: {
+        //     perPage: 3,
+        //   },
+        // },
+      }).mount({
+        AutoScroll: _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__.AutoScroll
+      });
+    });
+    // new Splide("#logo-carousel", {
+    // 	perPage: 7,
+    // 	type: "loop",
+    // 	arrows: false,
+    // 	pagination: false,
+    // 	autoScroll: {
+    // 		pauseOnHover: false,
+    // 	},
+    // 	breakpoints: {
+    // 		991: {
+    // 			perPage: 3,
+    // 		},
+    // 	},
+    // }).mount({ AutoScroll });
+  },
+  destroy: function destroy() {}
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/logoCarouselGrid.js":
+/*!***********************************************!*\
+  !*** ./assets/js/modules/logoCarouselGrid.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
+/* harmony import */ var _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide-extension-auto-scroll */ "./node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.esm.js");
+/* harmony import */ var _splidejs_splide_extension_grid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @splidejs/splide-extension-grid */ "./node_modules/@splidejs/splide-extension-grid/dist/js/splide-extension-grid.esm.js");
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    document.querySelectorAll(".logo-slider.grid").forEach(function (carousel) {
+      return new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide(carousel, {
+        // perPage: 7,
+        autoWidth: true,
+        type: "loop",
+        arrows: false,
+        gap: 20,
+        pagination: false,
+        autoScroll: {
+          speed: 0.5,
+          pauseOnHover: false
+        },
+        grid: {
+          rows: 2,
+          // cols: 2,
+          gap: {
+            row: '1rem',
+            col: '1.5rem'
+          }
+        }
+        // breakpoints: {
+        //   991: {
+        //     perPage: 5,
+        //   },
+        //   767: {
+        //     perPage: 3,
+        //   },
+        // },
+      }).mount({
+        AutoScroll: _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__.AutoScroll,
+        Grid: _splidejs_splide_extension_grid__WEBPACK_IMPORTED_MODULE_2__.Grid
+      });
+    });
+    // new Splide("#logo-carousel", {
+    // 	perPage: 7,
+    // 	type: "loop",
+    // 	arrows: false,
+    // 	pagination: false,
+    // 	autoScroll: {
+    // 		pauseOnHover: false,
+    // 	},
+    // 	breakpoints: {
+    // 		991: {
+    // 			perPage: 3,
+    // 		},
+    // 	},
+    // }).mount({ AutoScroll });
+  },
+  destroy: function destroy() {}
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/officeListTwo.js":
+/*!********************************************!*\
+  !*** ./assets/js/modules/officeListTwo.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    var toggleSubOfficeList = function toggleSubOfficeList(event) {
+      event.stopPropagation();
+      var mainOfficeList = event.currentTarget.closest('.main-office-list');
+      var subOfficeLists = mainOfficeList.querySelectorAll('.sub-office-list');
+      subOfficeLists.forEach(function (list) {
+        list.classList.toggle('show');
+      });
+    };
+    var toggleAddressOffice = function toggleAddressOffice(event) {
+      event.stopPropagation();
+      var subOffice = event.currentTarget.closest('.sub-office');
+      var addressOffice = subOffice.querySelector('.address-office');
+      addressOffice.classList.toggle('show');
+    };
+    document.querySelectorAll('.main-office-content').forEach(function (element) {
+      element.addEventListener('click', toggleSubOfficeList);
+    });
+    document.querySelectorAll('.sub-office-content').forEach(function (element) {
+      element.addEventListener('click', toggleAddressOffice);
+    });
+  },
+  destroy: function destroy() {
+    document.querySelectorAll('.main-office-content').forEach(function (element) {
+      element.removeEventListener('click', toggleSubOfficeList);
+    });
+    document.querySelectorAll('.sub-office-content').forEach(function (element) {
+      element.removeEventListener('click', toggleAddressOffice);
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/promoBanner.js":
+/*!******************************************!*\
+  !*** ./assets/js/modules/promoBanner.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/dist/js.cookie.mjs");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    function showPromoBanner() {
+      if (document.querySelector(".header-message")) {
+        var promoBanner = document.querySelector(".header-message");
+        var body = document.querySelector("body");
+        var agreedCookies = js_cookie__WEBPACK_IMPORTED_MODULE_0__["default"].get("hubexo_promo_banner");
+        if (typeof agreedCookies == "undefined") {
+          promoBanner.style.display = "block";
+          body.classList.add("has-promo-banner");
+        }
+      }
+    }
+    showPromoBanner();
+    function hidePromoBanner() {
+      if (document.querySelector(".header-message")) {
+        var promoButton = document.querySelector(".header-message button");
+        var promoBanner = document.querySelector(".header-message");
+        var body = document.querySelector("body");
+        promoButton.addEventListener("click", function () {
+          js_cookie__WEBPACK_IMPORTED_MODULE_0__["default"].set("hubexo_promo_banner");
+          promoBanner.style.display = "none";
+          body.classList.remove("has-promo-banner");
+        });
+      }
+    }
+    hidePromoBanner();
+  },
+  destroy: function destroy() {}
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/searchBar.js":
+/*!****************************************!*\
+  !*** ./assets/js/modules/searchBar.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    // Country code to region mapping
+    var countryRegionMap = {
+      'AU': 'Asia Pacific',
+      'NZ': 'Asia Pacific',
+      'SG': 'Asia Pacific',
+      'MY': 'Asia Pacific',
+      'ID': 'Asia Pacific',
+      'HK': 'Asia Pacific',
+      'PH': 'Asia Pacific',
+      'TH': 'Asia Pacific',
+      'VN': 'Asia Pacific',
+      'US': 'North America',
+      'CA': 'North America',
+      'SE': 'North East Europe',
+      'DK': 'North East Europe',
+      'FI': 'North East Europe',
+      'NO': 'North East Europe',
+      'CZ': 'North East Europe',
+      'SK': 'North East Europe',
+      'PL': 'North East Europe',
+      'GB': 'UKI',
+      'IE': 'UKI',
+      'ES': 'West Europe',
+      'PT': 'West Europe',
+      'AT': 'West Europe',
+      'CH': 'West Europe',
+      'DE': 'West Europe'
+    };
+
+    // Update region title based on country data
+    var updateRegionTitle = function updateRegionTitle() {
+      var countryDataString = localStorage.getItem('country_data');
+      if (countryDataString) {
+        try {
+          var countryData = JSON.parse(countryDataString);
+          var countryCode = countryData.iso_code;
+          var region = countryRegionMap[countryCode] || '';
+          var titleElement = document.querySelector('.text-region-bar');
+          if (titleElement && region) {
+            titleElement.textContent = "".concat(region);
+          }
+        } catch (e) {
+          console.error('Error parsing country data:', e);
+        }
+      }
+    };
+
+    // Debounce function
+    var debounce = function debounce(func, wait) {
+      var timeout;
+      return function executedFunction() {
+        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+        var later = function later() {
+          clearTimeout(timeout);
+          func.apply(void 0, args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    };
+
+    // Perform search
+    var performSearch = function performSearch(inputElement, listContentUpdate, showCardContent, loadingDiv, listItem) {
+      var searchTerm = inputElement.value.trim();
+      if (searchTerm.length < 2) {
+        listContentUpdate.innerHTML = '';
+        showCardContent.classList.remove('active');
+        loadingDiv.style.display = 'none';
+        return;
+      }
+      loadingDiv.style.display = 'flex';
+      showCardContent.classList.add('active');
+      listContentUpdate.innerHTML = '';
+      fetch("".concat(wp_ajax_object.ajax_url, "?action=hubexo_search&query=").concat(encodeURIComponent(searchTerm))).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        loadingDiv.style.display = 'none';
+        if (data.success && data.data.length > 0) {
+          listContentUpdate.innerHTML = '';
+          data.data.forEach(function (result) {
+            var itemClone = listItem.cloneNode(true);
+
+            // Add the title
+            itemClone.querySelector('.title--search').textContent = result.title;
+
+            // Add the link URL - using 'link' as returned by PHP
+            var linkElement = itemClone.querySelector('.link--title');
+            if (linkElement && result.link) {
+              linkElement.href = result.link;
+            }
+
+            // Add the excerpt/description
+            var descElement = itemClone.querySelector('.desc--search');
+            if (descElement && result.excerpt) {
+              descElement.textContent = result.excerpt;
+            }
+
+            // Add the thumbnail if available
+            var thumbnailElement = itemClone.querySelector('.hover--thumbnail');
+            if (thumbnailElement && result.thumbnail) {
+              // Check if thumbnail exists and is not empty
+              if (result.thumbnail.trim() !== '') {
+                thumbnailElement.src = result.thumbnail;
+                thumbnailElement.alt = result.title; // Optional: set alt text
+                thumbnailElement.style.display = 'block'; // Ensure it's visible
+              } else {
+                thumbnailElement.style.display = 'none'; // Hide if no thumbnail
+              }
+            } else if (thumbnailElement) {
+              thumbnailElement.style.display = 'none'; // Hide if thumbnail property doesn't exist
+            }
+            listContentUpdate.appendChild(itemClone);
+          });
+        } else {
+          listContentUpdate.innerHTML = '<p>No results found.</p>';
+        }
+      })["catch"](function (error) {
+        loadingDiv.style.display = 'none';
+        console.error('Search error:', error);
+      });
+    };
+    var performSearchMobile = function performSearchMobile(inputElement, listContentUpdateMobile, showCardContentMobile, loadingDivMobile, v) {
+      var searchTermMobile = inputElement.value.trim();
+      if (searchTermMobile.length < 2) {
+        listContentUpdateMobile.innerHTML = '';
+        showCardContentMobile.classList.remove('active');
+        loadingDivMobile.style.display = 'none';
+        return;
+      }
+      loadingDivMobile.style.display = 'flex';
+      showCardContentMobile.classList.add('active');
+      listContentUpdateMobile.innerHTML = '';
+      fetch("".concat(wp_ajax_object.ajax_url, "?action=hubexo_search&query=").concat(encodeURIComponent(searchTermMobile))).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        loadingDivMobile.style.display = 'none';
+        if (data.success && data.data.length > 0) {
+          listContentUpdate.innerHTML = '';
+          data.data.forEach(function (result) {
+            // const itemClone = listItemMobile.cloneNode(true);
+            // itemClone.querySelector('.title--search-mobile').textContent = result.title;
+
+            // Add the title
+            var itemClone = listItemMobile.cloneNode(true);
+            itemClone.querySelector('.title--search-mobile').textContent = result.title;
+
+            // Add the link URL - using 'link' as returned by PHP
+            var linkElementMobile = itemClone.querySelector('.link--title-mobile');
+            if (linkElementMobile && result.link) {
+              linkElementMobile.href = result.link;
+            }
+
+            // Add the excerpt/description
+            var descElementMobile = itemClone.querySelector('.desc--search-mobile');
+            if (descElementMobile && result.excerpt) {
+              descElementMobile.textContent = result.excerpt;
+            }
+
+            // Add the thumbnail if available
+            var thumbnailElementMobile = itemClone.querySelector('.hover--thumbnail-mobile');
+            if (thumbnailElementMobile && result.thumbnail) {
+              // Check if thumbnail exists and is not empty
+              if (result.thumbnail.trim() !== '') {
+                thumbnailElementMobile.src = result.thumbnail;
+                thumbnailElementMobile.alt = result.title; // Optional: set alt text
+                thumbnailElementMobile.style.display = 'block'; // Ensure it's visible
+              } else {
+                thumbnailElementMobile.style.display = 'none'; // Hide if no thumbnail
+              }
+            } else if (thumbnailElementMobile) {
+              thumbnailElementMobile.style.display = 'none'; // Hide if thumbnail property doesn't exist
+            }
+            listContentUpdateMobile.appendChild(itemClone);
+          });
+        } else {
+          listContentUpdateMobile.innerHTML = '<p>No results found.</p>';
+        }
+      })["catch"](function (error) {
+        loadingDivMobile.style.display = 'none';
+        console.error('Search error:', error);
+      });
+    };
+
+    // Desktop search bar elements
+    var menuItem = document.getElementById('menu-item-1759');
+    var searchBar = document.getElementById('searchBar');
+    var closeButton = document.getElementById('closeSearchBar');
+    var contentSearch = document.getElementById('contentSearch');
+    var listContentUpdate = document.querySelector('.list--content-update');
+    var listItem = document.querySelector('.list--item');
+    var showCardContent = document.querySelector('.show--card-content');
+    var loadingDivDesktop = document.createElement('div');
+    loadingDivDesktop.className = 'search-loading';
+    loadingDivDesktop.textContent = 'Loading';
+    loadingDivDesktop.style.display = 'none';
+    listContentUpdate.parentNode.insertBefore(loadingDivDesktop, listContentUpdate);
+
+    // Mobile search bar elements
+    var menuItemMobile = document.getElementById('searchMobileButton');
+    var searchBarMobile = document.getElementById('searchBarMobile');
+    var closeButtonMobile = document.getElementById('closeSearchBarMobile');
+    var contentSearchMobile = document.getElementById('contentSearchMobile');
+    var listContentUpdateMobile = document.querySelector('.list--content-update-mobile');
+    var listItemMobile = document.querySelector('.list--item-mobile');
+    var showCardContentMobile = document.querySelector('.show--card-content-mobile');
+    var loadingDivMobile = document.createElement('div');
+    loadingDivMobile.className = 'search-loading-mobile';
+    loadingDivMobile.textContent = 'Loading';
+    loadingDivMobile.style.display = 'none';
+    listContentUpdateMobile.parentNode.insertBefore(loadingDivMobile, listContentUpdateMobile);
+
+    // Event listeners for desktop
+    var openSearchBarDesktop = function openSearchBarDesktop(e) {
+      e.preventDefault();
+      searchBar.classList.add('active');
+    };
+    var closeSearchBarDesktop = function closeSearchBarDesktop() {
+      return searchBar.classList.remove('active');
+    };
+    var searchDesktop = debounce(function () {
+      return performSearch(contentSearch, listContentUpdate, showCardContent, loadingDivDesktop, listItem);
+    }, 500);
+    if (menuItem && searchBar) {
+      menuItem.querySelector('a').addEventListener('click', openSearchBarDesktop);
+      closeButton.addEventListener('click', closeSearchBarDesktop);
+      contentSearch.addEventListener('input', searchDesktop);
+    }
+
+    // Event listeners for mobile
+    var openSearchBarMobile = function openSearchBarMobile(e) {
+      e.preventDefault();
+      searchBarMobile.classList.add('active');
+    };
+    var closeSearchBarMobile = function closeSearchBarMobile() {
+      return searchBarMobile.classList.remove('active');
+    };
+    var searchMobile = debounce(function () {
+      return performSearchMobile(contentSearchMobile, listContentUpdateMobile, showCardContentMobile, loadingDivMobile, listItemMobile);
+    }, 500);
+    if (menuItemMobile && searchBarMobile) {
+      menuItemMobile.addEventListener('click', openSearchBarMobile);
+      closeButtonMobile.addEventListener('click', closeSearchBarMobile);
+      contentSearchMobile.addEventListener('input', searchMobile);
+    }
+
+    // Initialize region title
+    updateRegionTitle();
+
+    // Store event listeners for cleanup
+    this.eventListeners = {
+      desktop: {
+        openSearchBarDesktop: openSearchBarDesktop,
+        closeSearchBarDesktop: closeSearchBarDesktop,
+        searchDesktop: searchDesktop
+      },
+      mobile: {
+        openSearchBarMobile: openSearchBarMobile,
+        closeSearchBarMobile: closeSearchBarMobile,
+        searchMobile: searchMobile
+      }
+    };
+  },
+  destroy: function destroy() {
+    // Remove all event listeners for desktop
+    var _this$eventListeners = this.eventListeners,
+      desktop = _this$eventListeners.desktop,
+      mobile = _this$eventListeners.mobile;
+    var menuItem = document.getElementById('menu-item-1759');
+    var searchBar = document.getElementById('searchBar');
+    var closeButton = document.getElementById('closeSearchBar');
+    var contentSearch = document.getElementById('contentSearch');
+    if (menuItem && searchBar) {
+      menuItem.querySelector('a').removeEventListener('click', desktop.openSearchBarDesktop);
+      closeButton.removeEventListener('click', desktop.closeSearchBarDesktop);
+      contentSearch.removeEventListener('input', desktop.searchDesktop);
+    }
+
+    // Remove all event listeners for mobile
+    var menuItemMobile = document.getElementById('searchMobileButton');
+    var searchBarMobile = document.getElementById('searchBarMobile');
+    var closeButtonMobile = document.getElementById('closeSearchBarMobile');
+    var contentSearchMobile = document.getElementById('contentSearchMobile');
+    if (menuItemMobile && searchBarMobile) {
+      menuItemMobile.removeEventListener('click', mobile.openSearchBarMobile);
+      closeButtonMobile.removeEventListener('click', mobile.closeSearchBarMobile);
+      contentSearchMobile.removeEventListener('input', mobile.searchMobile);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/stats.js":
+/*!************************************!*\
+  !*** ./assets/js/modules/stats.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   stats: () => (/* binding */ stats)
+/* harmony export */ });
+/* harmony import */ var _classes_Rollup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes/Rollup */ "./assets/js/modules/classes/Rollup.js");
+
+var stats = function stats() {
+  var stats = Array.from(document.querySelectorAll(".stat-block--number"));
+  var statMap = new WeakMap();
+  stats.forEach(function (stat) {
+    var rollup = new _classes_Rollup__WEBPACK_IMPORTED_MODULE_0__["default"](stat);
+    // rollup.destroy();
+    statMap.set(stat, rollup);
+  });
+
+  // function moreThan15Percent(entries) {
+  //   entries.forEach((entry) => {
+  //     if (
+  //       entry.isIntersecting &&
+  //       (entry.intersectionRatio > 0.15 ||
+  //         entry.intersectionRatio * entry.boundingClientRect.height >
+  //           window.innerHeight * 0.15)
+  //     ) {
+  //       setTimeout(() => entry.target.classList.add("in-view"), 0);
+  //       stats.forEach((stat) => {
+  //         console.log("hi!");
+  //         statMap.get(stat).loop();
+  //       });
+  //       // remove the item from funning again
+  //       // Intersections.inViewObserver.unobserve(entry.target);
+  //     }
+  //   });
+  // }
+
+  // const inViewObserver = new IntersectionObserver(moreThan15Percent, {
+  //   threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+  // });
+
+  // inViewObserver.observe(document.querySelector(".special-fade-in"));
+};
+
+/***/ }),
+
+/***/ "./assets/js/modules/teamMembers.js":
+/*!******************************************!*\
+  !*** ./assets/js/modules/teamMembers.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var masonry_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! masonry-layout */ "./node_modules/masonry-layout/masonry.js");
+/* harmony import */ var masonry_layout__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(masonry_layout__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    if (!document.querySelector(".team-member")) {
+      return;
+    }
+    var grid = document.querySelector(".grid");
+    var msnry = new (masonry_layout__WEBPACK_IMPORTED_MODULE_0___default())(grid, {
+      // options...
+      itemSelector: ".grid-item",
+      gutter: 24,
+      percentPosition: true,
+      horizontalOrder: true
+    });
+    var teamMemberButtons = document.querySelectorAll(".team-member--button");
+    teamMemberButtons.forEach(function (teamMemberButton) {
+      teamMemberButton.addEventListener("click", function (e) {
+        var teamMember = teamMemberButton.closest(".team-member");
+        teamMember.classList.toggle("active");
+        var buttonText = teamMemberButton.querySelector(".button--text");
+        if (buttonText.textContent === "Show more") {
+          buttonText.textContent = "Show less";
+        } else {
+          buttonText.textContent = "Show more";
+        }
+
+        // Trigger Masonry layout refresh
+        msnry.layout();
+      });
+    });
+  },
+  destroy: function destroy() {}
+});
+
+/***/ }),
+
+/***/ "./assets/js/modules/testimonials.js":
+/*!*******************************************!*\
+  !*** ./assets/js/modules/testimonials.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  init: function init() {
+    document.querySelectorAll(".testimonials-slider").forEach(function (carousel) {
+      return new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide(carousel, _defineProperty(_defineProperty({
+        perPage: 1,
+        type: "loop",
+        pagination: false
+      }, "type", "fade"), "rewind", true)).mount();
+    });
+  },
+  destroy: function destroy() {}
+});
+
+/***/ }),
+
+/***/ "./assets/scss/style.scss":
+/*!********************************!*\
+  !*** ./assets/scss/style.scss ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.esm.js":
 /*!*********************************************************************************************************!*\
   !*** ./node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.esm.js ***!
@@ -544,6 +2120,606 @@ function AutoScroll(Splide2, Components2, options) {
     play,
     pause,
     isPaused
+  };
+}
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@splidejs/splide-extension-grid/dist/js/splide-extension-grid.esm.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@splidejs/splide-extension-grid/dist/js/splide-extension-grid.esm.js ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Grid: () => (/* binding */ Grid)
+/* harmony export */ });
+/*!
+ * @splidejs/splide-extension-grid
+ * Version  : 0.4.1
+ * License  : MIT
+ * Copyright: 2022 Naotoshi Fujita
+ */
+function empty$1(array) {
+  array.length = 0;
+}
+
+function slice$1(arrayLike, start, end) {
+  return Array.prototype.slice.call(arrayLike, start, end);
+}
+
+function apply$1(func) {
+  return func.bind.apply(func, [null].concat(slice$1(arguments, 1)));
+}
+
+function typeOf$1(type, subject) {
+  return typeof subject === type;
+}
+
+var isArray$1 = Array.isArray;
+apply$1(typeOf$1, "function");
+apply$1(typeOf$1, "string");
+apply$1(typeOf$1, "undefined");
+
+function toArray$1(value) {
+  return isArray$1(value) ? value : [value];
+}
+
+function forEach$1(values, iteratee) {
+  toArray$1(values).forEach(iteratee);
+}
+
+var ownKeys$1 = Object.keys;
+
+function forOwn$1(object, iteratee, right) {
+  if (object) {
+    var keys = ownKeys$1(object);
+    keys = right ? keys.reverse() : keys;
+
+    for (var i = 0; i < keys.length; i++) {
+      var key = keys[i];
+
+      if (key !== "__proto__") {
+        if (iteratee(object[key], key) === false) {
+          break;
+        }
+      }
+    }
+  }
+
+  return object;
+}
+
+function assign$1(object) {
+  slice$1(arguments, 1).forEach(function (source) {
+    forOwn$1(source, function (value, key) {
+      object[key] = source[key];
+    });
+  });
+  return object;
+}
+
+var PROJECT_CODE$1 = "splide";
+
+function EventBinder() {
+  var listeners = [];
+
+  function bind(targets, events, callback, options) {
+    forEachEvent(targets, events, function (target, event, namespace) {
+      var isEventTarget = ("addEventListener" in target);
+      var remover = isEventTarget ? target.removeEventListener.bind(target, event, callback, options) : target["removeListener"].bind(target, callback);
+      isEventTarget ? target.addEventListener(event, callback, options) : target["addListener"](callback);
+      listeners.push([target, event, namespace, callback, remover]);
+    });
+  }
+
+  function unbind(targets, events, callback) {
+    forEachEvent(targets, events, function (target, event, namespace) {
+      listeners = listeners.filter(function (listener) {
+        if (listener[0] === target && listener[1] === event && listener[2] === namespace && (!callback || listener[3] === callback)) {
+          listener[4]();
+          return false;
+        }
+
+        return true;
+      });
+    });
+  }
+
+  function dispatch(target, type, detail) {
+    var e;
+    var bubbles = true;
+
+    if (typeof CustomEvent === "function") {
+      e = new CustomEvent(type, {
+        bubbles: bubbles,
+        detail: detail
+      });
+    } else {
+      e = document.createEvent("CustomEvent");
+      e.initCustomEvent(type, bubbles, false, detail);
+    }
+
+    target.dispatchEvent(e);
+    return e;
+  }
+
+  function forEachEvent(targets, events, iteratee) {
+    forEach$1(targets, function (target) {
+      target && forEach$1(events, function (events2) {
+        events2.split(" ").forEach(function (eventNS) {
+          var fragment = eventNS.split(".");
+          iteratee(target, fragment[0], fragment[1]);
+        });
+      });
+    });
+  }
+
+  function destroy() {
+    listeners.forEach(function (data) {
+      data[4]();
+    });
+    empty$1(listeners);
+  }
+
+  return {
+    bind: bind,
+    unbind: unbind,
+    dispatch: dispatch,
+    destroy: destroy
+  };
+}
+var EVENT_VISIBLE = "visible";
+var EVENT_HIDDEN = "hidden";
+var EVENT_REFRESH = "refresh";
+var EVENT_UPDATED = "updated";
+var EVENT_DESTROY = "destroy";
+
+function EventInterface(Splide2) {
+  var bus = Splide2 ? Splide2.event.bus : document.createDocumentFragment();
+  var binder = EventBinder();
+
+  function on(events, callback) {
+    binder.bind(bus, toArray$1(events).join(" "), function (e) {
+      callback.apply(callback, isArray$1(e.detail) ? e.detail : []);
+    });
+  }
+
+  function emit(event) {
+    binder.dispatch(bus, event, slice$1(arguments, 1));
+  }
+
+  if (Splide2) {
+    Splide2.event.on(EVENT_DESTROY, binder.destroy);
+  }
+
+  return assign$1(binder, {
+    bus: bus,
+    on: on,
+    off: apply$1(binder.unbind, bus),
+    emit: emit
+  });
+}
+var CLASS_ROOT = PROJECT_CODE$1;
+var CLASS_SLIDE = PROJECT_CODE$1 + "__slide";
+var CLASS_CONTAINER = CLASS_SLIDE + "__container";
+
+function empty(array) {
+  array.length = 0;
+}
+
+function slice(arrayLike, start, end) {
+  return Array.prototype.slice.call(arrayLike, start, end);
+}
+
+function apply(func) {
+  return func.bind(null, ...slice(arguments, 1));
+}
+
+function typeOf(type, subject) {
+  return typeof subject === type;
+}
+function isObject(subject) {
+  return !isNull(subject) && typeOf("object", subject);
+}
+const isArray = Array.isArray;
+apply(typeOf, "function");
+const isString = apply(typeOf, "string");
+const isUndefined = apply(typeOf, "undefined");
+function isNull(subject) {
+  return subject === null;
+}
+function isHTMLElement(subject) {
+  return subject instanceof HTMLElement;
+}
+
+function toArray(value) {
+  return isArray(value) ? value : [value];
+}
+
+function forEach(values, iteratee) {
+  toArray(values).forEach(iteratee);
+}
+
+function push(array, items) {
+  array.push(...toArray(items));
+  return array;
+}
+
+function toggleClass(elm, classes, add) {
+  if (elm) {
+    forEach(classes, (name) => {
+      if (name) {
+        elm.classList[add ? "add" : "remove"](name);
+      }
+    });
+  }
+}
+
+function addClass(elm, classes) {
+  toggleClass(elm, isString(classes) ? classes.split(" ") : classes, true);
+}
+
+function append(parent, children) {
+  forEach(children, parent.appendChild.bind(parent));
+}
+
+function matches(elm, selector) {
+  return isHTMLElement(elm) && (elm["msMatchesSelector"] || elm.matches).call(elm, selector);
+}
+
+function children(parent, selector) {
+  const children2 = parent ? slice(parent.children) : [];
+  return selector ? children2.filter((child) => matches(child, selector)) : children2;
+}
+
+function child(parent, selector) {
+  return selector ? children(parent, selector)[0] : parent.firstElementChild;
+}
+
+const ownKeys = Object.keys;
+
+function forOwn(object, iteratee, right) {
+  if (object) {
+    let keys = ownKeys(object);
+    keys = right ? keys.reverse() : keys;
+    for (let i = 0; i < keys.length; i++) {
+      const key = keys[i];
+      if (key !== "__proto__") {
+        if (iteratee(object[key], key) === false) {
+          break;
+        }
+      }
+    }
+  }
+  return object;
+}
+
+function assign(object) {
+  slice(arguments, 1).forEach((source) => {
+    forOwn(source, (value, key) => {
+      object[key] = source[key];
+    });
+  });
+  return object;
+}
+
+function omit(object, keys) {
+  toArray(keys || ownKeys(object)).forEach((key) => {
+    delete object[key];
+  });
+}
+
+function removeAttribute(elms, attrs) {
+  forEach(elms, (elm) => {
+    forEach(attrs, (attr) => {
+      elm && elm.removeAttribute(attr);
+    });
+  });
+}
+
+function setAttribute(elms, attrs, value) {
+  if (isObject(attrs)) {
+    forOwn(attrs, (value2, name) => {
+      setAttribute(elms, name, value2);
+    });
+  } else {
+    forEach(elms, (elm) => {
+      isNull(value) || value === "" ? removeAttribute(elm, attrs) : elm.setAttribute(attrs, String(value));
+    });
+  }
+}
+
+function create(tag, attrs, parent) {
+  const elm = document.createElement(tag);
+  if (attrs) {
+    isString(attrs) ? addClass(elm, attrs) : setAttribute(elm, attrs);
+  }
+  parent && append(parent, elm);
+  return elm;
+}
+
+function style(elm, prop, value) {
+  if (isUndefined(value)) {
+    return getComputedStyle(elm)[prop];
+  }
+  if (!isNull(value)) {
+    elm.style[prop] = `${value}`;
+  }
+}
+
+function hasClass(elm, className) {
+  return elm && elm.classList.contains(className);
+}
+
+function remove(nodes) {
+  forEach(nodes, (node) => {
+    if (node && node.parentNode) {
+      node.parentNode.removeChild(node);
+    }
+  });
+}
+
+function queryAll(parent, selector) {
+  return selector ? slice(parent.querySelectorAll(selector)) : [];
+}
+
+function removeClass(elm, classes) {
+  toggleClass(elm, classes, false);
+}
+
+function unit(value) {
+  return isString(value) ? value : value ? `${value}px` : "";
+}
+
+const PROJECT_CODE = "splide";
+
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(`[${PROJECT_CODE}] ${message || ""}`);
+  }
+}
+
+const { min, max, floor, ceil, abs } = Math;
+
+function pad(number) {
+  return number < 10 ? `0${number}` : `${number}`;
+}
+
+const CLASS_SLIDE_ROW = `${CLASS_SLIDE}__row`;
+const CLASS_SLIDE_COL = `${CLASS_SLIDE}--col`;
+
+const DEFAULTS = {
+  rows: 1,
+  cols: 1,
+  dimensions: [],
+  gap: {}
+};
+
+function Dimension(options) {
+  function normalize() {
+    const { rows, cols, dimensions } = options;
+    return isArray(dimensions) && dimensions.length ? dimensions : [[rows, cols]];
+  }
+  function get(index) {
+    const dimensions = normalize();
+    return dimensions[min(index, dimensions.length - 1)];
+  }
+  function getAt(index) {
+    const dimensions = normalize();
+    let rows, cols, aggregator = 0;
+    for (let i = 0; i < dimensions.length; i++) {
+      const dimension = dimensions[i];
+      rows = dimension[0] || 1;
+      cols = dimension[1] || 1;
+      aggregator += rows * cols;
+      if (index < aggregator) {
+        break;
+      }
+    }
+    assert(rows && cols, "Invalid dimension");
+    return [rows, cols];
+  }
+  return {
+    get,
+    getAt
+  };
+}
+
+function Layout(Splide2, gridOptions, Dimension) {
+  const { on, destroy: destroyEvent } = EventInterface(Splide2);
+  const { Components, options } = Splide2;
+  const { resolve } = Components.Direction;
+  const { forEach } = Components.Slides;
+  function mount() {
+    layout();
+    if (options.slideFocus) {
+      on(EVENT_VISIBLE, onVisible);
+      on(EVENT_HIDDEN, onHidden);
+    }
+  }
+  function destroy() {
+    forEach((Slide) => {
+      const { slide } = Slide;
+      toggleTabIndex(slide, false);
+      getRowsIn(slide).forEach((cell) => {
+        removeAttribute(cell, "style");
+      });
+      getColsIn(slide).forEach((colSlide) => {
+        cover(colSlide, true);
+        removeAttribute(colSlide, "style");
+      });
+    });
+    destroyEvent();
+  }
+  function layout() {
+    forEach((Slide) => {
+      const { slide } = Slide;
+      const [rows, cols] = Dimension.get(Slide.isClone ? Slide.slideIndex : Slide.index);
+      layoutRow(rows, slide);
+      layoutCol(cols, slide);
+      getColsIn(Slide.slide).forEach((colSlide, index) => {
+        colSlide.id = `${Slide.slide.id}-col${pad(index + 1)}`;
+        if (Splide2.options.cover) {
+          cover(colSlide);
+        }
+      });
+    });
+  }
+  function layoutRow(rows, slide) {
+    const { row: rowGap } = gridOptions.gap;
+    const height = `calc(${100 / rows}%${rowGap ? ` - ${unit(rowGap)} * ${(rows - 1) / rows}` : ""})`;
+    getRowsIn(slide).forEach((rowElm, index, rowElms) => {
+      style(rowElm, "height", height);
+      style(rowElm, "display", "flex");
+      style(rowElm, "margin", `0 0 ${unit(rowGap)} 0`);
+      style(rowElm, "padding", 0);
+      if (index === rowElms.length - 1) {
+        style(rowElm, "marginBottom", 0);
+      }
+    });
+  }
+  function layoutCol(cols, slide) {
+    const { col: colGap } = gridOptions.gap;
+    const width = `calc(${100 / cols}%${colGap ? ` - ${unit(colGap)} * ${(cols - 1) / cols}` : ""})`;
+    getColsIn(slide).forEach((colElm, index, colElms) => {
+      style(colElm, "width", width);
+      if (index !== colElms.length - 1) {
+        style(colElm, resolve("marginRight"), unit(colGap));
+      }
+    });
+  }
+  function cover(colSlide, uncover) {
+    const container = child(colSlide, `.${CLASS_CONTAINER}`);
+    const img = child(container || colSlide, "img");
+    if (img && img.src) {
+      style(container || colSlide, "background", uncover ? "" : `center/cover no-repeat url("${img.src}")`);
+      style(img, "display", uncover ? "" : "none");
+    }
+  }
+  function getRowsIn(slide) {
+    return queryAll(slide, `.${CLASS_SLIDE_ROW}`);
+  }
+  function getColsIn(slide) {
+    return queryAll(slide, `.${CLASS_SLIDE_COL}`);
+  }
+  function toggleTabIndex(slide, add) {
+    getColsIn(slide).forEach((colSlide) => {
+      setAttribute(colSlide, "tabindex", add ? 0 : null);
+    });
+  }
+  function onVisible(Slide) {
+    toggleTabIndex(Slide.slide, true);
+  }
+  function onHidden(Slide) {
+    toggleTabIndex(Slide.slide, false);
+  }
+  return {
+    mount,
+    destroy
+  };
+}
+
+function Grid(Splide2, Components2, options) {
+  const { on, off } = EventInterface(Splide2);
+  const { Elements } = Components2;
+  const gridOptions = {};
+  const Dimension$1 = Dimension(gridOptions);
+  const Layout$1 = Layout(Splide2, gridOptions, Dimension$1);
+  const modifier = `${CLASS_ROOT}--grid`;
+  const originalSlides = [];
+  function mount() {
+    init();
+    on(EVENT_UPDATED, init);
+  }
+  function init() {
+    omit(gridOptions);
+    assign(gridOptions, DEFAULTS, options.grid || {});
+    if (shouldBuild()) {
+      destroy();
+      push(originalSlides, Elements.slides);
+      addClass(Splide2.root, modifier);
+      append(Elements.list, build());
+      off(EVENT_REFRESH);
+      on(EVENT_REFRESH, layout);
+      refresh();
+    } else if (isActive()) {
+      destroy();
+      refresh();
+    }
+  }
+  function destroy() {
+    if (isActive()) {
+      const { slides } = Elements;
+      Layout$1.destroy();
+      originalSlides.forEach((slide) => {
+        removeClass(slide, CLASS_SLIDE_COL);
+        append(Elements.list, slide);
+      });
+      remove(slides);
+      removeClass(Splide2.root, modifier);
+      empty(slides);
+      push(slides, originalSlides);
+      empty(originalSlides);
+      off(EVENT_REFRESH);
+    }
+  }
+  function refresh() {
+    Splide2.refresh();
+  }
+  function layout() {
+    if (isActive()) {
+      Layout$1.mount();
+    }
+  }
+  function build() {
+    const outerSlides = [];
+    let row = 0, col = 0;
+    let outerSlide, rowSlide;
+    originalSlides.forEach((slide, index) => {
+      const [rows, cols] = Dimension$1.getAt(index);
+      if (!col) {
+        if (!row) {
+          outerSlide = create(slide.tagName, CLASS_SLIDE);
+          outerSlides.push(outerSlide);
+        }
+        rowSlide = buildRow(rows, slide, outerSlide);
+      }
+      buildCol(cols, slide, rowSlide);
+      if (++col >= cols) {
+        col = 0;
+        row = ++row >= rows ? 0 : row;
+      }
+    });
+    return outerSlides;
+  }
+  function buildRow(rows, slide, outerSlide) {
+    const tag = slide.tagName.toLowerCase() === "li" ? "ul" : "div";
+    return create(tag, CLASS_SLIDE_ROW, outerSlide);
+  }
+  function buildCol(cols, slide, rowSlide) {
+    addClass(slide, CLASS_SLIDE_COL);
+    append(rowSlide, slide);
+    return slide;
+  }
+  function shouldBuild() {
+    if (options.grid) {
+      const { rows, cols, dimensions } = gridOptions;
+      return rows > 1 || cols > 1 || isArray(dimensions) && dimensions.length > 0;
+    }
+    return false;
+  }
+  function isActive() {
+    return hasClass(Splide2.root, modifier);
+  }
+  return {
+    mount,
+    destroy
   };
 }
 
@@ -4318,1281 +6494,6 @@ var SplideRenderer = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./assets/js/main.js":
-/*!***************************!*\
-  !*** ./assets/js/main.js ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_headerNav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/headerNav */ "./assets/js/modules/headerNav.js");
-/* harmony import */ var _modules_promoBanner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/promoBanner */ "./assets/js/modules/promoBanner.js");
-/* harmony import */ var _modules_teamMembers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/teamMembers */ "./assets/js/modules/teamMembers.js");
-/* harmony import */ var glightbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! glightbox */ "./node_modules/glightbox/dist/js/glightbox.min.js");
-/* harmony import */ var glightbox__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(glightbox__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _modules_basicIntersections__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/basicIntersections */ "./assets/js/modules/basicIntersections.js");
-/* harmony import */ var _modules_dotsStrip__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/dotsStrip */ "./assets/js/modules/dotsStrip.js");
-/* harmony import */ var _modules_logoCarousel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/logoCarousel */ "./assets/js/modules/logoCarousel.js");
-/* harmony import */ var _modules_testimonials__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/testimonials */ "./assets/js/modules/testimonials.js");
-/* harmony import */ var _modules_infiniteScroll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/infiniteScroll */ "./assets/js/modules/infiniteScroll.js");
-/* harmony import */ var _modules_fpnBlocks__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/fpnBlocks */ "./assets/js/modules/fpnBlocks.js");
-/* harmony import */ var _modules_officeListTwo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/officeListTwo */ "./assets/js/modules/officeListTwo.js");
-/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/header */ "./assets/js/modules/header.js");
-/* harmony import */ var _modules_introDots__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/introDots */ "./assets/js/modules/introDots.js");
-/* harmony import */ var _modules_stats__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/stats */ "./assets/js/modules/stats.js");
-/* harmony import */ var _modules_linkList__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/linkList */ "./assets/js/modules/linkList.js");
-/* harmony import */ var _modules_iconBlocks__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/iconBlocks */ "./assets/js/modules/iconBlocks.js");
-/* harmony import */ var _modules_numberBlocks__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/numberBlocks */ "./assets/js/modules/numberBlocks.js");
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-
-
-
-
-
-
-
-// import journey from "./modules/journey";
-
-
-
-
-
-
-
-
-
-
-function init() {
-  _modules_header__WEBPACK_IMPORTED_MODULE_11__["default"].init();
-  _modules_promoBanner__WEBPACK_IMPORTED_MODULE_1__["default"].init();
-  _modules_headerNav__WEBPACK_IMPORTED_MODULE_0__["default"].init();
-  _modules_dotsStrip__WEBPACK_IMPORTED_MODULE_5__["default"].init();
-  _modules_logoCarousel__WEBPACK_IMPORTED_MODULE_6__["default"].init();
-  _modules_testimonials__WEBPACK_IMPORTED_MODULE_7__["default"].init();
-  _modules_teamMembers__WEBPACK_IMPORTED_MODULE_2__["default"].init();
-  _modules_basicIntersections__WEBPACK_IMPORTED_MODULE_4__["default"].init();
-  _modules_infiniteScroll__WEBPACK_IMPORTED_MODULE_8__["default"].init();
-  _modules_fpnBlocks__WEBPACK_IMPORTED_MODULE_9__["default"].init();
-  _modules_officeListTwo__WEBPACK_IMPORTED_MODULE_10__["default"].init();
-  _modules_numberBlocks__WEBPACK_IMPORTED_MODULE_16__["default"].init();
-  // journey.init();
-  (0,_modules_introDots__WEBPACK_IMPORTED_MODULE_12__.createHero)();
-  (0,_modules_stats__WEBPACK_IMPORTED_MODULE_13__.stats)();
-  (0,_modules_linkList__WEBPACK_IMPORTED_MODULE_14__.linkListMobileTriggers)();
-  (0,_modules_iconBlocks__WEBPACK_IMPORTED_MODULE_15__.iconBlocks)();
-  var videoLightbox = glightbox__WEBPACK_IMPORTED_MODULE_3___default()(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
-    selector: ".glightbox-video",
-    skin: "video",
-    touchNavigation: true,
-    loop: false,
-    keyboardNavigation: false
-  }, "touchNavigation", false), "autoplayVideos", true), "openEffect", "fade"), "closeEffect", "fade"), "slideEffect", "fade"));
-}
-document.addEventListener("DOMContentLoaded", function () {
-  init();
-});
-
-/***/ }),
-
-/***/ "./assets/js/modules/basicIntersections.js":
-/*!*************************************************!*\
-  !*** ./assets/js/modules/basicIntersections.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   moreThan15Percent: () => (/* binding */ moreThan15Percent)
-/* harmony export */ });
-// Basic, just if they are intersecting at all
-function anyIntersectionAtAll(entries) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      setTimeout(function () {
-        return entry.target.classList.add("in-view");
-      }, 0);
-      // remove the item from funning again
-      Intersections.inViewObserver.unobserve(entry.target);
-    } else {
-      // entry.target.classList.remove("in-view");
-    }
-  });
-}
-function moreThan15Percent(entries) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting && (entry.intersectionRatio > 0.15 || entry.intersectionRatio * entry.boundingClientRect.height > window.innerHeight * 0.15)) {
-      setTimeout(function () {
-        return entry.target.classList.add("in-view");
-      }, 0);
-      // remove the item from funning again
-      Intersections.inViewObserver.unobserve(entry.target);
-    } else {
-      // entry.target.classList.remove("in-view");
-    }
-  });
-}
-var Intersections = {
-  inViewObserver: new IntersectionObserver(moreThan15Percent, {
-    threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-  }),
-  init: function init() {
-    var _this = this;
-    document.querySelectorAll(".fade-in, .fade-up, .fade-in-stagger, .job-card, .location-card").forEach(function (pie) {
-      _this.inViewObserver.observe(pie);
-    });
-  },
-  destroy: function destroy() {
-    this.inViewObserver.disconnect();
-  }
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Intersections);
-
-/***/ }),
-
-/***/ "./assets/js/modules/classes/InView.js":
-/*!*********************************************!*\
-  !*** ./assets/js/modules/classes/InView.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ InView)
-/* harmony export */ });
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
-function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
-function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-var InView = /*#__PURE__*/function () {
-  function InView(element, args) {
-    _classCallCheck(this, InView);
-    this.settings = _objectSpread({
-      amount: 0.15,
-      delay: 100
-    }, args);
-    this.boundCallBack = this.callback.bind(this);
-    this.inViewObserver = new IntersectionObserver(this.boundCallBack, {
-      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
-    });
-    this.inViewObserver.observe(element);
-  }
-  return _createClass(InView, [{
-    key: "callback",
-    value: function callback(entries) {
-      var _this = this;
-      entries.forEach(function (entry) {
-        var test = entry.isIntersecting && (entry.intersectionRatio > _this.settings.amount || entry.intersectionRatio * entry.boundingClientRect.height > window.innerHeight * _this.settings.amount);
-        if (test) {
-          setTimeout(function () {
-            _this.inView(entry);
-          }, _this.settings.delay);
-          // remove the item from funning again
-          _this.inViewObserver.unobserve(entry.target);
-        } else {
-          // entry.target.classList.remove("in-view");
-        }
-      });
-    }
-  }, {
-    key: "inView",
-    value: function inView(entry) {
-      return entry.target.classList.add("in-view");
-    }
-  }, {
-    key: "outView",
-    value: function outView(entry) {
-      return;
-    }
-  }, {
-    key: "destroy",
-    value: function destroy() {
-      this.inViewObserver.disconnect();
-    }
-  }]);
-}();
-
-
-/***/ }),
-
-/***/ "./assets/js/modules/classes/Rollup.js":
-/*!*********************************************!*\
-  !*** ./assets/js/modules/classes/Rollup.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ RollUp)
-/* harmony export */ });
-/* harmony import */ var _InView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InView */ "./assets/js/modules/classes/InView.js");
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
-function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
-function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
-function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
-function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
-function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
-function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
-function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
-function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
-
-var RollUp = /*#__PURE__*/function (_InView) {
-  function RollUp(el, mods) {
-    var _this;
-    _classCallCheck(this, RollUp);
-    _this = _callSuper(this, RollUp, [el]);
-    _this.el = el;
-    _this.destroyed = false;
-    _this.original = _this.el.innerText;
-    _this.settings = _objectSpread(_objectSpread({}, _this.settings), {}, {
-      duration: 2000,
-      isInt: true
-    }, mods);
-    _this.nan = false;
-    _this.getNumber();
-    if (_this.nan) return _possibleConstructorReturn(_this);
-    _this.makeFormatter();
-    _this.progress = 0;
-    _this.dir = null;
-    _this.format(_this.progress);
-    return _this;
-  }
-  _inherits(RollUp, _InView);
-  return _createClass(RollUp, [{
-    key: "getNumber",
-    value: function getNumber() {
-      var match = this.original.match(/[0-9,.]+/gm);
-      if (!match) {
-        this.nan = true;
-        return false;
-      }
-      var num = match[0];
-      if (num.indexOf(".") >= 0) {
-        this.parse = parseFloat;
-        this.decimals = num.split(".")[1].length;
-      } else {
-        this.decimals = 0;
-        this.parse = parseInt;
-      }
-      var bits = this.original.split(num);
-      this.prepend = bits[0];
-      this.append = bits[1];
-      var plainNumber = num.replace(/,/g, "");
-      this.el.innerText = 0;
-      this.value = this.parse(plainNumber);
-    }
-  }, {
-    key: "makeFormatter",
-    value: function makeFormatter() {
-      var args = {
-        minimumFractionDigits: this.decimals,
-        maximumFractionDigits: this.decimals
-      };
-
-      // Currencies
-      if (this.prepend == "$") {
-        args.style = "currency";
-        args.currency = "USD";
-      } else if (this.prepend == "£") {
-        args.style = "currency";
-        args.currency = "GBP";
-      } else if (this.prepend == "€") {
-        args.style = "currency";
-        args.currency = "EUR";
-      }
-
-      // Plus
-      if (this.settings.hasPlus) {
-        args.signDisplay = "always";
-      }
-      this.formatter = new Intl.NumberFormat(window.navigator.userLanguage || window.navigator.language, args);
-    }
-  }, {
-    key: "ease",
-    value: function ease(t) {
-      return Math.sqrt(1 - Math.pow(t - 1, 2));
-      return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-      // const sqt = t * t;
-      // return sqt / (2.0 * (sqt - t) + 1.0);
-    }
-  }, {
-    key: "loop",
-    value: function loop() {
-      // if (this.destroyed) return;
-      if (!this.dir) return;
-      if (this.dir == "up") {
-        this.progress = this.ease(Math.min(1, 1 - (this.finishTime - Date.now()) / this.settings.duration));
-      } else {
-        this.progress = this.ease(Math.max(0, (this.finishTime - Date.now()) / this.settings.duration));
-      }
-      this.format();
-      if (this.dir == "down" && this.progress > 0 || this.dir == "up" && this.progress < 1) {
-        // setTimeout(this.loop.bind(this), 50);
-        requestAnimationFrame(this.loop.bind(this));
-      } else {
-        this.dir = false;
-      }
-    }
-  }, {
-    key: "up",
-    value: function up() {
-      if (this.nan) return;
-      this.finishTime = Date.now() + this.settings.duration;
-      this.dir = "up";
-      this.loop();
-    }
-  }, {
-    key: "down",
-    value: function down() {
-      if (this.nan) return;
-      this.finishTime = Date.now() + this.settings.duration;
-      this.dir = "down";
-      this.loop();
-    }
-  }, {
-    key: "format",
-    value: function format() {
-      this.el.innerText = "".concat(this.formatter.format(this.progress * this.value)).concat(this.append);
-    }
-  }, {
-    key: "destroy",
-    value: function destroy() {
-      this.destroyed = true;
-    }
-  }, {
-    key: "inView",
-    value: function inView(entry) {
-      this.up();
-    }
-  }, {
-    key: "outView",
-    value: function outView(entry) {}
-  }]);
-}(_InView__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-
-/***/ }),
-
-/***/ "./assets/js/modules/dotsStrip.js":
-/*!****************************************!*\
-  !*** ./assets/js/modules/dotsStrip.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    var masterPatternA = document.querySelector("#master-pattern-a");
-    var circleGroup = masterPatternA.querySelector("#master-pattern-a-group");
-    var aInstances = Array.from(document.querySelectorAll(".pattern-a"));
-    var fillChildren = function fillChildren() {
-      aInstances.forEach(function (pattern) {
-        var group = pattern.querySelector("g");
-        while (group.firstChild) {
-          group.removeChild(group.firstChild);
-        }
-        var clone = circleGroup.cloneNode(true);
-        group.appendChild(clone);
-      });
-    };
-    var settings = {
-      gridSize: 32
-    };
-    var grid = [];
-    var fillGrid = function fillGrid() {
-      grid.length = 0;
-      while (circleGroup.firstChild) {
-        circleGroup.removeChild(circleGroup.firstChild);
-      }
-      for (var row = 0; row < settings.rows; row++) {
-        for (var col = 0; col <= settings.cols; col++) {
-          var center = {
-            x: col * settings.gridSize + settings.offsetX,
-            y: row * settings.gridSize
-          };
-          var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-          circle.setAttribute("cx", center.x);
-          circle.setAttribute("cy", center.y);
-          circle.setAttribute("r", settings.gridSize / 2);
-          circle.setAttribute("fill", "currentColor");
-          circle.style.setProperty("--x", col);
-          circle.style.setProperty("--y", row);
-          grid.push({
-            circle: circle,
-            center: center
-          });
-          circleGroup.appendChild(circle);
-        }
-      }
-      fillChildren();
-    };
-    var setViewBox = function setViewBox() {
-      masterPatternA.setAttribute("viewBox", "0 0 ".concat(settings.width, " ").concat(settings.height));
-      aInstances.forEach(function (pattern) {
-        return pattern.setAttribute("viewBox", "0 0 ".concat(settings.width, " ").concat(settings.height));
-      });
-    };
-    var reset = function reset() {
-      settings.width = window.innerWidth;
-      settings.height = settings.gridSize * 2.5;
-
-      // Calculate the number of rows and columns
-      settings.cols = Math.ceil(settings.width / settings.gridSize);
-      settings.rows = Math.ceil(settings.height / settings.gridSize);
-
-      // Calculate the offset to center the grid
-      settings.offsetX = (settings.width - settings.cols * settings.gridSize) / 2;
-      settings.offsetY = (settings.height - settings.rows * settings.gridSize) / 2;
-      setViewBox();
-      fillGrid();
-    };
-    reset();
-    window.addEventListener("resize", reset);
-  }
-});
-
-/***/ }),
-
-/***/ "./assets/js/modules/fpnBlocks.js":
-/*!****************************************!*\
-  !*** ./assets/js/modules/fpnBlocks.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    var _this = this;
-    var itemColumns = document.querySelectorAll('.item-column');
-    itemColumns.forEach(function (itemColumn) {
-      // Add event listeners for mouseenter and mouseleave
-      itemColumn.addEventListener('mouseenter', _this.handleMouseEnter);
-      itemColumn.addEventListener('mouseleave', _this.handleMouseLeave);
-    });
-  },
-  destroy: function destroy() {
-    var _this2 = this;
-    var itemColumns = document.querySelectorAll('.item-column');
-    itemColumns.forEach(function (itemColumn) {
-      // Remove event listeners for mouseenter and mouseleave
-      itemColumn.removeEventListener('mouseenter', _this2.handleMouseEnter);
-      itemColumn.removeEventListener('mouseleave', _this2.handleMouseLeave);
-    });
-  },
-  handleMouseEnter: function handleMouseEnter(event) {
-    var itemColumn = event.currentTarget;
-    itemColumn.classList.add('plum-bg');
-    var iconImg = itemColumn.querySelector('.icon-item img');
-    if (iconImg) {
-      iconImg.classList.add('filter-white');
-    }
-    var itemLink = itemColumn.querySelector('.item-content a');
-    if (itemLink) {
-      itemLink.classList.add('filter-white');
-      itemLink.classList.add('hidden');
-    }
-    var hoverDescription = itemColumn.querySelector('.hover-description');
-    if (hoverDescription) {
-      hoverDescription.classList.add('visible');
-    }
-  },
-  handleMouseLeave: function handleMouseLeave(event) {
-    var itemColumn = event.currentTarget;
-    itemColumn.classList.remove('plum-bg');
-    var iconImg = itemColumn.querySelector('.icon-item img');
-    if (iconImg) {
-      iconImg.classList.remove('filter-white');
-    }
-    var itemLink = itemColumn.querySelector('.item-content a');
-    if (itemLink) {
-      itemLink.classList.remove('filter-white');
-      itemLink.classList.remove('hidden');
-    }
-    var hoverDescription = itemColumn.querySelector('.hover-description');
-    if (hoverDescription) {
-      hoverDescription.classList.remove('visible');
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./assets/js/modules/header.js":
-/*!*************************************!*\
-  !*** ./assets/js/modules/header.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var cycle = function cycle(logo) {
-  if (logo.classList.contains("animating")) {
-    return;
-  }
-  logo.classList.add("animating");
-  logo.addEventListener("animationend", function () {
-    logo.classList.remove("animating");
-  }, {
-    once: true
-  });
-};
-var _intermittentCycle = function intermittentCycle(logo) {
-  var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var rate = 10;
-  var rand = 10;
-  var t = Math.round((Math.random() * rand + rate + n / 3) * 1000);
-  console.log("Cycling in ".concat(t / 1000, "s"));
-  n++;
-  setTimeout(function () {
-    cycle(logo);
-    _intermittentCycle(logo, n);
-  }, t);
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    if (!document.querySelector("#header")) {
-      return;
-    }
-    var logo = document.querySelector(".animated-hubexo-logo");
-    logo.addEventListener("pointerenter", function () {
-      cycle(logo);
-    });
-    _intermittentCycle(logo);
-    var lastScrollTop = 0; // Initialize lastScrollTop
-    var navbar = document.getElementById("header");
-    if (navbar.classList.contains("hide")) {
-      setTimeout(function () {
-        if (window.scrollY < 10) {
-          navbar.classList.remove("hide");
-        }
-      }, 20);
-    }
-    function handleScroll() {
-      // Check if we're at the top of the page
-      if (window.scrollY < 3) {
-        navbar.classList.remove("header-bg");
-      } else {
-        navbar.classList.add("header-bg");
-      }
-    }
-    window.addEventListener("scroll", function () {
-      var scrollTop = document.documentElement.scrollTop;
-      if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        navbar.classList.add("hide");
-      } else {
-        // Scrolling up
-        navbar.classList.remove("hide");
-      }
-
-      // Update lastScrollTop after handling the scroll direction
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll values
-
-      handleScroll();
-    });
-  },
-  destroy: function destroy() {}
-});
-
-/***/ }),
-
-/***/ "./assets/js/modules/headerNav.js":
-/*!****************************************!*\
-  !*** ./assets/js/modules/headerNav.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    if (!document.querySelector("#hamburger")) {
-      return;
-    }
-    var navButton = document.querySelector("#hamburger");
-    var navText = document.querySelector(".hamburger--text");
-    navButton.addEventListener("click", function () {
-      this.classList.toggle("is-active");
-      document.body.classList.toggle("menu-open");
-      if (navText.textContent === "Menu") {
-        navText.textContent = "Close";
-      } else {
-        navText.textContent = "Menu";
-      }
-    });
-    var mobileButtons = document.querySelectorAll(".mobile-button");
-    mobileButtons.forEach(function (mobileButton) {
-      mobileButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        mobileButton.closest("li").classList.toggle("active");
-      });
-    });
-
-    // const mediaQuery = window.matchMedia("(max-width: 991px)");
-
-    // function handleMenuToggle(e) {
-    // 	e.preventDefault();
-    // 	this.classList.toggle("active");
-    // }
-
-    // function attachEventListeners() {
-    // 	const parentLinks = document.querySelectorAll(
-    // 		"li.menu-item-has-children > a"
-    // 	);
-
-    // 	parentLinks.forEach((parentLink) => {
-    // 		parentLink.addEventListener("click", handleMenuToggle);
-    // 	});
-    // }
-
-    // function removeEventListeners() {
-    // 	const parentLinks = document.querySelectorAll(
-    // 		"li.menu-item-has-children a"
-    // 	);
-
-    // 	parentLinks.forEach((parentLink) => {
-    // 		parentLink.removeEventListener("click", handleMenuToggle);
-    // 	});
-    // }
-
-    // function handleScreenSizeChange(e) {
-    // 	if (e.matches) {
-    // 		attachEventListeners();
-    // 	} else {
-    // 		removeEventListeners();
-    // 	}
-    // }
-
-    // mediaQuery.addListener(handleScreenSizeChange);
-    // handleScreenSizeChange(mediaQuery);
-  },
-  destroy: function destroy() {}
-});
-
-/***/ }),
-
-/***/ "./assets/js/modules/iconBlocks.js":
-/*!*****************************************!*\
-  !*** ./assets/js/modules/iconBlocks.js ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   iconBlocks: () => (/* binding */ iconBlocks)
-/* harmony export */ });
-/* harmony import */ var _classes_InView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes/InView */ "./assets/js/modules/classes/InView.js");
-
-var iconBlocks = function iconBlocks() {
-  Array.from(document.querySelectorAll(".icon-block")).forEach(function (iconBlock) {
-    new _classes_InView__WEBPACK_IMPORTED_MODULE_0__["default"](iconBlock, {});
-  });
-};
-
-/***/ }),
-
-/***/ "./assets/js/modules/infiniteScroll.js":
-/*!*********************************************!*\
-  !*** ./assets/js/modules/infiniteScroll.js ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _modules_basicIntersections__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/basicIntersections */ "./assets/js/modules/basicIntersections.js");
-var InfiniteScroll = __webpack_require__(/*! infinite-scroll */ "./node_modules/infinite-scroll/js/index.js");
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    if (document.querySelector(".next-link")) {
-      var elem = document.querySelector("#posts-wrap");
-      var infScroll = new InfiniteScroll(elem, {
-        // options
-        path: ".next-link",
-        append: ".blog-post-block",
-        history: false
-      });
-      infScroll.on("append", function (response, path, items) {
-        _modules_basicIntersections__WEBPACK_IMPORTED_MODULE_0__["default"].init();
-      });
-    }
-  },
-  destroy: function destroy() {}
-});
-
-/***/ }),
-
-/***/ "./assets/js/modules/introDots.js":
-/*!****************************************!*\
-  !*** ./assets/js/modules/introDots.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   createHero: () => (/* binding */ createHero)
-/* harmony export */ });
-/* harmony import */ var simplex_noise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! simplex-noise */ "./node_modules/simplex-noise/dist/esm/simplex-noise.js");
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-
-var dist = function dist(p1, p2) {
-  return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
-};
-var lerp = function lerp(v0, v1, t) {
-  return (1 - t) * v0 + t * v1;
-};
-
-// initialize the noise function
-var noise3D = (0,simplex_noise__WEBPACK_IMPORTED_MODULE_0__.createNoise3D)();
-var settings = {
-  width: 25,
-  height: 25
-};
-var mouse = {
-  x: 12.5,
-  y: 12.5
-};
-var heroCirclePattern = document.querySelector("#hero-circles");
-var heroCircleArray = [];
-var makeHeroCircles = function makeHeroCircles() {
-  for (var y = 0; y < settings.height; y++) {
-    for (var x = 0; x < settings.width; x++) {
-      // const circle = document.createElementNS(
-      //   "http://www.w3.org/2000/svg",
-      //   "circle"
-      // );
-      // circle.setAttribute("r", 0);
-      // circle.setAttribute("cx", 30 + x * 60);
-      // circle.setAttribute("cy", 30 + y * 60);
-      // circle.setAttribute("fill", "#C8D2D2");
-      heroCircleArray.push({
-        r: 0
-      });
-    }
-  }
-};
-var createHero = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-    var ctx, isIntersecting, callback, observer, t, last, _draw;
-    return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-      while (1) switch (_context2.prev = _context2.next) {
-        case 0:
-          if (heroCirclePattern) {
-            _context2.next = 2;
-            break;
-          }
-          return _context2.abrupt("return");
-        case 2:
-          makeHeroCircles();
-          heroCirclePattern.width = 1500;
-          heroCirclePattern.height = 1500;
-          ctx = heroCirclePattern.getContext("2d"); // Define the isIntersecting variable
-          isIntersecting = false; // Define the callback function that will be triggered when the intersection occurs
-          callback = function callback(entries, observer) {
-            entries.forEach(function (entry) {
-              // Update the isIntersecting variable based on whether the element is intersecting
-              isIntersecting = entry.isIntersecting;
-            });
-          }; // Create a new Intersection Observer
-          observer = new IntersectionObserver(callback); // Start observing the target div
-          observer.observe(heroCirclePattern);
-          document.documentElement.addEventListener("mousemove", function (e) {
-            // Mouse position relative to heroCirclePattern
-
-            var rect = heroCirclePattern.getBoundingClientRect();
-            mouse.x = (e.clientX - rect.left) / rect.width * settings.width;
-            mouse.y = (e.clientY - rect.top) / rect.height * settings.height;
-          });
-          t = Date.now();
-          last = Date.now();
-          _draw = /*#__PURE__*/function () {
-            var _ref2 = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-              var dt, scale, maximumDistance, i, x, y, noise, mouseDistance, mouseDistanceModifier, n;
-              return _regeneratorRuntime().wrap(function _callee$(_context) {
-                while (1) switch (_context.prev = _context.next) {
-                  case 0:
-                    requestAnimationFrame(_draw);
-                    if (isIntersecting) {
-                      _context.next = 3;
-                      break;
-                    }
-                    return _context.abrupt("return");
-                  case 3:
-                    t = Date.now();
-                    dt = t - last;
-                    if (!(dt < 1000 / 30)) {
-                      _context.next = 7;
-                      break;
-                    }
-                    return _context.abrupt("return");
-                  case 7:
-                    last = t;
-                    scale = 0.1;
-                    maximumDistance = dist({
-                      x: 0,
-                      y: 0
-                    }, {
-                      x: settings.width,
-                      y: settings.height
-                    });
-                    ctx.clearRect(0, 0, heroCirclePattern.width, heroCirclePattern.height);
-                    ctx.fillStyle = "#C8D2D2";
-                    for (i = 0; i < heroCircleArray.length; i++) {
-                      x = i % settings.width;
-                      y = Math.floor(i / settings.width);
-                      noise = noise3D(x * scale, y * scale, t / 3000) + 0.3;
-                      mouseDistance = dist({
-                        x: x,
-                        y: y
-                      }, {
-                        x: mouse.x,
-                        y: mouse.y
-                      }); //  Old version:
-                      mouseDistanceModifier = mouseDistance * 5 / maximumDistance;
-                      noise *= Math.min(1, mouseDistanceModifier * 2);
-                      n = Math.min(1, Math.max(0, noise)); // With lerp
-                      heroCircleArray[i].r = lerp(heroCircleArray[i].r, n, 0.3);
-                      ctx.beginPath();
-                      ctx.arc(30 + x * 60, 30 + y * 60, heroCircleArray[i].r * 25, 0, 2 * Math.PI);
-                      ctx.fill();
-
-                      // Without lerp
-                      // heroCircleArray[i].circle.setAttribute("r", n * 25);
-                    }
-                  case 13:
-                  case "end":
-                    return _context.stop();
-                }
-              }, _callee);
-            }));
-            return function draw() {
-              return _ref2.apply(this, arguments);
-            };
-          }();
-          requestAnimationFrame(_draw);
-        case 15:
-        case "end":
-          return _context2.stop();
-      }
-    }, _callee2);
-  }));
-  return function createHero() {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-/***/ }),
-
-/***/ "./assets/js/modules/linkList.js":
-/*!***************************************!*\
-  !*** ./assets/js/modules/linkList.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   linkListMobileTriggers: () => (/* binding */ linkListMobileTriggers)
-/* harmony export */ });
-var linkListMobileTriggers = function linkListMobileTriggers() {
-  var triggers = Array.from(document.querySelectorAll(".link-list--trigger"));
-  triggers.forEach(function (trigger) {
-    var li = trigger.closest("li");
-    trigger.addEventListener("click", function (e) {
-      if (li.classList.contains("hovered")) {
-        return true;
-      }
-      triggers.forEach(function (t) {
-        return t.closest("li").classList.remove("hovered");
-      });
-      e.preventDefault();
-      e.stopPropagation();
-      li.classList.toggle("hovered");
-    });
-  });
-};
-
-/***/ }),
-
-/***/ "./assets/js/modules/logoCarousel.js":
-/*!*******************************************!*\
-  !*** ./assets/js/modules/logoCarousel.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-/* harmony import */ var _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide-extension-auto-scroll */ "./node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.esm.js");
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    document.querySelectorAll(".logo-slider").forEach(function (carousel) {
-      return new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide(carousel, {
-        // perPage: 7,
-        autoWidth: true,
-        type: "loop",
-        arrows: false,
-        gap: 20,
-        pagination: false,
-        autoScroll: {
-          speed: 0.5,
-          pauseOnHover: false
-        }
-        // breakpoints: {
-        //   991: {
-        //     perPage: 5,
-        //   },
-        //   767: {
-        //     perPage: 3,
-        //   },
-        // },
-      }).mount({
-        AutoScroll: _splidejs_splide_extension_auto_scroll__WEBPACK_IMPORTED_MODULE_1__.AutoScroll
-      });
-    });
-    // new Splide("#logo-carousel", {
-    // 	perPage: 7,
-    // 	type: "loop",
-    // 	arrows: false,
-    // 	pagination: false,
-    // 	autoScroll: {
-    // 		pauseOnHover: false,
-    // 	},
-    // 	breakpoints: {
-    // 		991: {
-    // 			perPage: 3,
-    // 		},
-    // 	},
-    // }).mount({ AutoScroll });
-  },
-  destroy: function destroy() {}
-});
-
-/***/ }),
-
-/***/ "./assets/js/modules/numberBlocks.js":
-/*!*******************************************!*\
-  !*** ./assets/js/modules/numberBlocks.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var numberBlocks = {
-  init: function init() {
-    this.countElements = document.querySelectorAll('.title--number');
-    this.observeElements();
-  },
-  observeElements: function observeElements() {
-    var _this = this;
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          _this.startCounting(entry.target);
-          observer.unobserve(entry.target); // Stop observing after counting
-        }
-      });
-    });
-    this.countElements.forEach(function (el) {
-      observer.observe(el);
-    });
-  },
-  startCounting: function startCounting(el) {
-    var countTo = parseInt(el.getAttribute('data-count').replace('+', ''));
-    var count = 0;
-    var _updateCount = function updateCount() {
-      var increment = Math.ceil(countTo / 100);
-      count += increment;
-      if (count > countTo) {
-        count = countTo;
-      }
-      el.textContent = count + '+';
-      if (count < countTo) {
-        requestAnimationFrame(_updateCount);
-      }
-    };
-    _updateCount();
-  },
-  destroy: function destroy() {
-    // If you need to clean up, you can implement this method
-  }
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (numberBlocks);
-
-/***/ }),
-
-/***/ "./assets/js/modules/officeListTwo.js":
-/*!********************************************!*\
-  !*** ./assets/js/modules/officeListTwo.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    var toggleSubOfficeList = function toggleSubOfficeList(event) {
-      event.stopPropagation();
-      var mainOfficeList = event.currentTarget.closest('.main-office-list');
-      var subOfficeLists = mainOfficeList.querySelectorAll('.sub-office-list');
-      subOfficeLists.forEach(function (list) {
-        list.classList.toggle('show');
-      });
-    };
-    var toggleAddressOffice = function toggleAddressOffice(event) {
-      event.stopPropagation();
-      var subOffice = event.currentTarget.closest('.sub-office');
-      var addressOffice = subOffice.querySelector('.address-office');
-      addressOffice.classList.toggle('show');
-    };
-    document.querySelectorAll('.main-office-content').forEach(function (element) {
-      element.addEventListener('click', toggleSubOfficeList);
-    });
-    document.querySelectorAll('.sub-office-content').forEach(function (element) {
-      element.addEventListener('click', toggleAddressOffice);
-    });
-  },
-  destroy: function destroy() {
-    document.querySelectorAll('.main-office-content').forEach(function (element) {
-      element.removeEventListener('click', toggleSubOfficeList);
-    });
-    document.querySelectorAll('.sub-office-content').forEach(function (element) {
-      element.removeEventListener('click', toggleAddressOffice);
-    });
-  }
-});
-
-/***/ }),
-
-/***/ "./assets/js/modules/promoBanner.js":
-/*!******************************************!*\
-  !*** ./assets/js/modules/promoBanner.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/dist/js.cookie.mjs");
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    function showPromoBanner() {
-      if (document.querySelector(".header-message")) {
-        var promoBanner = document.querySelector(".header-message");
-        var body = document.querySelector("body");
-        var agreedCookies = js_cookie__WEBPACK_IMPORTED_MODULE_0__["default"].get("hubexo_promo_banner");
-        if (typeof agreedCookies == "undefined") {
-          promoBanner.style.display = "block";
-          body.classList.add("has-promo-banner");
-        }
-      }
-    }
-    showPromoBanner();
-    function hidePromoBanner() {
-      if (document.querySelector(".header-message")) {
-        var promoButton = document.querySelector(".header-message button");
-        var promoBanner = document.querySelector(".header-message");
-        var body = document.querySelector("body");
-        promoButton.addEventListener("click", function () {
-          js_cookie__WEBPACK_IMPORTED_MODULE_0__["default"].set("hubexo_promo_banner");
-          promoBanner.style.display = "none";
-          body.classList.remove("has-promo-banner");
-        });
-      }
-    }
-    hidePromoBanner();
-  },
-  destroy: function destroy() {}
-});
-
-/***/ }),
-
-/***/ "./assets/js/modules/stats.js":
-/*!************************************!*\
-  !*** ./assets/js/modules/stats.js ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   stats: () => (/* binding */ stats)
-/* harmony export */ });
-/* harmony import */ var _classes_Rollup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes/Rollup */ "./assets/js/modules/classes/Rollup.js");
-
-var stats = function stats() {
-  var stats = Array.from(document.querySelectorAll(".stat-block--number"));
-  var statMap = new WeakMap();
-  stats.forEach(function (stat) {
-    var rollup = new _classes_Rollup__WEBPACK_IMPORTED_MODULE_0__["default"](stat);
-    // rollup.destroy();
-    statMap.set(stat, rollup);
-  });
-
-  // function moreThan15Percent(entries) {
-  //   entries.forEach((entry) => {
-  //     if (
-  //       entry.isIntersecting &&
-  //       (entry.intersectionRatio > 0.15 ||
-  //         entry.intersectionRatio * entry.boundingClientRect.height >
-  //           window.innerHeight * 0.15)
-  //     ) {
-  //       setTimeout(() => entry.target.classList.add("in-view"), 0);
-  //       stats.forEach((stat) => {
-  //         console.log("hi!");
-  //         statMap.get(stat).loop();
-  //       });
-  //       // remove the item from funning again
-  //       // Intersections.inViewObserver.unobserve(entry.target);
-  //     }
-  //   });
-  // }
-
-  // const inViewObserver = new IntersectionObserver(moreThan15Percent, {
-  //   threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-  // });
-
-  // inViewObserver.observe(document.querySelector(".special-fade-in"));
-};
-
-/***/ }),
-
-/***/ "./assets/js/modules/teamMembers.js":
-/*!******************************************!*\
-  !*** ./assets/js/modules/teamMembers.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var masonry_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! masonry-layout */ "./node_modules/masonry-layout/masonry.js");
-/* harmony import */ var masonry_layout__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(masonry_layout__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    if (!document.querySelector(".team-member")) {
-      return;
-    }
-    var grid = document.querySelector(".grid");
-    var msnry = new (masonry_layout__WEBPACK_IMPORTED_MODULE_0___default())(grid, {
-      // options...
-      itemSelector: ".grid-item",
-      gutter: 24,
-      percentPosition: true,
-      horizontalOrder: true
-    });
-    var teamMemberButtons = document.querySelectorAll(".team-member--button");
-    teamMemberButtons.forEach(function (teamMemberButton) {
-      teamMemberButton.addEventListener("click", function (e) {
-        var teamMember = teamMemberButton.closest(".team-member");
-        teamMember.classList.toggle("active");
-        var buttonText = teamMemberButton.querySelector(".button--text");
-        if (buttonText.textContent === "Show more") {
-          buttonText.textContent = "Show less";
-        } else {
-          buttonText.textContent = "Show more";
-        }
-
-        // Trigger Masonry layout refresh
-        msnry.layout();
-      });
-    });
-  },
-  destroy: function destroy() {}
-});
-
-/***/ }),
-
-/***/ "./assets/js/modules/testimonials.js":
-/*!*******************************************!*\
-  !*** ./assets/js/modules/testimonials.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  init: function init() {
-    document.querySelectorAll(".testimonials-slider").forEach(function (carousel) {
-      return new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__.Splide(carousel, _defineProperty(_defineProperty({
-        perPage: 1,
-        type: "loop",
-        pagination: false
-      }, "type", "fade"), "rewind", true)).mount();
-    });
-  },
-  destroy: function destroy() {}
-});
-
-/***/ }),
-
 /***/ "./node_modules/desandro-matches-selector/matches-selector.js":
 /*!********************************************************************!*\
   !*** ./node_modules/desandro-matches-selector/matches-selector.js ***!
@@ -7404,6 +8305,155 @@ return InfiniteScroll;
 
 /***/ }),
 
+/***/ "./node_modules/js-cookie/dist/js.cookie.mjs":
+/*!***************************************************!*\
+  !*** ./node_modules/js-cookie/dist/js.cookie.mjs ***!
+  \***************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ api)
+/* harmony export */ });
+/*! js-cookie v3.0.5 | MIT */
+/* eslint-disable no-var */
+function assign (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+    for (var key in source) {
+      target[key] = source[key];
+    }
+  }
+  return target
+}
+/* eslint-enable no-var */
+
+/* eslint-disable no-var */
+var defaultConverter = {
+  read: function (value) {
+    if (value[0] === '"') {
+      value = value.slice(1, -1);
+    }
+    return value.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent)
+  },
+  write: function (value) {
+    return encodeURIComponent(value).replace(
+      /%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,
+      decodeURIComponent
+    )
+  }
+};
+/* eslint-enable no-var */
+
+/* eslint-disable no-var */
+
+function init (converter, defaultAttributes) {
+  function set (name, value, attributes) {
+    if (typeof document === 'undefined') {
+      return
+    }
+
+    attributes = assign({}, defaultAttributes, attributes);
+
+    if (typeof attributes.expires === 'number') {
+      attributes.expires = new Date(Date.now() + attributes.expires * 864e5);
+    }
+    if (attributes.expires) {
+      attributes.expires = attributes.expires.toUTCString();
+    }
+
+    name = encodeURIComponent(name)
+      .replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent)
+      .replace(/[()]/g, escape);
+
+    var stringifiedAttributes = '';
+    for (var attributeName in attributes) {
+      if (!attributes[attributeName]) {
+        continue
+      }
+
+      stringifiedAttributes += '; ' + attributeName;
+
+      if (attributes[attributeName] === true) {
+        continue
+      }
+
+      // Considers RFC 6265 section 5.2:
+      // ...
+      // 3.  If the remaining unparsed-attributes contains a %x3B (";")
+      //     character:
+      // Consume the characters of the unparsed-attributes up to,
+      // not including, the first %x3B (";") character.
+      // ...
+      stringifiedAttributes += '=' + attributes[attributeName].split(';')[0];
+    }
+
+    return (document.cookie =
+      name + '=' + converter.write(value, name) + stringifiedAttributes)
+  }
+
+  function get (name) {
+    if (typeof document === 'undefined' || (arguments.length && !name)) {
+      return
+    }
+
+    // To prevent the for loop in the first place assign an empty array
+    // in case there are no cookies at all.
+    var cookies = document.cookie ? document.cookie.split('; ') : [];
+    var jar = {};
+    for (var i = 0; i < cookies.length; i++) {
+      var parts = cookies[i].split('=');
+      var value = parts.slice(1).join('=');
+
+      try {
+        var found = decodeURIComponent(parts[0]);
+        jar[found] = converter.read(value, found);
+
+        if (name === found) {
+          break
+        }
+      } catch (e) {}
+    }
+
+    return name ? jar[name] : jar
+  }
+
+  return Object.create(
+    {
+      set,
+      get,
+      remove: function (name, attributes) {
+        set(
+          name,
+          '',
+          assign({}, attributes, {
+            expires: -1
+          })
+        );
+      },
+      withAttributes: function (attributes) {
+        return init(this.converter, assign({}, this.attributes, attributes))
+      },
+      withConverter: function (converter) {
+        return init(assign({}, this.converter, converter), this.attributes)
+      }
+    },
+    {
+      attributes: { value: Object.freeze(defaultAttributes) },
+      converter: { value: Object.freeze(converter) }
+    }
+  )
+}
+
+var api = init(defaultConverter, { path: '/' });
+/* eslint-enable no-var */
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/masonry-layout/masonry.js":
 /*!************************************************!*\
   !*** ./node_modules/masonry-layout/masonry.js ***!
@@ -7639,19 +8689,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   return Masonry;
 
 }));
-
-
-/***/ }),
-
-/***/ "./assets/scss/style.scss":
-/*!********************************!*\
-  !*** ./assets/scss/style.scss ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
 
 
 /***/ }),
@@ -9494,155 +10531,6 @@ Outlayer.Item = Item;
 return Outlayer;
 
 }));
-
-
-/***/ }),
-
-/***/ "./node_modules/js-cookie/dist/js.cookie.mjs":
-/*!***************************************************!*\
-  !*** ./node_modules/js-cookie/dist/js.cookie.mjs ***!
-  \***************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ api)
-/* harmony export */ });
-/*! js-cookie v3.0.5 | MIT */
-/* eslint-disable no-var */
-function assign (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-    for (var key in source) {
-      target[key] = source[key];
-    }
-  }
-  return target
-}
-/* eslint-enable no-var */
-
-/* eslint-disable no-var */
-var defaultConverter = {
-  read: function (value) {
-    if (value[0] === '"') {
-      value = value.slice(1, -1);
-    }
-    return value.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent)
-  },
-  write: function (value) {
-    return encodeURIComponent(value).replace(
-      /%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,
-      decodeURIComponent
-    )
-  }
-};
-/* eslint-enable no-var */
-
-/* eslint-disable no-var */
-
-function init (converter, defaultAttributes) {
-  function set (name, value, attributes) {
-    if (typeof document === 'undefined') {
-      return
-    }
-
-    attributes = assign({}, defaultAttributes, attributes);
-
-    if (typeof attributes.expires === 'number') {
-      attributes.expires = new Date(Date.now() + attributes.expires * 864e5);
-    }
-    if (attributes.expires) {
-      attributes.expires = attributes.expires.toUTCString();
-    }
-
-    name = encodeURIComponent(name)
-      .replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent)
-      .replace(/[()]/g, escape);
-
-    var stringifiedAttributes = '';
-    for (var attributeName in attributes) {
-      if (!attributes[attributeName]) {
-        continue
-      }
-
-      stringifiedAttributes += '; ' + attributeName;
-
-      if (attributes[attributeName] === true) {
-        continue
-      }
-
-      // Considers RFC 6265 section 5.2:
-      // ...
-      // 3.  If the remaining unparsed-attributes contains a %x3B (";")
-      //     character:
-      // Consume the characters of the unparsed-attributes up to,
-      // not including, the first %x3B (";") character.
-      // ...
-      stringifiedAttributes += '=' + attributes[attributeName].split(';')[0];
-    }
-
-    return (document.cookie =
-      name + '=' + converter.write(value, name) + stringifiedAttributes)
-  }
-
-  function get (name) {
-    if (typeof document === 'undefined' || (arguments.length && !name)) {
-      return
-    }
-
-    // To prevent the for loop in the first place assign an empty array
-    // in case there are no cookies at all.
-    var cookies = document.cookie ? document.cookie.split('; ') : [];
-    var jar = {};
-    for (var i = 0; i < cookies.length; i++) {
-      var parts = cookies[i].split('=');
-      var value = parts.slice(1).join('=');
-
-      try {
-        var found = decodeURIComponent(parts[0]);
-        jar[found] = converter.read(value, found);
-
-        if (name === found) {
-          break
-        }
-      } catch (e) {}
-    }
-
-    return name ? jar[name] : jar
-  }
-
-  return Object.create(
-    {
-      set,
-      get,
-      remove: function (name, attributes) {
-        set(
-          name,
-          '',
-          assign({}, attributes, {
-            expires: -1
-          })
-        );
-      },
-      withAttributes: function (attributes) {
-        return init(this.converter, assign({}, this.attributes, attributes))
-      },
-      withConverter: function (converter) {
-        return init(assign({}, this.converter, converter), this.attributes)
-      }
-    },
-    {
-      attributes: { value: Object.freeze(defaultAttributes) },
-      converter: { value: Object.freeze(converter) }
-    }
-  )
-}
-
-var api = init(defaultConverter, { path: '/' });
-/* eslint-enable no-var */
-
-
 
 
 /***/ }),

@@ -209,3 +209,15 @@
 .editor-styles-wrapper .link-list--title {
 	opacity: 1;
 }
+
+.h2.snug.link-list--title.with-icon {
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.h2.snug.link-list--title.with-icon img {
+	width: 2.5rem;
+	@media (max-width: 767px) {
+		width: 1.8rem;
+	}
+}
